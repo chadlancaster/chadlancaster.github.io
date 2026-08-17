@@ -966,6 +966,10 @@ section { transition: background 0.6s var(--ease-out); }
 @media (min-width: 801px) {
   /* shrink the video on hover ONLY when the leftover would be under the panel's min width */
   .work__stack:hover .case:hover .case__media { flex-basis: calc(var(--card-open) - 48px - var(--panel-w)); }
+  /* keep the meta row (client / title / discipline) lined up under the shrunk video */
+  .work__stack:hover .case:hover .case__client,
+  .work__stack:hover .case:hover .case__title,
+  .work__stack:hover .case:hover .case__impact { max-width: calc(var(--card-open) - 48px - var(--panel-w)); }
 }
 
 /* Sound toggle — appears over the playing video on hover. */
