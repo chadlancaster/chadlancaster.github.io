@@ -812,7 +812,16 @@ section { transition: background 0.6s var(--ease-out); }
   text-transform: uppercase; color: var(--accent);
   margin-bottom: 8px;
 }
-.work-grid .case__client { font-size: 10px; margin-bottom: 6px; }
+.work-grid .case__client {
+  font-size: 10px; margin-bottom: 8px;
+  flex-direction: column;            /* stack brand over category so long tags never collide */
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3px;
+  min-height: 3em;                   /* uniform meta height -> card titles line up across the grid */
+}
+.work-grid .case__client b { white-space: nowrap; }   /* keep "Stella Artois" on one line */
+.work-grid .case__client > span { font-size: 9px; letter-spacing: 0.06em; line-height: 1.4; }
 .work-grid .case__title {
   font-size: clamp(18px, 1.55vw, 26px);
   line-height: 1.12;
@@ -1064,15 +1073,15 @@ section { transition: background 0.6s var(--ease-out); }
 .text-loop {
   display: inline-block;
   position: relative;
-  height: 1em;
-  line-height: 1em;
+  height: 1.2em;            /* taller than 1em so glyph descenders/ascenders aren't clipped */
+  line-height: 1.2em;
   overflow: hidden;
   vertical-align: middle;
 }
 .text-loop > span {
   display: block;
-  line-height: 1em;
-  height: 1em;
+  line-height: 1.2em;
+  height: 1.2em;
   transform: translateY(0);
   transition: transform 0.55s cubic-bezier(0.65, 0, 0.35, 1);
   /* Per-character usage sets --d so the roll cascades letter-by-letter.
