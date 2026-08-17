@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="About CSA - A globally recognised, award-winning entertainment, marketing and talent agency. Cape Town, Los Angeles, London, Lagos, Paris." />
+<title>About - CSA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200..900&family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<!-- NAVIGATION -->
+<nav class="nav is-scrolled" id="nav" aria-label="Primary">
+  <a href="./index.html" class="nav__logo" aria-label="CSA - home">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="./brand/CSA_animation_logo.webm" type="video/webm">
+      <source src="./brand/CSA_animation_logo.mp4" type="video/mp4">
+    </video>
+  </a>
+  <ul class="nav__menu">
+    <li><a href="./index.html#work">Work</a></li>
+    <li><a href="./about.html" class="is-current">About</a></li>
+    <li>
+      <span class="nav__menu-trigger">Services</span>
+      <div class="nav__submenu">
+        <a href="./brand-communications.html">Brand Communications</a>
+        <a href="./talent.html">Talent</a>
+        <a href="./events-activations.html">Events &amp; Activations</a>
+        <a href="https://napkin-sport.com/#top" target="_blank" rel="noopener">Napkin Sport</a>
+      </div>
+    </li>
+    <li><a href="./the-wire.html">The Wire</a></li>
+  </ul>
+  <a href="./index.html#contact" class="nav__cta">Get in touch</a>
+  <div class="nav__hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="nav__mobile" id="mobileNav">
+  <a href="./index.html#work">Work</a>
+  <a href="./about.html">About</a>
+  <a href="./brand-communications.html" class="nav__mobile-sub">→ Brand Communications</a>
+  <a href="./talent.html" class="nav__mobile-sub">→ Talent</a>
+  <a href="./events-activations.html" class="nav__mobile-sub">→ Events &amp; Activations</a>
+  <a href="https://napkin-sport.com/#top" class="nav__mobile-sub" target="_blank" rel="noopener">→ Napkin Sport</a>
+  <a href="./the-wire.html">The Wire</a>
+  <a href="./index.html#contact">Contact</a>
+</div>
+
+<!-- PAGE HERO (static) with the brand GIF behind the copy -->
+<header class="page-hero page-hero--media">
+  <div class="page-hero__media" aria-hidden="true"></div>
+  <div class="page-hero__inner">
+    <div class="page-hero__kicker">About</div>
+    <h1 class="page-hero__title">
+      Bridging brands &amp; culture through <em>unforgettable</em> storytelling.
+    </h1>
+    <p class="page-hero__lede">
+      As one of Africa's leading and award-winning entertainment, marketing, and talent agencies, CSA is passionate about showcasing African narratives and merging them with pop culture, philanthropy, and impact. As a result, CSA also helps create opportunities for African artists, providing them with a platform to reach a global audience.
+    </p>
+  </div>
+</header>
+
+<!-- MISSION (beige) -->
+<section class="section" data-theme="light">
+  <div class="section__head">
+    <h2 class="section__title" data-reveal>Our <em>mission.</em></h2>
+  </div>
+
+  <div style="max-width: 1100px;">
+    <p data-reveal style="font-family: var(--font-display); font-weight: 300; font-size: clamp(28px, 4vw, 56px); line-height: 1.15; letter-spacing: -0.02em; font-variation-settings: 'SOFT' 60, 'opsz' 144; margin-bottom: 60px;">
+      We connect brands with the storytellers who produce powerful, authentic content and deliver it to the people they influence most, <em style="font-style: italic; color: var(--accent); font-variation-settings: 'SOFT' 100, 'opsz' 144;">building cultural brand relevance in the process.</em>
+    </p>
+
+  </div>
+
+  <div class="timeline js-timeline">
+    <div class="timeline__line" aria-hidden="true"></div>
+    <div class="timeline__items">
+      <div class="timeline__item">
+        <div class="timeline__num">800<span class="plus">+</span></div>
+        <div class="timeline__label">Clients worked with</div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__num">$1B<span class="plus">+</span></div>
+        <div class="timeline__label">Earned media generated</div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__num">26</div>
+        <div class="timeline__label">Years at the front of culture</div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__num">87<span class="plus">+</span></div>
+        <div class="timeline__label">Markets activated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPRIETARY TOOLS (black) - dark card grid; matched pair with the Advantage cards -->
+<section class="section proptools" id="propTools">
+  <div class="section__head">
+    <h2 class="section__title" data-reveal>Our <em>proprietary tools.</em></h2>
+    <p class="section__sub" data-reveal data-reveal-delay="1">The in-house intelligence that turns cultural instinct into a repeatable system.</p>
+  </div>
+
+  <div class="pcarousel" id="ptoolCarousel" data-reveal>
+    <div class="pcarousel__stage">
+      <article class="ptool">
+        <div class="ptool__no">1</div>
+        <h3 class="ptool__name">CSA Compass</h3>
+        <div class="ptool__tag">Cultural Campaign Blueprint</div>
+        <p class="ptool__body">Defines a brand's cultural positioning and the tribes or spaces where it should credibly play.</p>
+      </article>
+      <article class="ptool">
+        <div class="ptool__no">2</div>
+        <h3 class="ptool__name">Culture Quotient Index</h3>
+        <div class="ptool__tag">Brand Relevance Radar</div>
+        <p class="ptool__body">Measures how "culturally fluent" a brand is versus competitors and where white space exists.</p>
+      </article>
+      <article class="ptool">
+        <div class="ptool__no">3</div>
+        <h3 class="ptool__name">Talent Dashboard</h3>
+        <div class="ptool__tag">Human-Led Talent Profiling</div>
+        <p class="ptool__body">Evaluates talent beyond metrics - by purpose, opinion and influence within culture.</p>
+      </article>
+      <article class="ptool">
+        <div class="ptool__no">4</div>
+        <h3 class="ptool__name">CSA Influence Index</h3>
+        <div class="ptool__tag">Campaign Performance Suite</div>
+        <p class="ptool__body">Connects influencer and PR activity to brand lift, sentiment and earned conversation.</p>
+      </article>
+      <article class="ptool">
+        <div class="ptool__no">5</div>
+        <h3 class="ptool__name">Amplification Engine</h3>
+        <div class="ptool__tag">Seeding &amp; Storytelling Ripple Model</div>
+        <p class="ptool__body">A 1:9:90 approach that scales content and PR narratives through connected communities.</p>
+      </article>
+      <article class="ptool">
+        <div class="ptool__no">6</div>
+        <h3 class="ptool__name">Storytelling, Not Selling</h3>
+        <div class="ptool__tag">Influencer Asset Creation</div>
+        <p class="ptool__body">Ensures every piece of content tells a story that builds emotion and authenticity.</p>
+      </article>
+    </div>
+    <div class="pcarousel__nav">
+      <button class="pcarousel__arrow" type="button" data-dir="-1" aria-label="Previous tool"><span aria-hidden="true">&#8592;</span></button>
+      <div class="pcarousel__dots" id="ptoolDots"></div>
+      <button class="pcarousel__arrow" type="button" data-dir="1" aria-label="Next tool"><span aria-hidden="true">&#8594;</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- OUR DISTINCT ADVANTAGE (white) - card system; breaks up the black run -->
+<section class="section adv" data-theme="light" id="advantage">
+  <div class="section__head">
+    <h2 class="section__title" data-reveal>Our Distinct <em>Advantage.</em></h2>
+    <p class="section__sub" data-reveal data-reveal-delay="1">Six reasons the work lands, and keeps moving culture forward.</p>
+  </div>
+
+  <div class="adv__grid">
+    <article class="adv-card" data-reveal>
+      <div class="adv-card__no">01</div>
+      <h3 class="adv-card__title">Experience-led</h3>
+      <p class="adv-card__body">We design culture-rich, immersive moments that audiences feel and remember.</p>
+    </article>
+    <article class="adv-card" data-reveal data-reveal-delay="1">
+      <div class="adv-card__no">02</div>
+      <h3 class="adv-card__title">Built to scale</h3>
+      <p class="adv-card__body">Every idea is architected for amplification - across platforms, countries and channels.</p>
+    </article>
+    <article class="adv-card" data-reveal data-reveal-delay="2">
+      <div class="adv-card__no">03</div>
+      <h3 class="adv-card__title">One engine, all gears</h3>
+      <p class="adv-card__body">Media. Creative. Talent. Tech. Strategy. Integrated under one roof, with no silos.</p>
+    </article>
+    <article class="adv-card" data-reveal>
+      <div class="adv-card__no">04</div>
+      <h3 class="adv-card__title">Local depth, global firepower</h3>
+      <p class="adv-card__body">Deep roots in Africa, global reach via 87+ markets and major creative hubs.</p>
+    </article>
+    <article class="adv-card" data-reveal data-reveal-delay="1">
+      <div class="adv-card__no">05</div>
+      <h3 class="adv-card__title">Impact obsessed</h3>
+      <p class="adv-card__body">We don't just track awareness, we track influence, action and ROI.</p>
+    </article>
+    <article class="adv-card" data-reveal data-reveal-delay="2">
+      <div class="adv-card__no">06</div>
+      <h3 class="adv-card__title">Culturally invested</h3>
+      <p class="adv-card__body">We help brands matter more by contributing to culture, not just capitalizing on it.</p>
+    </article>
+  </div>
+</section>
+
+<!-- NETWORK GLOBE (black section so the globe blends seamlessly).
+     Big scroll-scrubbed globe on the left; heading + copy + legend stacked on
+     the right. The outer is tall so the sticky inner pins while it rotates. -->
+<section class="section globe-section">
+  <div class="globe-map" id="globeHero" data-globe-frames="240">
+    <div class="globe-map__sticky">
+      <div class="globe-map__inner">
+        <div class="globe-map__globe">
+          <canvas class="globe-map__canvas" id="globeCanvas" aria-hidden="true"></canvas>
+        </div>
+        <div class="globe-map__copy">
+          <h2 class="globe-map__title" data-reveal>Our <em>Network.</em></h2>
+          <div class="globe-map__legend">
+            <div class="network__legend-item"><b>3 Global Hubs</b>Cape Town · London · Los Angeles</div>
+            <div class="network__legend-item"><b>10 African Markets</b>Connected across the continent</div>
+            <div class="network__legend-item"><b>87 Markets Worldwide</b>Where culture meets commerce</div>
+            <div class="network__legend-item"><b>One Global Network</b>Global reach. Local credibility.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXECUTIVE BOARD (beige) -->
+<section class="section" data-theme="light">
+  <div class="section__head">
+    <h2 class="section__title" data-reveal>Executive <em>board.</em>
+      <button type="button" class="founder-chip" onclick="document.getElementById('founderModal').showModal()" aria-haspopup="dialog">
+        <span aria-hidden="true">✦</span> Founder · Francine Le Chat
+      </button>
+    </h2>
+    <p class="section__sub" data-reveal data-reveal-delay="1">The people behind the influence. A powerful collective of industry leaders, strategists and cultural architects driving the ideas, partnerships and experiences that move brands, talent and culture across the world.</p>
+  </div>
+
+  <div class="team__grid">
+
+    <article class="team-member" data-reveal>
+      <div class="team-member__image">
+        <img src="./team/davin-phillips.jpg" alt="Davin Phillips" loading="lazy">
+      </div>
+      <h3 class="team-member__name">Davin Phillips</h3>
+      <div class="team-member__role">Executive Director &amp; Managing Partner</div>
+      <p class="team-member__bio">Davin is a brand and new-media specialist with a renowned and respected insight into developing innovative strategies for African markets.</p>
+    </article>
+
+    <article class="team-member" data-reveal data-reveal-delay="1">
+      <div class="team-member__image">
+        <img src="./team/marc-le-chat.jpg" alt="Marc Le Chat" loading="lazy">
+      </div>
+      <h3 class="team-member__name">Marc Le Chat</h3>
+      <div class="team-member__role">Co-Founder &amp; MD · CSA Inc</div>
+      <p class="team-member__bio">Marc is an esteemed writer overseeing editorial direction and strategy. He has been a judge on the prestigious PICA Awards and was Miriam Makeba's personal publicist for 15 years.</p>
+    </article>
+
+    <article class="team-member" data-reveal data-reveal-delay="2">
+      <div class="team-member__image">
+        <img src="./team/brannon-phillips.jpg" alt="Brannon Phillips" loading="lazy">
+      </div>
+      <h3 class="team-member__name">Brannon Phillips</h3>
+      <div class="team-member__role">Executive Director · Los Angeles</div>
+      <p class="team-member__bio">Brannon's strategic approach drives CSA's brand campaigns across the US and Africa. Based in Los Angeles, his insights into global trends and start-up culture keep CSA at the cutting edge.</p>
+    </article>
+
+    <article class="team-member" data-reveal data-reveal-delay="3">
+      <div class="team-member__image">
+        <img src="./team/jaren-phillips.jpg" alt="Jaren Phillips" loading="lazy">
+      </div>
+      <h3 class="team-member__name">Jaren Phillips</h3>
+      <div class="team-member__role">Chief Financial Officer</div>
+      <p class="team-member__bio">Managing the financial process and internal systems, Jaren brings significant expertise and experience to bear on both existing operations and new business.</p>
+    </article>
+
+  </div>
+
+  <aside class="team__cta" data-reveal>
+    <div class="team__cta-text">
+      <h3 class="team__cta-title">For the culture builders.</h3>
+      <p class="team__cta-body">The future belongs to people who don't just follow culture, they shape it. We're looking for strategists, creators, producers and cultural thinkers with bold ideas and restless curiosity. If you're ready to build work that moves people, grows brands and leaves a lasting mark, let's create what's next.</p>
+    </div>
+    <a href="./index.html#contact" class="btn">Open roles <span aria-hidden="true">→</span></a>
+  </aside>
+</section>
+
+<!-- FOUNDER MODAL - opened from the "Founder" chip on the Executive board heading -->
+<dialog id="founderModal" class="founder-modal" aria-label="Francine Le Chat, Founder">
+  <button type="button" class="founder-modal__close" aria-label="Close" onclick="this.closest('dialog').close()">&times;</button>
+  <div class="founder-modal__inner">
+    <div class="founder-modal__image">
+      <img src="./team/francine-le-chat.jpg" alt="Francine Le Chat">
+    </div>
+    <div class="founder-modal__body">
+      <div class="founder-modal__kicker">Founder</div>
+      <h3 class="founder-modal__name">Francine Le Chat</h3>
+      <div class="founder-modal__role">Founder &amp; Chairperson · 1955-2017</div>
+      <p>A visionary publicist, theatre and television producer, and philanthropist, Fran was integral in building CSA into a cultural force. At a pivotal time in South Africa's history, she brought global icons including Naomi Campbell, Herb Ritts, Djimon Hounsou and Kimora Lee Simmons to the country, creating powerful new connections between South African talent and the world.</p>
+      <p>She opened CSA's Los Angeles office, expanded the agency's international reach and gave African talent greater visibility, credibility and access on the global stage. Her legacy lives in the careers she shaped, the doors she opened and the belief that African talent belongs at the centre of global culture.</p>
+      <p>Her name remains at the foundation of CSA. Her standard still sets the bar.</p>
+    </div>
+  </div>
+</dialog>
+
+<!-- AWARDS -->
+<section class="section">
+  <div class="section__head">
+    <h2 class="section__title" data-reveal>Awards &amp; <em>recognition.</em></h2>
+  </div>
+
+  <div class="awards" data-reveal>
+    <div class="award"><img src="./brand/awards/sabre.png" alt="The Sabre Awards" loading="lazy"></div>
+    <div class="award"><img src="./brand/awards/telly.png" alt="The Telly Awards" loading="lazy"></div>
+    <div class="award"><img src="./brand/awards/prism.png" alt="Prism Awards" loading="lazy"></div>
+    <div class="award"><img src="./brand/awards/creative-x.png" alt="Creative X Award" loading="lazy"></div>
+    <div class="award award--loeries"><img src="./brand/awards/loeries.png" alt="Loeries" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2 class="contact__heading" data-reveal>
+    Let's build what <em>culture</em><br>talks about next.
+  </h2>
+  <a href="mailto:hello@csa.global" class="contact__email" data-reveal data-reveal-delay="1">
+    hello@csa.global
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+  </a>
+
+  <div class="contact__offices" data-reveal data-reveal-delay="2">
+    <div class="contact__office"><b>Cape Town</b>HQ - Africa</div>
+    <div class="contact__office"><b>Johannesburg</b>South Africa</div>
+    <div class="contact__office"><b>Los Angeles</b>HQ - Americas</div>
+    <div class="contact__office"><b>London</b>United Kingdom</div>
+    <div class="contact__office"><b>Lagos</b>Nigeria</div>
+    <div class="contact__office"><b>Paris</b>France</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <video autoplay muted loop playsinline>
+        <source src="./brand/CSA_animation_logo.webm" type="video/webm">
+        <source src="./brand/CSA_animation_logo.mp4" type="video/mp4">
+      </video>
+      <div class="footer__tag">A culture &amp; entertainment agency. Working at the speed of what people care about.</div>
+    </div>
+    <div class="footer__col">
+      <h4>Services</h4>
+      <a href="./brand-communications.html">Brand Communications</a>
+      <a href="./talent.html">Talent</a>
+      <a href="./events-activations.html">Events &amp; Activations</a>
+      <a href="https://napkin-sport.com/#top" target="_blank" rel="noopener">Napkin Sport</a>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="./about.html">About</a>
+      <a href="./index.html#work">Work</a>
+      <a href="./the-wire.html">The Wire</a>
+      <a href="./index.html#contact">Contact</a>
+    </div>
+    <div class="footer__col">
+      <h4>Connect</h4>
+      <a href="https://www.instagram.com/csa.global/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/company/celebrityservicesafrica/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.facebook.com/celebrityservicesafrica" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.youtube.com/c/csaglobaltv" target="_blank" rel="noopener">YouTube</a>
+      <a href="/the-wire.html">Newsletter →</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div>© 2026 Celebrity Services Africa</div>
+    <div>Cape Town · Johannesburg · Los Angeles · London · Lagos · Paris</div>
+    <div><a href="/privacy-policy.html">Privacy Policy</a> · <a href="/data-protection.html">Data Protection</a></div>
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

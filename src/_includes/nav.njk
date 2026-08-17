@@ -1,0 +1,37 @@
+<nav class="nav is-scrolled" id="nav" aria-label="Primary">
+  <a href="/index.html" class="nav__logo" aria-label="CSA - home">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="/brand/CSA_animation_logo.webm" type="video/webm">
+      <source src="/brand/CSA_animation_logo.mp4" type="video/mp4">
+    </video>
+  </a>
+  <ul class="nav__menu">
+    <li><a href="/index.html#work">Work</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li>
+      <span class="nav__menu-trigger">Services</span>
+      <div class="nav__submenu">
+        <a href="/brand-communications.html">Brand Communications</a>
+        <a href="/talent.html">Talent</a>
+        <a href="/events-activations.html">Events &amp; Activations</a>
+        <a href="https://napkin-sport.com/#top" target="_blank" rel="noopener">Napkin Sport</a>
+      </div>
+    </li>
+    <li><a href="/the-wire.html"{% if navCurrent == "wire" %} class="is-current"{% endif %}>The Wire</a></li>
+  </ul>
+  <a href="/index.html#contact" class="nav__cta">Get in touch</a>
+  <div class="nav__hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="nav__mobile" id="mobileNav">
+  <a href="/index.html#work">Work</a>
+  <a href="/about.html">About</a>
+  <a href="/brand-communications.html" class="nav__mobile-sub">→ Brand Communications</a>
+  <a href="/talent.html" class="nav__mobile-sub">→ Talent</a>
+  <a href="/events-activations.html" class="nav__mobile-sub">→ Events &amp; Activations</a>
+  <a href="https://napkin-sport.com/#top" class="nav__mobile-sub" target="_blank" rel="noopener">→ Napkin Sport</a>
+  <a href="/the-wire.html">The Wire</a>
+  <a href="/index.html#contact">Contact</a>
+</div>

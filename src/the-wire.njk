@@ -1,0 +1,141 @@
+---
+layout: base.njk
+permalink: "/the-wire.html"
+title: "The Wire"
+description: "CSA's editorial signal - trends, drops and cultural movements from our desks across Cape Town, Lagos, London, Paris and Los Angeles."
+bodyClass: theme-wire
+navCurrent: wire
+---
+<header class="page-hero">
+  <div class="page-hero__inner">
+    <div class="page-hero__kicker">Editorial</div>
+    <h1 class="page-hero__title">The <em>Wire.</em></h1>
+    <p class="page-hero__lede">
+      CSA's editorial signal - trends, drops and cultural movements from our desks across Cape Town, Lagos, London, Paris and Los Angeles.
+    </p>
+  </div>
+</header>
+
+<section class="section" data-theme="light">
+  <div class="section__head">
+    <h2 class="section__title">The <em>archive.</em></h2>
+    <p class="section__sub">Trend reports, signal pieces, masterclasses and culture drops from across the agency.</p>
+  </div>
+
+  <div class="cards-rail">
+    {% for post in collections.articles %}
+      <a class="article-card" href="{{ post.url }}">
+        <div class="article-card__image">
+          {% if post.data.image %}<img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" loading="lazy" />{% else %}<div class="placeholder"><span class="placeholder__label">[ image ]</span></div>{% endif %}
+        </div>
+        <div class="article-card__meta"><span>{{ post.data.category }}</span><span class="date">{{ post.data.date | readableDate }}</span></div>
+        <h3 class="article-card__title">{{ post.data.title }}</h3>
+        <p class="article-card__excerpt">{{ post.data.standfirst }}</p>
+        <div class="article-card__foot"><span>{{ post.templateContent | readingTime }}</span><span aria-hidden="true">→</span></div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+{# CHART PULSE - signature weekly chart, below the archive (black, full-width). #}
+{% if chartPulse and chartPulse.regions.length %}
+<section class="section section--tight" id="chart-pulse">
+  <div class="section__head section__head--pulse">
+    <h2 class="section__title" data-reveal>Chart <em>Pulse.</em></h2>
+    <p class="section__sub" data-reveal data-reveal-delay="1">{{ chartPulse.intro }}</p>
+    <div class="pulse-toggle" id="pulseToggle" role="tablist" data-reveal>
+      {% for r in chartPulse.regions %}
+      <button type="button" class="{% if loop.first %}is-active{% endif %}" data-region="{{ r.id }}" role="tab">{{ r.short }}</button>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% for r in chartPulse.regions %}
+  <div class="pulse-region {% if loop.first %}is-active{% endif %}" data-region-panel="{{ r.id }}">
+    {% if r.editions.length %}
+    {% set ed = r.editions[0] %}
+    {# Cover + the full Top-10 laid out in two columns. #}
+    <div class="pulse-feature">
+      <a class="pulse-feature__cover" href="#pulse-{{ r.id }}-{{ ed.slug }}" data-pulse-open="pulse-{{ r.id }}-{{ ed.slug }}" aria-label="Open {{ ed.title }} Top 10">
+        {% if ed.cover %}<img src="{{ ed.cover }}" alt="{{ ed.title }}, {{ ed.weekStart }} to {{ ed.weekEnd }}" loading="lazy" />{% else %}<div class="placeholder"><span class="placeholder__label">[ cover ]</span></div>{% endif %}
+      </a>
+      <div class="pulse-feature__body">
+        <div class="pulse-feature__meta"><span>{{ ed.title }}</span><span class="date">{{ ed.weekStart }} - {{ ed.weekEnd }}</span></div>
+        <ol class="pulse-feature__list">
+          {% for e in ed.entries %}{% if loop.index <= 10 %}
+          <li class="pulse-rank">
+            <span class="pulse-rank__no">{{ e.rank }}</span>
+            <span class="pulse-rank__artist">{{ e.artist }}<em>{{ e.genre }}</em></span>
+            <span class="pulse-rank__delta {% if e.status == 'new' %}is-new{% elif e.change > 0 %}is-up{% elif e.change < 0 %}is-down{% else %}is-flat{% endif %}">{% if e.status == 'new' %}New{% elif e.change > 0 %}&#9650; {{ e.change }}%{% elif e.change < 0 %}&#9660; {{ e.change | abs }}%{% else %}&#8226;{% endif %}</span>
+            <span class="pulse-rank__score">{{ e.score }}</span>
+          </li>
+          {% endif %}{% endfor %}
+        </ol>
+        <a class="pulse-feature__cta" href="#pulse-{{ r.id }}-{{ ed.slug }}" data-pulse-open="pulse-{{ r.id }}-{{ ed.slug }}">View the full Top 10 <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    {% else %}
+    <p class="pulse-empty">The first {{ r.label }} Chart Pulse drops soon.</p>
+    {% endif %}
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if chartPulse and chartPulse.regions.length %}
+{# Each week's Top 10, opened from its card #}
+{% for r in chartPulse.regions %}{% for ed in r.editions %}
+<div class="pmodal" id="pulse-{{ r.id }}-{{ ed.slug }}" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="{{ ed.title }}, {{ ed.weekStart }} to {{ ed.weekEnd }}">
+  <div class="pmodal__scrim" data-pulse-close></div>
+  <div class="pmodal__sheet" role="document">
+    <header class="pmodal__head">
+      <div>
+        <div class="pmodal__kicker">{{ ed.weekStart }} - {{ ed.weekEnd }}</div>
+        <h3 class="pmodal__title">{{ ed.title }}</h3>
+        <p class="pmodal__sub">"{{ ed.subtitle }}"</p>
+      </div>
+      <button type="button" class="pmodal__close" data-pulse-close aria-label="Close">&times;</button>
+    </header>
+
+    <div class="pchart">
+      {% for e in ed.entries %}
+      <article class="pchart__row">
+        <div class="pchart__rank">#{{ e.rank }}</div>
+        <div class="pchart__avatar">
+          {% if e.image %}<img src="{{ e.image }}" alt="{{ e.artist }}" loading="lazy">{% else %}<span class="pchart__initials" aria-hidden="true">{{ e.artist | initials }}</span>{% endif %}
+        </div>
+        <div class="pchart__info">
+          <h4 class="pchart__name">{{ e.artist }}</h4>
+          <div class="pchart__genre">{{ e.genre }}</div>
+          <p class="pchart__bio">{{ e.note }}</p>
+        </div>
+        <div class="pchart__scorebox">
+          <div class="pchart__scorelabel">Pulse Score</div>
+          <div class="pchart__scorerow">
+            <span class="pchart__score">{{ e.score }}</span>
+            <span class="pchart__delta {% if e.status == 'new' %}is-new{% elif e.change > 0 %}is-up{% elif e.change < 0 %}is-down{% else %}is-flat{% endif %}">
+              <span class="pchart__arrow" aria-hidden="true">{% if e.status == 'new' %}&#9664;{% elif e.change > 0 %}&#9650;{% elif e.change < 0 %}&#9660;{% else %}&#9664;{% endif %}</span>
+              <span class="pchart__pct">{{ e.change | abs }}%</span>
+            </span>
+          </div>
+          <div class="pchart__when">{% if e.status == 'new' %}New entry{% else %}This week{% endif %}</div>
+          <div class="pchart__strong">Strong: <b>{{ e.platform }}</b></div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endfor %}{% endfor %}
+{% endif %}
+
+<section class="contact" id="contact">
+  <h2 class="contact__heading">Get The Wire <em>in your inbox.</em></h2>
+  <p style="font-family: var(--font-display); font-weight: 300; font-size: clamp(18px, 1.4vw, 22px); color: var(--text-dim); max-width: 50ch; margin: 0 auto 48px;">
+    A monthly signal on what's coming next in culture - trends, drops, talent and the cultural shifts brands need to know about. No fluff, no spam.
+  </p>
+  <a href="mailto:hello@csa.global?subject=Subscribe%20to%20The%20Wire&body=Please%20add%20me%20to%20The%20Wire%20newsletter." class="contact__email">
+    Subscribe
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+  </a>
+</section>

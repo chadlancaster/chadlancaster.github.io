@@ -1,0 +1,8 @@
+{
+  "roles": ["Admin & Developer", "Developer", "Copy Writer", "Editor", "Author", "Custom"],
+  "users": [
+    { "name": "Chad Lancaster", "email": "design@csa.global", "role": "Admin & Developer", "access": ["all"], "twoFactor": true, "lastActive": "2026-07-09" },
+    { "name": "Davin Phillips", "email": "davin@csa.global", "role": "Developer", "access": ["all"], "twoFactor": true, "lastActive": "2026-07-08" },
+    { "name": "Robert Greeff", "email": "robert@csa.global", "role": "Copy Writer", "access": ["articles"], "twoFactor": true, "lastActive": "2026-07-09" }
+  ]
+}

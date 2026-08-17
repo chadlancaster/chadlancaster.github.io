@@ -1,0 +1,101 @@
+---
+layout: base.njk
+bodyClass: theme-wire
+navCurrent: wire
+ogType: article
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ title | dump | safe }},
+  "datePublished": "{{ date | isoDate }}",
+  "author": { "@type": "Person", "name": {{ author | dump | safe }} },
+  "image": "{{ site.url }}{{ image }}",
+  "publisher": { "@type": "Organization", "name": "Celebrity Services Africa" },
+  "mainEntityOfPage": "{{ site.url }}{{ page.url }}"
+}
+</script>
+
+<article class="post" data-theme="light">
+
+  <!-- LEAD IMAGE -->
+  <figure class="post__lead">
+    <div class="post__lead-media">
+      {% if image %}<img src="{{ image }}" alt="{{ imageAlt }}" />{% else %}<div class="placeholder"><span class="placeholder__label">[ Lead image ]</span></div>{% endif %}
+    </div>
+    {% if imageCaption or imageCredit %}<figcaption class="post__lead-cap">{{ imageCaption }}{% if imageCredit %} <span>{{ imageCredit }}</span>{% endif %}</figcaption>{% endif %}
+  </figure>
+
+  <div class="post__wrap">
+    <div class="post__main">
+    <header class="post__head">
+      <a class="post__back" href="/the-wire.html"><span aria-hidden="true">←</span> The Wire</a>
+      {% if category %}<div class="post__kicker">{{ category }}</div>{% endif %}
+      {# titleEm highlights that phrase of the headline in the accent colour,
+         the way the original design did. Kept out of `title` because that
+         feeds <title> and the og tags, which must stay plain text. #}
+      <h1 class="post__title">{% if titleEm %}{{ title | replace(titleEm, "<em>" + titleEm + "</em>") | safe }}{% else %}{{ title }}{% endif %}</h1>
+      {% if standfirst %}<p class="post__standfirst">{{ standfirst }}</p>{% endif %}
+
+      <div class="post__byline">
+        {% if author %}<div class="post__by"><span class="post__by-label">Words</span><span class="post__by-value">{{ author }}</span></div>{% endif %}
+        <div class="post__by"><span class="post__by-label">Published</span><span class="post__by-value">{{ date | readableDate }}</span></div>
+        <div class="post__by"><span class="post__by-label">Reading time</span><span class="post__by-value">{{ content | readingTime }}</span></div>
+        <div class="post__share" aria-label="Share this article">
+          <a href="https://twitter.com/intent/tweet?url={{ (site.url + page.url) | urlencode }}&text={{ title | urlencode }}" target="_blank" rel="noopener" aria-label="Share on X">X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ (site.url + page.url) | urlencode }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">In</a>
+          <a href="{{ site.url }}{{ page.url }}" onclick="if(navigator.clipboard){navigator.clipboard.writeText(this.href);}return false;" aria-label="Copy link">Link</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- BODY (from Markdown) -->
+    <div class="post__body">
+      {{ content | safe }}
+    </div>
+
+    {% if tags %}
+    <div class="post__tags">
+      {% for t in tags %}{% if t != "article" %}<span>{{ t }}</span>{% endif %}{% endfor %}
+    </div>
+    {% endif %}
+
+    {% if author %}
+    <div class="post__author">
+      <div class="post__author-avatar" aria-hidden="true">{{ author | initials }}</div>
+      <div class="post__author-body">
+        <div class="post__author-name">{{ author }}</div>
+        {% if authorRole %}<div class="post__author-role">{{ authorRole }}</div>{% endif %}
+        {% if authorBio %}<p class="post__author-bio">{{ authorBio }}</p>{% endif %}
+      </div>
+    </div>
+    {% endif %}
+    </div><!-- /post__main -->
+
+    <aside class="post__aside">
+      <h2 class="post__aside-title">Trending <em>Articles.</em></h2>
+      <div class="post__aside-cards">
+        {% for post in collections.articles | exclude(page.url) | limit(3) %}
+        <a class="article-card" href="{{ post.url }}">
+          <div class="article-card__image">
+            {% if post.data.image %}<img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" loading="lazy" />{% else %}<div class="placeholder"><span class="placeholder__label">[ image ]</span></div>{% endif %}
+          </div>
+          <div class="article-card__meta"><span>{{ post.data.category }}</span><span class="date">{{ post.data.date | readableDate }}</span></div>
+          <h3 class="article-card__title">{{ post.data.title }}</h3>
+          <div class="article-card__foot"><span>{{ post.templateContent | readingTime }}</span><span aria-hidden="true">→</span></div>
+        </a>
+        {% endfor %}
+      </div>
+
+      <div class="post__subscribe">
+        <h3 class="post__subscribe-title">The Wire, <em>in your inbox.</em></h3>
+        <p class="post__subscribe-copy">A monthly signal on what's shifting in culture, trends, drops and talent. No fluff, no spam.</p>
+        <form class="post__subscribe-form" action="#" method="post" onsubmit="return false;">
+          <input type="email" placeholder="Email address" aria-label="Email address" required>
+          <button type="submit" aria-label="Subscribe"><span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </aside>
+  </div>
+</article>

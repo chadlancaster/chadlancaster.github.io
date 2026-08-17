@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+<header class="page-hero">
+  <div class="page-hero__inner">
+    {% if kicker %}<div class="page-hero__kicker">{{ kicker }}</div>{% endif %}
+    <h1 class="page-hero__title">{{ title }}</h1>
+    {% if lede %}<p class="page-hero__lede">{{ lede }}</p>{% endif %}
+  </div>
+</header>
+<section class="section">
+  <div class="post__wrap">
+    <div class="post__body">
+      {{ content | safe }}
+    </div>
+  </div>
+</section>

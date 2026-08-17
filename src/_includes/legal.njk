@@ -1,0 +1,13 @@
+---
+layout: base.njk
+---
+<main class="legal">
+  <div class="legal__wrap">
+    <a href="/index.html" class="legal__back"><span aria-hidden="true">←</span> Back to CSA</a>
+    <h1 class="legal__title">{{ title }}</h1>
+    {% if legalUpdated %}<p class="legal__meta">Last updated: {{ legalUpdated }}</p>{% endif %}
+    <div class="legal__body">
+      {{ content | safe }}
+    </div>
+  </div>
+</main>

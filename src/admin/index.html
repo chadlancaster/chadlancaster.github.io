@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>CSA: Content Studio</title>
+</head>
+<body>
+  <!-- Sveltia CMS - a lightweight, WordPress-like editor that commits to GitHub.
+       Drop-in compatible with Decap/Netlify CMS config. -->
+  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
+
+  <!-- On-brand live preview: render Wire articles in the real site styling
+       inside the editor's preview pane. Registered defensively so it never
+       breaks the editor if the preview API changes. -->
+  <script>
+    (function () {
+      function initPreview(CMS) {
+        // 1) Load the real site stylesheet into the preview pane.
+        try { CMS.registerPreviewStyle("/styles.css"); } catch (e) {}
+
+        // 2) Render the article exactly like the live page (teal Wire look).
+        var h = window.h;
+        var createClass = window.createClass;
+        if (!h || !createClass || !CMS.registerPreviewTemplate) return;
+        try {
+          var ArticlePreview = createClass({
+            render: function () {
+              var d = this.props.entry.get("data");
+              var body = this.props.widgetFor("body");
+              var img = d.get("image");
+              return h(
+                "div",
+                { className: "theme-wire" },
+                h(
+                  "article",
+                  { className: "post", "data-theme": "light", style: "min-height:0;padding-top:32px" },
+                  img
+                    ? h(
+                        "figure",
+                        { className: "post__lead" },
+                        h(
+                          "div",
+                          { className: "post__lead-media" },
+                          h("img", { src: img, alt: d.get("imageAlt") || "" })
+                        ),
+                        d.get("imageCaption")
+                          ? h(
+                              "figcaption",
+                              { className: "post__lead-cap" },
+                              d.get("imageCaption"),
+                              d.get("imageCredit") ? h("span", null, " " + d.get("imageCredit")) : null
+                            )
+                          : null
+                      )
+                    : null,
+                  h(
+                    "div",
+                    { className: "post__wrap" },
+                    h(
+                      "header",
+                      { className: "post__head" },
+                      d.get("category") ? h("div", { className: "post__kicker" }, d.get("category")) : null,
+                      h("h1", { className: "post__title" }, d.get("title") || "Untitled"),
+                      d.get("standfirst") ? h("p", { className: "post__standfirst" }, d.get("standfirst")) : null,
+                      h(
+                        "div",
+                        { className: "post__byline" },
+                        h(
+                          "div",
+                          { className: "post__by" },
+                          h("span", { className: "post__by-label" }, "Words"),
+                          h("span", { className: "post__by-value" }, d.get("author") || "-")
+                        ),
+                        h(
+                          "div",
+                          { className: "post__by" },
+                          h("span", { className: "post__by-label" }, "Published"),
+                          h("span", { className: "post__by-value" }, d.get("date") || "-")
+                        )
+                      )
+                    ),
+                    h("div", { className: "post__body" }, body)
+                  )
+                )
+              );
+            },
+          });
+          CMS.registerPreviewTemplate("articles", ArticlePreview);
+        } catch (e) {
+          console.warn("[CSA] on-brand preview not applied:", e);
+        }
+      }
+
+      var tries = 0;
+      var timer = setInterval(function () {
+        if (window.CMS) {
+          clearInterval(timer);
+          initPreview(window.CMS);
+        } else if (++tries > 150) {
+          clearInterval(timer);
+        }
+      }, 100);
+    })();
+  </script>
+</body>
+</html>

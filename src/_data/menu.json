@@ -1,0 +1,7 @@
+{
+  "primary": [
+    { "label": "Work", "url": "/index.html#work" },
+    { "label": "About", "url": "/about.html" },
+    { "label": "The Wire", "url": "/the-wire.html" }
+  ]
+}

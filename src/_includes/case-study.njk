@@ -1,0 +1,72 @@
+---
+layout: base.njk
+ogType: article
+---
+<article class="cs">
+
+  <header class="cs__hero">
+    <a href="/index.html#work" class="cs__back"><span aria-hidden="true">←</span> Selected Work</a>
+    <div class="cs__hero-grid">
+      <div class="cs__hero-main">
+        <div class="cs__kicker">Case Study{% if discipline %} / {{ discipline }}{% endif %}</div>
+        <h1 class="cs__title">{{ title }}</h1>
+        {% if standfirst %}<p class="cs__dek">{{ standfirst }}</p>{% endif %}
+      </div>
+      {% if client %}
+      <div class="cs__brand">
+        <div class="cs__brand-label">Client</div>
+        {% if clientLogo %}
+        <img class="cs__brand-logo" src="{{ clientLogo }}" alt="{{ client }}" />
+        {% else %}
+        <div class="cs__brand-name">{{ client }}</div>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+    <div class="cs__meta">
+      {% if client %}<div class="cs__meta-item"><span>Client</span><b>{{ client }}</b></div>{% endif %}
+      {% if discipline %}<div class="cs__meta-item"><span>Discipline</span><b>{{ discipline }}</b></div>{% endif %}
+      {% if market %}<div class="cs__meta-item"><span>Market</span><b>{{ market }}</b></div>{% endif %}
+      {% if year %}<div class="cs__meta-item"><span>Year</span><b>{{ year }}</b></div>{% endif %}
+    </div>
+  </header>
+
+  <div class="cs__body">
+    <div class="cs__narrative">
+      {% if challenge %}<section class="cs__block"><div class="cs__block-no">01</div><h2 class="cs__block-title">Challenge</h2><p class="cs__block-body">{{ challenge }}</p></section>{% endif %}
+      {% if bigIdea %}<section class="cs__block"><div class="cs__block-no">02</div><h2 class="cs__block-title">The Big Idea</h2><p class="cs__block-body">{{ bigIdea }}</p></section>{% endif %}
+      {% if execution %}<section class="cs__block"><div class="cs__block-no">03</div><h2 class="cs__block-title">Execution</h2><p class="cs__block-body">{{ execution }}</p></section>{% endif %}
+    </div>
+
+    <aside class="cs__aside">
+      <div class="cs__sticky">
+        <div class="cs__video"{% if videoYouTube %} data-youtube="{{ videoYouTube }}"{% endif %} role="button" tabindex="0" aria-label="Play film - {{ title }}">
+          <div class="cs__video-poster">
+            {% if image %}<img src="{{ image }}" alt="{{ imageAlt }}" />{% else %}<div class="placeholder"><span class="placeholder__label">[ film poster ]</span></div>{% endif %}
+          </div>
+          {% if videoTitle %}
+          <div class="cs__video-meta">
+            <div class="cs__video-title">{{ videoTitle }}</div>
+            {% if videoSub %}<div class="cs__video-sub">{{ videoSub }}</div>{% endif %}
+          </div>
+          {% endif %}
+          <button class="cs__play" type="button" aria-hidden="true" tabindex="-1">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+
+        {% if stats %}
+        <div class="cs__stats">
+          {% for s in stats %}
+          <div class="cs__stat">
+            <div class="cs__stat-num">{{ s.value }}</div>
+            <div class="cs__stat-label">{{ s.label }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </aside>
+  </div>
+
+</article>

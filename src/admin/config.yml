@@ -1,0 +1,214 @@
+# =====================================================================
+# CSA Content Studio - Sveltia CMS configuration
+# ---------------------------------------------------------------------
+# BEFORE GOING LIVE, fill in the two placeholders below:
+#   1. backend.repo      -> "your-github-org/your-repo-name"
+#   2. backend.base_url  -> the URL of your GitHub OAuth worker
+# =====================================================================
+
+# CSA logo on the login screen + header.
+logo_url: /brand/CSA_Script_Logo_Black.png
+
+# Run the whole CMS locally (no GitHub) to review the design:
+# `npm run dev` → http://localhost:8080/admin/ → "Work with Local Repository".
+local_backend: true
+
+backend:
+  name: github
+  repo: CSA-ORG/csa-site        # <-- CHANGE ME (owner/repo)
+  branch: main
+  base_url: https://REPLACE-WITH-YOUR-AUTH-WORKER.workers.dev   # <-- CHANGE ME
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+site_url: https://csa.global
+display_url: https://csa.global
+publish_mode: editorial_workflow   # draft → in review → publish
+
+collections:
+  # ===============================================================
+  # THE WIRE - Articles   (like WP "Posts")
+  # ===============================================================
+  - name: articles
+    label: "The Wire"
+    label_singular: "Article"
+    icon: article
+    folder: "src/the-wire"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{title}}  ·  {{date | date('YYYY-MM-DD')}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: titleEm, label: "Highlight in the title", widget: string, required: false, hint: "The phrase from the title to colour in orange, e.g. 'where the genre is going next'" }
+      - { name: category, label: "Category", widget: select, options: ["Trend", "Signal", "Masterclass", "Insight", "Drop", "Spotlight"] }
+      - { name: standfirst, label: "Standfirst / excerpt", widget: text }
+      - { name: author, label: "Author", widget: string }
+      - { name: authorRole, label: "Author role", widget: string, required: false }
+      - { name: authorBio, label: "Author bio", widget: text, required: false }
+      - { name: date, label: "Publish date", widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { name: image, label: "Lead image  (16:9)", widget: image }
+      - { name: imageAlt, label: "Lead image ALT text  (REQUIRED for accessibility & SEO)", widget: string, hint: "Describe the image, e.g. 'A rooftop music session at dusk in Accra'" }
+      - { name: imageCaption, label: "Image caption", widget: string, required: false }
+      - { name: imageCredit, label: "Image credit", widget: string, required: false }
+      - { name: tags, label: "Tags", widget: list, required: false }
+      - { name: featured, label: "Feature on the homepage", widget: boolean, default: false }
+      - { name: order, label: "Homepage order (lower shows first)", widget: number, required: false, value_type: int }
+      - { name: relatedCaseStudy, label: "Related case study", widget: relation, required: false, collection: caseStudies, value_field: "{{slug}}", search_fields: [title], display_fields: [title], multiple: true }
+      - { name: body, label: "Body", widget: markdown, hint: "## for headings, > for pull-quotes, - for bullet lists. Insert images inline via the toolbar." }
+      # --- SEO: the final step before publishing ---
+      - { name: focusKeyphrase, label: "SEO · Focus keyphrase", widget: string, required: false, hint: "The term you want this article to rank for" }
+      - { name: seoTitle, label: "SEO · Title override", widget: string, required: false, hint: "Defaults to the article title" }
+      - { name: description, label: "SEO · Meta description (~150 chars)", widget: text, required: false, pattern: ['^.{0,160}$', "Keep it under 160 characters"] }
+
+  # ===============================================================
+  # SELECTED WORK - Case Studies
+  # ===============================================================
+  - name: caseStudies
+    label: "Case Studies"
+    label_singular: "Case Study"
+    icon: work
+    folder: "src/work"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{title}}  ·  {{client}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: client, label: "Client", widget: string }
+      - { name: serviceArea, label: "Lives on (service page)", widget: select, options: ["Brand Communications", "Events & Activations", "Sport", "Talent"], hint: "Which Selected Work section this case study appears in" }
+      - { name: featured, label: "Feature on the homepage", widget: boolean, default: false }
+      - { name: order, label: "Homepage order (lower shows first)", widget: number, required: false, value_type: int }
+      - { name: relatedTalent, label: "Talent involved", widget: relation, required: false, collection: talent, value_field: "{{slug}}", search_fields: [name], display_fields: [name], multiple: true }
+      - { name: discipline, label: "Discipline  (e.g. Brand Comms · Earned Media)", widget: string, required: false }
+      - { name: market, label: "Market", widget: string, required: false }
+      - { name: year, label: "Year", widget: string, required: false }
+      - { name: date, label: "Date (for ordering)", widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { name: standfirst, label: "One-line summary (under the title)", widget: text }
+      - { name: image, label: "Lead image / film poster (16:9)", widget: image }
+      - { name: imageAlt, label: "Lead image ALT text  (REQUIRED)", widget: string }
+      - { name: videoYouTube, label: "YouTube video ID (optional)", widget: string, required: false, hint: "Just the ID, e.g. dQw4w9WgXcQ" }
+      - { name: videoTitle, label: "Video title overlay", widget: string, required: false }
+      - { name: videoSub, label: "Video subtitle", widget: string, required: false }
+      - { name: challenge, label: "01 · Challenge", widget: text }
+      - { name: bigIdea, label: "02 · The Big Idea", widget: text }
+      - { name: execution, label: "03 · Execution", widget: text }
+      - name: stats
+        label: "Impact stats (3 tiles)"
+        widget: list
+        max: 3
+        required: false
+        fields:
+          - { name: value, label: "Value (e.g. R2.67M)", widget: string }
+          - { name: label, label: "Label (e.g. Earned Media)", widget: string }
+      - { name: description, label: "SEO meta description", widget: text, required: false }
+
+  # ===============================================================
+  # TALENT  (roster) - managed here, shown on the Talent page
+  # ===============================================================
+  - name: talent
+    label: "Talent"
+    label_singular: "Talent"
+    icon: person
+    folder: "src/talent-roster"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{name}}  ·  {{discipline}}"
+    fields:
+      - { name: name, label: "Name", widget: string }
+      - { name: discipline, label: "Discipline (e.g. Actor, Musician)", widget: string }
+      - { name: country, label: "Country / base", widget: string, required: false }
+      - { name: image, label: "Profile image", widget: image, required: false }
+      - { name: imageAlt, label: "Profile image ALT text", widget: string, required: false }
+      - { name: instagram, label: "Instagram handle", widget: string, required: false }
+      - { name: featured, label: "Featured on roster?", widget: boolean, default: true }
+      - { name: order, label: "Sort order", widget: number, required: false }
+      - { name: body, label: "Bio", widget: markdown, required: false }
+
+  # ===============================================================
+  # BOARD MEMBERS / LEADERSHIP - shown on the About page
+  # ===============================================================
+  - name: board
+    label: "Board Members"
+    label_singular: "Board Member"
+    icon: group
+    folder: "src/board"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{name}}  ·  {{role}}"
+    fields:
+      - { name: name, label: "Name", widget: string }
+      - { name: role, label: "Role / title", widget: string }
+      - { name: image, label: "Portrait", widget: image, required: false }
+      - { name: imageAlt, label: "Portrait ALT text", widget: string, required: false }
+      - { name: order, label: "Sort order", widget: number, required: false }
+      - { name: body, label: "Bio", widget: markdown, required: false }
+
+  # ===============================================================
+  # PAGES - standalone pages (Privacy, Terms, etc.)
+  # ===============================================================
+  - name: pages
+    label: "Pages"
+    label_singular: "Page"
+    icon: page
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: kicker, label: "Kicker (small label above title)", widget: string, required: false }
+      - { name: lede, label: "Intro line", widget: text, required: false }
+      - { name: description, label: "SEO meta description", widget: text, required: false }
+      - { name: body, label: "Body", widget: markdown }
+
+  # ===============================================================
+  # CLIENTS - logos shown on the homepage strip
+  # ===============================================================
+  - name: clients
+    label: "Clients"
+    label_singular: "Client"
+    icon: star
+    folder: "src/clients"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{name}}"
+    sortable_fields: [order, name]
+    fields:
+      - { name: name, label: "Client name", widget: string }
+      - { name: logo, label: "Logo  (white PNG on transparent works best)", widget: image }
+      - { name: url, label: "Website URL", widget: string, required: false }
+      - { name: order, label: "Order", widget: number, required: false, value_type: int }
+
+  # ===============================================================
+  # AWARDS - award logos won
+  # ===============================================================
+  - name: awards
+    label: "Awards"
+    label_singular: "Award"
+    icon: star
+    folder: "src/awards"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{name}}  ·  {{year}}"
+    sortable_fields: [order, year, name]
+    fields:
+      - { name: name, label: "Award name", widget: string }
+      - { name: logo, label: "Award logo", widget: image, required: false }
+      - { name: year, label: "Year", widget: string, required: false }
+      - { name: url, label: "Link (optional)", widget: string, required: false }
+      - { name: order, label: "Order", widget: number, required: false, value_type: int }

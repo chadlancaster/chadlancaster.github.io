@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="CSA Talent - Career architects for the artists, athletes and creators shaping global culture from Africa." />
+<title>Talent - CSA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200..900&family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<nav class="nav is-scrolled" id="nav" aria-label="Primary">
+  <a href="./index.html" class="nav__logo" aria-label="CSA - home">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="./brand/CSA_animation_logo.webm" type="video/webm">
+      <source src="./brand/CSA_animation_logo.mp4" type="video/mp4">
+    </video>
+  </a>
+  <ul class="nav__menu">
+    <li><a href="./index.html#work">Work</a></li>
+    <li><a href="./about.html">About</a></li>
+    <li>
+      <span class="nav__menu-trigger" style="color: var(--accent);">Services</span>
+      <div class="nav__submenu">
+        <a href="./brand-communications.html">Brand Communications</a>
+        <a href="./talent.html" style="color: var(--accent);">Talent</a>
+        <a href="./events-activations.html">Events &amp; Activations</a>
+        <a href="https://napkin-sport.com/#top" target="_blank" rel="noopener">Napkin Sport</a>
+      </div>
+    </li>
+    <li><a href="./the-wire.html">The Wire</a></li>
+  </ul>
+  <a href="./index.html#contact" class="nav__cta">Get in touch</a>
+  <div class="nav__hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="nav__mobile" id="mobileNav">
+  <a href="./index.html#work">Work</a>
+  <a href="./about.html">About</a>
+  <a href="./brand-communications.html" class="nav__mobile-sub">→ Brand Communications</a>
+  <a href="./talent.html" class="nav__mobile-sub">→ Talent</a>
+  <a href="./events-activations.html" class="nav__mobile-sub">→ Events &amp; Activations</a>
+  <a href="https://napkin-sport.com/#top" class="nav__mobile-sub" target="_blank" rel="noopener">→ Napkin Sport</a>
+  <a href="./the-wire.html">The Wire</a>
+  <a href="./index.html#contact">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero__inner">
+    <div class="page-hero__kicker" data-reveal>Services / 02</div>
+    <h1 class="page-hero__title" data-reveal data-reveal-delay="1">
+      <em>Talent.</em>
+    </h1>
+    <p class="page-hero__lede" data-reveal data-reveal-delay="2">
+      CSA is more than a connector - we manage, develop, and elevate talent to help them build sustainable careers while maximizing brand collaborations.
+    </p>
+  </div>
+</header>
+
+<!-- ROSTER GRID -->
+<section class="section" data-theme="light">
+  <div class="section__head">
+    <h2 class="section__title" data-reveal>Featured <em>roster.</em></h2>
+    <p class="section__sub" data-reveal data-reveal-delay="1">The faces of culture. A snapshot of the artists, athletes, creators and cultural leaders we've partnered with to create influence, build legacies and move culture forward.</p>
+  </div>
+
+  <div class="talent__grid" id="talentGrid" data-reveal>
+
+    <a class="talent-card">
+      <div class="talent-card__image"><img src="./roster/naomi-campbell.jpg" alt="Naomi Campbell" loading="lazy"></div>
+      <div class="talent-card__name">Naomi Campbell</div>
+      <div class="talent-card__meta"><span>Supermodel</span><span>UK</span></div>
+    </a>
+
+    <a class="talent-card">
+      <div class="talent-card__image"><img src="./roster/djimon-hounsou.jpg" alt="Djimon Hounsou" loading="lazy"></div>
+      <div class="talent-card__name">Djimon Hounsou</div>
+      <div class="talent-card__meta"><span>Actor</span><span>Benin / USA</span></div>
+    </a>
+
+    <a class="talent-card">
+      <div class="talent-card__image"><img src="./roster/danny-glover.jpg" alt="Danny Glover" loading="lazy"></div>
+      <div class="talent-card__name">Danny Glover</div>
+      <div class="talent-card__meta"><span>Actor</span><span>USA</span></div>
+    </a>
+
+    <a class="talent-card">
+      <div class="talent-card__image"><img src="./roster/wesley-snipes.jpg" alt="Wesley Snipes" loading="lazy"></div>
+      <div class="talent-card__name">Wesley Snipes</div>
+      <div class="talent-card__meta"><span>Actor</span><span>USA</span></div>
+    </a>
+
+    <a class="talent-card">
+      <div class="talent-card__image"><img src="./roster/akon.jpg" alt="Akon" loading="lazy"></div>
+      <div class="talent-card__name">Akon</div>
+      <div class="talent-card__meta"><span>Singer · Producer</span><span>Senegal / USA</span></div>
+    </a>
+
+    <a class="talent-card">
+      <div class="talent-card__image"><img src="./roster/common-the-rapper.jpg" alt="Common" loading="lazy"></div>
+      <div class="talent-card__name">Common</div>
+      <div class="talent-card__meta"><span>Rapper · Actor</span><span>USA</span></div>
+    </a>
+
+    <a class="talent-card">
+      <div class="talent-card__image"><img src="./roster/stacy-barthe.jpg" alt="Stacy Barthe" loading="lazy"></div>
+      <div class="talent-card__name">Stacy Barthe</div>
+      <div class="talent-card__meta"><span>Singer-Songwriter</span><span>USA</span></div>
+    </a>
+
+    <a class="talent-card">
+      <div class="talent-card__image"><img src="./roster/dbanj.jpg" alt="D'Banj" loading="lazy"></div>
+      <div class="talent-card__name">D'Banj</div>
+      <div class="talent-card__meta"><span>Musician</span><span>Nigeria</span></div>
+    </a>
+
+    <a class="talent-card">
+      <div class="talent-card__image"><img src="./roster/don-jazzy.jpg" alt="Don Jazzy" loading="lazy"></div>
+      <div class="talent-card__name">Don Jazzy</div>
+      <div class="talent-card__meta"><span>Music Producer</span><span>Nigeria</span></div>
+    </a>
+
+    <a class="talent-card" data-extra>
+      <div class="talent-card__image"><img src="./roster/bonang-matheba.jpg" alt="Bonang Matheba" loading="lazy"></div>
+      <div class="talent-card__name">Bonang Matheba</div>
+      <div class="talent-card__meta"><span>TV Presenter</span><span>South Africa</span></div>
+    </a>
+
+    <a class="talent-card" data-extra>
+      <div class="talent-card__image"><img src="./roster/aka.jpg" alt="AKA" loading="lazy"></div>
+      <div class="talent-card__name">AKA</div>
+      <div class="talent-card__meta"><span>Rapper</span><span>South Africa</span></div>
+    </a>
+
+    <a class="talent-card" data-extra>
+      <div class="talent-card__image"><img src="./roster/sho-madjozi.jpg" alt="Sho Madjozi" loading="lazy"></div>
+      <div class="talent-card__name">Sho Madjozi</div>
+      <div class="talent-card__meta"><span>Rapper · Musician</span><span>South Africa</span></div>
+    </a>
+
+    <a class="talent-card" data-extra>
+      <div class="talent-card__image"><img src="./roster/dj-zinhle.jpg" alt="DJ Zinhle" loading="lazy"></div>
+      <div class="talent-card__name">DJ Zinhle</div>
+      <div class="talent-card__meta"><span>DJ · Producer</span><span>South Africa</span></div>
+    </a>
+
+    <a class="talent-card" data-extra>
+      <div class="talent-card__image"><img src="./roster/moonchild-sanelly.jpg" alt="Moonchild Sanelly" loading="lazy"></div>
+      <div class="talent-card__name">Moonchild Sanelly</div>
+      <div class="talent-card__meta"><span>Musician</span><span>South Africa</span></div>
+    </a>
+
+    <a class="talent-card" data-extra>
+      <div class="talent-card__image"><img src="./roster/jsomething.jpg" alt="J'Something" loading="lazy"></div>
+      <div class="talent-card__name">J'Something</div>
+      <div class="talent-card__meta"><span>Singer</span><span>South Africa</span></div>
+    </a>
+
+    <a class="talent-card" data-extra>
+      <div class="talent-card__image"><img src="./roster/karabo-poppy.jpg" alt="Karabo Poppy" loading="lazy"></div>
+      <div class="talent-card__name">Karabo Poppy</div>
+      <div class="talent-card__meta"><span>Illustrator · Artist</span><span>South Africa</span></div>
+    </a>
+
+    <a class="talent-card" data-extra>
+      <div class="talent-card__image"><img src="./roster/osborne-macharia.jpg" alt="Osborne Macharia" loading="lazy"></div>
+      <div class="talent-card__name">Osborne Macharia</div>
+      <div class="talent-card__meta"><span>Photographer</span><span>Kenya</span></div>
+    </a>
+
+    <a class="talent-card" data-extra>
+      <div class="talent-card__image"><img src="./roster/david-tlale.jpg" alt="David Tlale" loading="lazy"></div>
+      <div class="talent-card__name">David Tlale</div>
+      <div class="talent-card__meta"><span>Fashion Designer</span><span>South Africa</span></div>
+    </a>
+
+  </div>
+
+  <div style="text-align: center; margin-top: clamp(60px, 8vw, 100px);" data-reveal>
+    <a href="#" id="rosterToggle" class="big-link" role="button" aria-expanded="false" aria-controls="talentGrid">
+      <span class="roster-toggle__label">View the full roster</span>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="section">
+  <div class="section__head">
+    <h2 class="section__title" data-reveal>How we <em>work</em> with talent.</h2>
+    <p class="section__sub" data-reveal data-reveal-delay="1">How we build enduring careers. We don't manage moments. We build influence, unlock opportunity and help create careers designed to shape culture for the long term.</p>
+  </div>
+
+  <div class="capabilities" data-reveal>
+    <div class="capability">
+      <div class="capability__no">/ 01</div>
+      <h3 class="capability__title">Long-Term Career Development</h3>
+      <p class="capability__body">Strategic career planning that aligns creative ambition, commercial opportunity and cultural relevance across every stage of the journey.</p>
+    </div>
+    <div class="capability">
+      <div class="capability__no">/ 02</div>
+      <h3 class="capability__title">Strategic Brand Partnerships</h3>
+      <p class="capability__body">Purpose-driven partnerships that strengthen personal brands, deepen audience connection and create lasting commercial value.</p>
+    </div>
+    <div class="capability">
+      <div class="capability__no">/ 03</div>
+      <h3 class="capability__title">Editorial &amp; Press</h3>
+      <p class="capability__body">Compelling storytelling, strategic media placement and earned visibility that builds reputation, credibility and cultural influence.</p>
+    </div>
+    <div class="capability">
+      <div class="capability__no">/ 04</div>
+      <h3 class="capability__title">Tour &amp; Event Strategy</h3>
+      <p class="capability__body">From global tours to iconic cultural moments, we create opportunities that expand audiences, elevate profiles and grow careers.</p>
+    </div>
+    <div class="capability">
+      <div class="capability__no">/ 05</div>
+      <h3 class="capability__title">Cross-Continental Bookings</h3>
+      <p class="capability__body">Connecting talent with opportunities across Africa and the world through a trusted international network and deep cultural expertise.</p>
+    </div>
+    <div class="capability">
+      <div class="capability__no">/ 06</div>
+      <h3 class="capability__title">Social &amp; Platform Growth</h3>
+      <p class="capability__body">Audience-first content strategies that grow communities, deepen engagement and build lasting influence across every platform that matters.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PARTNERSHIPS -->
+<section class="section" data-theme="light">
+  <div class="section__head">
+    <h2 class="section__title" data-reveal>Featured <em>partnerships.</em></h2>
+    <p class="section__sub" data-reveal data-reveal-delay="1">A few brand-talent collaborations we've engineered recently.</p>
+  </div>
+
+  <div class="work-grid" id="partnershipsGrid">
+
+    <a class="case" data-reveal>
+      <div class="case__media"><img src="./roster/naomi-campbell.jpg" alt="" loading="lazy"></div>
+      <div class="case__no">/ 01</div>
+      <div class="case__client"><b>Naomi Campbell × Luxury House</b><span>Global · 2024</span></div>
+      <h3 class="case__title">A supermodel collaboration that travelled four continents.</h3>
+      <div class="case__impact"><span>Earned reach</span><b>410M</b></div>
+    </a>
+
+    <a class="case" data-reveal data-reveal-delay="1">
+      <div class="case__media"><img src="./roster/djimon-hounsou.jpg" alt="" loading="lazy"></div>
+      <div class="case__no">/ 02</div>
+      <div class="case__client"><b>Djimon Hounsou × Mandela Legacy</b><span>Featured · 2024</span></div>
+      <h3 class="case__title">An ambassador moment for a culture-led philanthropy push.</h3>
+      <div class="case__impact"><span>Funds raised</span><b>$11M+</b></div>
+    </a>
+
+    <a class="case" data-reveal data-reveal-delay="2">
+      <div class="case__media"><img src="./roster/common-the-rapper.jpg" alt="" loading="lazy"></div>
+      <div class="case__no">/ 03</div>
+      <div class="case__client"><b>Common × Streaming Platform</b><span>USA · Africa · 2025</span></div>
+      <h3 class="case__title">A rapper-actor anchors a continental content launch.</h3>
+      <div class="case__impact"><span>Subscribers gained</span><b>1.4M</b></div>
+    </a>
+
+    <a class="case" data-reveal>
+      <div class="case__media"><img src="./roster/sho-madjozi.jpg" alt="" loading="lazy"></div>
+      <div class="case__no">/ 04</div>
+      <div class="case__client"><b>Sho Madjozi × Footwear</b><span>South Africa · 2023</span></div>
+      <h3 class="case__title">A signature drop that became a streetwear conversation.</h3>
+      <div class="case__impact"><span>Sell-through</span><b>96 hrs</b></div>
+    </a>
+
+    <a class="case" data-reveal data-reveal-delay="1">
+      <div class="case__media"><img src="./roster/dj-zinhle.jpg" alt="" loading="lazy"></div>
+      <div class="case__no">/ 05</div>
+      <div class="case__client"><b>DJ Zinhle × Beauty Brand</b><span>Pan-African · 2024</span></div>
+      <h3 class="case__title">A 12-city Amapiano residency for a global beauty house.</h3>
+      <div class="case__impact"><span>Markets</span><b>12</b></div>
+    </a>
+
+    <a class="case" data-reveal data-reveal-delay="2">
+      <div class="case__media"><img src="./roster/bonang-matheba.jpg" alt="" loading="lazy"></div>
+      <div class="case__no">/ 06</div>
+      <div class="case__client"><b>Bonang Matheba × Telco</b><span>South Africa · 2024</span></div>
+      <h3 class="case__title">A presenter-led campaign for a continental brand refresh.</h3>
+      <div class="case__impact"><span>Engagement lift</span><b>+340%</b></div>
+    </a>
+
+    <a class="case" data-extra data-reveal>
+      <div class="case__media"><img src="./roster/aka.jpg" alt="" loading="lazy"></div>
+      <div class="case__no">/ 07</div>
+      <div class="case__client"><b>AKA × Spirits Brand</b><span>South Africa · 2022</span></div>
+      <h3 class="case__title">A landmark ambassadorship that defined a category year.</h3>
+      <div class="case__impact"><span>Press value</span><b>$3.8M</b></div>
+    </a>
+
+    <a class="case" data-extra data-reveal data-reveal-delay="1">
+      <div class="case__media"><img src="./roster/don-jazzy.jpg" alt="" loading="lazy"></div>
+      <div class="case__no">/ 08</div>
+      <div class="case__client"><b>Don Jazzy × Music-Tech Platform</b><span>Lagos · 2025</span></div>
+      <h3 class="case__title">A producer-led launch for the next wave of Afrobeats tools.</h3>
+      <div class="case__impact"><span>Creators on-boarded</span><b>22k</b></div>
+    </a>
+
+    <a class="case" data-extra data-reveal data-reveal-delay="2">
+      <div class="case__media"><img src="./roster/karabo-poppy.jpg" alt="" loading="lazy"></div>
+      <div class="case__no">/ 09</div>
+      <div class="case__client"><b>Karabo Poppy × Sportswear</b><span>South Africa · 2024</span></div>
+      <h3 class="case__title">An illustrator-led capsule for a global sportswear brand.</h3>
+      <div class="case__impact"><span>Sell-through</span><b>72 hrs</b></div>
+    </a>
+
+  </div>
+
+  <div style="text-align: center; margin-top: clamp(60px, 8vw, 100px);" data-reveal>
+    <a href="#" id="partnershipsToggle" class="big-link" role="button" aria-expanded="false" aria-controls="partnershipsGrid">
+      <span class="partnerships-toggle__label">View more partnerships</span>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- CROSSLINK -->
+<section class="crosslink">
+  <div class="crosslink__head">More services</div>
+  <div class="crosslink__list">
+    <a href="./brand-communications.html"><div class="crosslink__item">Brand Communications <span>→</span></div></a>
+    <a href="./events-activations.html"><div class="crosslink__item">Events &amp; Activations <span>→</span></div></a>
+    <a href="https://napkin-sport.com/#top" target="_blank" rel="noopener"><div class="crosslink__item">Napkin Sport <span>→</span></div></a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2 class="contact__heading" data-reveal>
+    Looking to <em>partner</em><br>with our talent?
+  </h2>
+  <a href="mailto:hello@csa.global" class="contact__email" data-reveal data-reveal-delay="1">
+    hello@csa.global
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <video autoplay muted loop playsinline>
+        <source src="./brand/CSA_animation_logo.webm" type="video/webm">
+        <source src="./brand/CSA_animation_logo.mp4" type="video/mp4">
+      </video>
+      <div class="footer__tag">A culture &amp; entertainment agency. Working at the speed of what people care about.</div>
+    </div>
+    <div class="footer__col">
+      <h4>Services</h4>
+      <a href="./brand-communications.html">Brand Communications</a>
+      <a href="./talent.html">Talent</a>
+      <a href="./events-activations.html">Events &amp; Activations</a>
+      <a href="https://napkin-sport.com/#top" target="_blank" rel="noopener">Napkin Sport</a>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="./about.html">About</a>
+      <a href="./index.html#work">Work</a>
+      <a href="./the-wire.html">The Wire</a>
+      <a href="./index.html#contact">Contact</a>
+    </div>
+    <div class="footer__col">
+      <h4>Connect</h4>
+      <a href="https://www.instagram.com/csa.global/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/company/celebrityservicesafrica/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.facebook.com/celebrityservicesafrica" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.youtube.com/c/csaglobaltv" target="_blank" rel="noopener">YouTube</a>
+      <a href="/the-wire.html">Newsletter →</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div>© 2026 Celebrity Services Africa</div>
+    <div>Cape Town · Johannesburg · Los Angeles · London · Lagos · Paris</div>
+    <div><a href="/privacy-policy.html">Privacy Policy</a> · <a href="/data-protection.html">Data Protection</a></div>
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

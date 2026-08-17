@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="CSA - A globally recognised culture and entertainment agency. We connect brands with the storytellers shaping the next chapter of culture." />
+<title>CSA - Where culture meets brand power</title>
+<link rel="preload" as="video" href="./brand/CSA_animation_logo.webm" type="video/webm" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200..900&family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<!-- LOADER -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <video autoplay muted playsinline preload="auto">
+      <source src="./brand/CSA_animation_logo.webm" type="video/webm">
+      <source src="./brand/CSA_animation_logo.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav" aria-label="Primary">
+  <a href="./index.html" class="nav__logo" aria-label="CSA - home">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="./brand/CSA_animation_logo.webm" type="video/webm">
+      <source src="./brand/CSA_animation_logo.mp4" type="video/mp4">
+    </video>
+  </a>
+  <ul class="nav__menu">
+    <li><a href="./index.html#work">Work</a></li>
+    <li><a href="./about.html">About</a></li>
+    <li>
+      <span class="nav__menu-trigger">Services</span>
+      <div class="nav__submenu">
+        <a href="./brand-communications.html">Brand Communications</a>
+        <a href="./talent.html">Talent</a>
+        <a href="./events-activations.html">Events &amp; Activations</a>
+        <a href="https://napkin-sport.com/#top" target="_blank" rel="noopener">Napkin Sport</a>
+      </div>
+    </li>
+    <li><a href="./the-wire.html">The Wire</a></li>
+  </ul>
+  <a href="#contact" class="nav__cta">Get in touch</a>
+  <div class="nav__hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="nav__mobile" id="mobileNav">
+  <a href="./index.html#work">Work</a>
+  <a href="./about.html">About</a>
+  <a href="./brand-communications.html" class="nav__mobile-sub">→ Brand Communications</a>
+  <a href="./talent.html" class="nav__mobile-sub">→ Talent</a>
+  <a href="./events-activations.html" class="nav__mobile-sub">→ Events &amp; Activations</a>
+  <a href="https://napkin-sport.com/#top" class="nav__mobile-sub" target="_blank" rel="noopener">→ Napkin Sport</a>
+  <a href="./the-wire.html">The Wire</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <!-- Full-width hero film -->
+  <div class="hero__video">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="./archive/we-are-csa.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Strip of animated client logos on black, pinned to the bottom of the video block -->
+  <div class="hero__brands" aria-label="Selected clients">
+    <div class="brands__rail">
+      <div class="brands__track">
+        <!-- First copy -->
+        <div class="brand-cell"><img class="brand-cell__logo" src="./logos/budweiser.png" alt="Budweiser" /></div>
+        <div class="brand-cell"><img class="brand-cell__logo" src="./logos/corona.png" alt="Corona" /></div>
+        <div class="brand-cell"><img class="brand-cell__logo" src="./logos/stella-artois.png" alt="Stella Artois" /></div>
+        <div class="brand-cell"><img class="brand-cell__logo" src="./logos/diageo.png" alt="Diageo" /></div>
+        <div class="brand-cell"><img class="brand-cell__logo" src="./logos/vodacom.png" alt="Vodacom" /></div>
+        <div class="brand-cell"><img class="brand-cell__logo" src="./logos/lindt.png" alt="Lindt" /></div>
+        <div class="brand-cell"><img class="brand-cell__logo" src="./logos/traveler.png" alt="National Geographic Traveler" /></div>
+        <div class="brand-cell"><img class="brand-cell__logo" src="./logos/city-of-cape-town.png" alt="City of Cape Town" /></div>
+        <div class="brand-cell"><img class="brand-cell__logo" src="./logos/wdo.png" alt="World Design Organization" /></div>
+        <!-- Second copy for seamless loop -->
+        <div class="brand-cell" aria-hidden="true"><img class="brand-cell__logo" src="./logos/budweiser.png" alt="" /></div>
+        <div class="brand-cell" aria-hidden="true"><img class="brand-cell__logo" src="./logos/corona.png" alt="" /></div>
+        <div class="brand-cell" aria-hidden="true"><img class="brand-cell__logo" src="./logos/stella-artois.png" alt="" /></div>
+        <div class="brand-cell" aria-hidden="true"><img class="brand-cell__logo" src="./logos/diageo.png" alt="" /></div>
+        <div class="brand-cell" aria-hidden="true"><img class="brand-cell__logo" src="./logos/vodacom.png" alt="" /></div>
+        <div class="brand-cell" aria-hidden="true"><img class="brand-cell__logo" src="./logos/lindt.png" alt="" /></div>
+        <div class="brand-cell" aria-hidden="true"><img class="brand-cell__logo" src="./logos/traveler.png" alt="" /></div>
+        <div class="brand-cell" aria-hidden="true"><img class="brand-cell__logo" src="./logos/city-of-cape-town.png" alt="" /></div>
+        <div class="brand-cell" aria-hidden="true"><img class="brand-cell__logo" src="./logos/wdo.png" alt="" /></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT (UP FRONT - beige) -->
+<section class="about-snippet" id="about" data-theme="light">
+  <div class="about-snippet__inner">
+    <div data-reveal>
+      <h2 class="about-snippet__heading">Bridging brands &amp; culture through <em>unforgettable</em> storytelling.</h2>
+    </div>
+    <div class="about-snippet__col-right" data-reveal data-reveal-delay="1">
+      <p class="about-snippet__body">
+        <strong>As one of Africa's leading and award-winning entertainment, marketing, and talent agencies,</strong> CSA is passionate about showcasing African narratives and merging them with pop culture, philanthropy, and impact.
+      </p>
+      <p class="about-snippet__body">
+        As a result, CSA also helps create opportunities for African artists, providing them with a platform to reach a global audience.
+      </p>
+    </div>
+  </div>
+
+  <!-- TIMELINE: animates as you scroll into view -->
+  <div class="timeline" id="timeline">
+    <div class="timeline__line" aria-hidden="true"></div>
+    <div class="timeline__items">
+      <div class="timeline__item">
+        <div class="timeline__num">2000</div>
+        <div class="timeline__label">Established</div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__num">800<span class="plus">+</span></div>
+        <div class="timeline__label">Clients &amp; counting</div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__num">8</div>
+        <div class="timeline__label">Global locations</div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__num timeline__num--word">Award<br>winning</div>
+        <div class="timeline__label">Recognized agency</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-snippet__cta">
+    <a href="./about.html" class="btn">More about CSA <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<!-- TRUST TOGGLE -->
+<section class="section">
+  <div class="section__head trust__head">
+    <div class="trust__toggle" id="trustToggle" role="tablist">
+      <button class="is-active" data-tab="brands" role="tab">Why brands trust us</button>
+      <button data-tab="talent" role="tab">Why talent trust us</button>
+    </div>
+  </div>
+
+  <div class="trust__panels">
+    <div>
+      <div class="trust__panel is-active" data-panel="brands">
+        <h3 class="trust__heading">From cultural insight to <em>commercial impact.</em></h3>
+        <p class="trust__sub">The future belongs to brands that shape culture, not interrupt it. We create the ideas, experiences and creator ecosystems that earn attention, build influence and turn cultural relevance into sustained business growth.</p>
+      </div>
+      <div class="trust__panel" data-panel="talent">
+        <h3 class="trust__heading">Where influence becomes <em>legacy.</em></h3>
+        <p class="trust__sub">The future belongs to talent who create and shape culture. We build enduring personal brands, strategic partnerships and careers that transform influence into enterprise, cultural relevance into lasting impact and moments into legacies.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="trust__panel is-active" data-panel="brands">
+        <ul class="trust__list">
+          <li class="trust__item">
+            <div class="trust__item-no">01</div>
+            <div class="trust__item-body">
+              <strong>Unmatched expertise</strong>
+              <p>For over two decades, CSA has pioneered the brand-talent space, generating over $1B in earned media and shaping cultural narratives for global brands.</p>
+            </div>
+          </li>
+          <li class="trust__item">
+            <div class="trust__item-no">02</div>
+            <div class="trust__item-body">
+              <strong>Strategic impact</strong>
+              <p>We don't follow culture - we shape it. Our strategists craft compelling brand stories that seamlessly integrate into entertainment and lifestyle trends.</p>
+            </div>
+          </li>
+          <li class="trust__item">
+            <div class="trust__item-no">03</div>
+            <div class="trust__item-body">
+              <strong>Global influence</strong>
+              <p>From blockbuster films and award-winning TV shows to chart-topping music and global tours, we engineer partnerships that transcend borders and industries.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="trust__panel" data-panel="talent">
+        <ul class="trust__list">
+          <li class="trust__item">
+            <div class="trust__item-no">01</div>
+            <div class="trust__item-body">
+              <strong>Comprehensive talent development</strong>
+              <p>CSA doesn't just secure endorsements - we manage, develop, and elevate talent, guiding them through career growth, brand partnerships, and industry evolution.</p>
+            </div>
+          </li>
+          <li class="trust__item">
+            <div class="trust__item-no">02</div>
+            <div class="trust__item-body">
+              <strong>Authentic narrative development</strong>
+              <p>We position talent at the forefront of culture, ensuring every partnership feels natural, strategic, and purpose-driven.</p>
+            </div>
+          </li>
+          <li class="trust__item">
+            <div class="trust__item-no">03</div>
+            <div class="trust__item-body">
+              <strong>Elite global network</strong>
+              <p>With hubs in Cape Town, London, and Beverly Hills, CSA connects talent with leading brands while expertly navigating the commercial landscape.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<section class="section" id="work">
+  <div class="section__head">
+    <h2 class="section__title" data-reveal>Selected <em>work.</em></h2>
+    <p class="section__sub" data-reveal data-reveal-delay="1">Campaigns, partnerships and cultural moments engineered for the brands at the front of the conversation.</p>
+  </div>
+
+  <div class="work__stack" data-reveal>
+    <a class="case" href="/work/stella-artois-racquet-club-launch/">
+      <div class="case__inner">
+      <div class="case__media">
+        <img src="./case-studies/stella-racquet-club.jpg" alt="Stella Artois Racquet Club Launch" loading="lazy" />
+        <video class="case__video" data-hover-video muted loop playsinline preload="metadata">
+          <source src="./archive/stella-racquet-club-2025.mp4" type="video/mp4">
+        </video>
+        <button type="button" class="case__sound" data-sound-toggle aria-label="Unmute video" aria-pressed="false">
+          <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+          <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19.5 5.5a9 9 0 0 1 0 13"/></svg>
+        </button>
+        <div class="case__overlay">
+          <div class="case__tags"><span>Activate</span><span>Lifestyle</span></div>
+          <div class="case__view">View case</div>
+        </div>
+      </div>
+      <div class="case__reveal" aria-hidden="true">
+        <div class="case__reveal-in">
+          <!-- Stats below are PLACEHOLDER figures - replace with the real case-study numbers -->
+          <div class="case__reveal-kicker">Stella Artois · Brand Comms · Talent</div>
+          <p class="case__summary">A cultural launch that turned a lifestyle moment into earned-media reach.</p>
+          <div class="case__brief">
+            <div class="case__brief-item"><span>The Challenge</span><p>Launch Stella's Racquet Club to a culture-first audience without a traditional media push.</p></div>
+            <div class="case__brief-item"><span>The Big Idea</span><p>Turn a members' tennis social into the season's most talked-about lifestyle moment.</p></div>
+            <div class="case__brief-item"><span>Execution</span><p>A tastemaker guest list, on-site content capture and a rolling earned-media programme.</p></div>
+          </div>
+          <div class="cs__stats">
+            <div class="cs__stat"><div class="cs__stat-num">4.2M</div><div class="cs__stat-label">Reach</div></div>
+            <div class="cs__stat"><div class="cs__stat-num">R1.8M</div><div class="cs__stat-label">Earned Media</div></div>
+            <div class="cs__stat"><div class="cs__stat-num">92%</div><div class="cs__stat-label">Positive Sentiment</div></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="case__client"><b>Stella Artois</b><span>Racquet Club Launch</span></div>
+      <h3 class="case__title">Stella Artois - Racquet Club Launch</h3>
+      <div class="case__impact"><span>Discipline</span><b>Brand Comms · Talent</b></div>
+    </a>
+
+    <a class="case" href="/work/corona-cero-olympics/">
+      <div class="case__inner">
+      <div class="case__media">
+        <img src="./case-studies/corona-cero-olympics.jpg" alt="Corona Cero - For Every #GoldenMoment" loading="lazy" />
+        <div class="case__overlay">
+          <div class="case__tags"><span>Sport</span><span>Global</span></div>
+          <div class="case__view">View case</div>
+        </div>
+      </div>
+      <div class="case__reveal" aria-hidden="true">
+        <div class="case__reveal-in">
+          <!-- Stats below are PLACEHOLDER figures - replace with the real case-study numbers -->
+          <div class="case__reveal-kicker">Corona Cero · Sport · Cultural Strategy</div>
+          <p class="case__summary">Corona Cero's global Olympics play, built for every golden moment.</p>
+          <div class="case__brief">
+            <div class="case__brief-item"><span>The Challenge</span><p>Make an alcohol-free beer the hero of the world's biggest sporting stage.</p></div>
+            <div class="case__brief-item"><span>The Big Idea</span><p>Celebrate every athlete's golden moment as the world watches together.</p></div>
+            <div class="case__brief-item"><span>Execution</span><p>A globally-routed campaign across 40+ markets, athlete talent and Olympic media.</p></div>
+          </div>
+          <div class="cs__stats">
+            <div class="cs__stat"><div class="cs__stat-num">220M</div><div class="cs__stat-label">Reach</div></div>
+            <div class="cs__stat"><div class="cs__stat-num">40+</div><div class="cs__stat-label">Markets</div></div>
+            <div class="cs__stat"><div class="cs__stat-num">3.1B</div><div class="cs__stat-label">Impressions</div></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="case__client"><b>Corona Cero</b><span>Olympics · Global</span></div>
+      <h3 class="case__title">Corona Cero - For Every #GoldenMoment</h3>
+      <div class="case__impact"><span>Discipline</span><b>Sport · Cultural Strategy</b></div>
+    </a>
+
+    <a class="case" href="/work/corona-island-2/">
+      <div class="case__inner">
+      <div class="case__media">
+        <img src="./case-studies/corona-island.jpg" alt="Corona Colombia Island" loading="lazy" />
+        <div class="case__overlay">
+          <div class="case__tags"><span>Activate</span><span>Influencer</span></div>
+          <div class="case__view">View case</div>
+        </div>
+      </div>
+      <div class="case__reveal" aria-hidden="true">
+        <div class="case__reveal-in">
+          <!-- Stats below are PLACEHOLDER figures - replace with the real case-study numbers -->
+          <div class="case__reveal-kicker">Corona · Activations · Talent</div>
+          <p class="case__summary">An immersive island activation connecting Corona to nature and culture.</p>
+          <div class="case__brief">
+            <div class="case__brief-item"><span>The Challenge</span><p>Connect Corona to nature and escape in a crowded activation landscape.</p></div>
+            <div class="case__brief-item"><span>The Big Idea</span><p>Build an immersive island where culture, creators and the brand meet the sea.</p></div>
+            <div class="case__brief-item"><span>Execution</span><p>A destination activation with 60+ creators and layered social storytelling.</p></div>
+          </div>
+          <div class="cs__stats">
+            <div class="cs__stat"><div class="cs__stat-num">18M</div><div class="cs__stat-label">Reach</div></div>
+            <div class="cs__stat"><div class="cs__stat-num">60+</div><div class="cs__stat-label">Creators</div></div>
+            <div class="cs__stat"><div class="cs__stat-num">R2.4M</div><div class="cs__stat-label">Earned Media</div></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="case__client"><b>Corona</b><span>Colombia Island</span></div>
+      <h3 class="case__title">Corona - Colombia Island</h3>
+      <div class="case__impact"><span>Discipline</span><b>Activations · Talent</b></div>
+    </a>
+
+    <a class="case" href="/work/tiktok-awards-larger-than-life/">
+      <div class="case__inner">
+      <div class="case__media">
+        <img src="./case-studies/tiktok-awards-larger-than-life.jpg" alt="TikTok Awards Larger Than Life" loading="lazy" />
+        <div class="case__overlay">
+          <div class="case__tags"><span>Events</span><span>Talent</span></div>
+          <div class="case__view">View case</div>
+        </div>
+      </div>
+      <div class="case__reveal" aria-hidden="true">
+        <div class="case__reveal-in">
+          <!-- Stats below are PLACEHOLDER figures - replace with the real case-study numbers -->
+          <div class="case__reveal-kicker">TikTok Awards · Events &amp; Activations</div>
+          <p class="case__summary">Bringing the TikTok Awards to life at a larger-than-life scale.</p>
+          <div class="case__brief">
+            <div class="case__brief-item"><span>The Challenge</span><p>Bring a digital-first awards show to life at real-world, larger-than-life scale.</p></div>
+            <div class="case__brief-item"><span>The Big Idea</span><p>Stage the platform's biggest night as an event creators would fight to attend.</p></div>
+            <div class="case__brief-item"><span>Execution</span><p>A full production build, 500+ creators and a night engineered for the feed.</p></div>
+          </div>
+          <div class="cs__stats">
+            <div class="cs__stat"><div class="cs__stat-num">12M</div><div class="cs__stat-label">Views</div></div>
+            <div class="cs__stat"><div class="cs__stat-num">500+</div><div class="cs__stat-label">Creators</div></div>
+            <div class="cs__stat"><div class="cs__stat-num">1</div><div class="cs__stat-label">Night</div></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="case__client"><b>TikTok Awards</b><span>Larger Than Life</span></div>
+      <h3 class="case__title">TikTok Awards - Larger Than Life</h3>
+      <div class="case__impact"><span>Discipline</span><b>Events &amp; Activations</b></div>
+    </a>
+
+    <a class="case" href="/work/stella-artois-lets-do-dinner/">
+      <div class="case__inner">
+      <div class="case__media">
+        <img src="./case-studies/stella-artois-lets-do-dinner.jpg" alt="Stella Artois Let's Do Dinner" loading="lazy" />
+        <div class="case__overlay">
+          <div class="case__tags"><span>Brand Comms</span><span>Lifestyle</span></div>
+          <div class="case__view">View case</div>
+        </div>
+      </div>
+      <div class="case__reveal" aria-hidden="true">
+        <div class="case__reveal-in">
+          <!-- Stats below are PLACEHOLDER figures - replace with the real case-study numbers -->
+          <div class="case__reveal-kicker">Stella Artois · Brand Comms · Influencer</div>
+          <p class="case__summary">A dinner-table cultural moment for Stella Artois, powered by influencers.</p>
+          <div class="case__brief">
+            <div class="case__brief-item"><span>The Challenge</span><p>Own the dinner-table occasion for Stella in a category obsessed with the bar.</p></div>
+            <div class="case__brief-item"><span>The Big Idea</span><p>Reframe Stella as the beer that belongs at every great meal with friends.</p></div>
+            <div class="case__brief-item"><span>Execution</span><p>An influencer-led dinner series with content built for share and reach.</p></div>
+          </div>
+          <div class="cs__stats">
+            <div class="cs__stat"><div class="cs__stat-num">6.5M</div><div class="cs__stat-label">Reach</div></div>
+            <div class="cs__stat"><div class="cs__stat-num">45</div><div class="cs__stat-label">Influencers</div></div>
+            <div class="cs__stat"><div class="cs__stat-num">R1.2M</div><div class="cs__stat-label">Earned Media</div></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="case__client"><b>Stella Artois</b><span>Let's Do Dinner</span></div>
+      <h3 class="case__title">Stella Artois - Let's Do Dinner</h3>
+      <div class="case__impact"><span>Discipline</span><b>Brand Comms · Influencer</b></div>
+    </a>
+  </div>
+
+  <div class="work__cta" data-reveal>
+    <a href="/index.html#work" class="big-link">
+      See all work
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- SERVICES (beige) -->
+<section class="section" data-theme="light">
+  <div class="section__head">
+    <h2 class="section__title" data-reveal>What we <em>do.</em></h2>
+    <p class="section__sub" data-reveal data-reveal-delay="1">Strategy, story, talent and execution - built for the speed of culture.</p>
+  </div>
+
+  <ul class="services__list" data-reveal>
+    <li class="service-item">
+      <a href="./brand-communications.html" class="service" data-trail>
+        <span class="service__title">Brand Communications</span>
+        <span class="service__desc"><span>PR, earned media and creative campaigns built for cultural traction.</span></span>
+        <span class="service__arrow" aria-hidden="true">→</span>
+      </a>
+      <div class="service__images" aria-hidden="true">
+        <img src="./case-studies/corona-copacabana-2026.jpg" alt="">
+        <img src="./case-studies/corona-studios-first-beach.jpg" alt="">
+        <img src="./case-studies/diageo-pem.jpg" alt="">
+        <img src="./case-studies/omo-play-on-stayunbeatable.jpg" alt="">
+      </div>
+    </li>
+    <li class="service-item">
+      <a href="./talent.html" class="service" data-trail>
+        <span class="service__title">Talent</span>
+        <span class="service__desc"><span>Roster management, casting and long-term ambassador partnerships.</span></span>
+        <span class="service__arrow" aria-hidden="true">→</span>
+      </a>
+      <div class="service__images" aria-hidden="true">
+        <img src="./roster/naomi-campbell.jpg" alt="">
+        <img src="./roster/djimon-hounsou.jpg" alt="">
+        <img src="./roster/bonang-matheba.jpg" alt="">
+        <img src="./roster/sho-madjozi.jpg" alt="">
+        <img src="./roster/dj-zinhle.jpg" alt="">
+      </div>
+    </li>
+    <li class="service-item">
+      <a href="./events-activations.html" class="service" data-trail>
+        <span class="service__title">Events &amp; Activations</span>
+        <span class="service__desc"><span>Festivals, pop-ups and money-can't-buy moments.</span></span>
+        <span class="service__arrow" aria-hidden="true">→</span>
+      </a>
+      <div class="service__images" aria-hidden="true">
+        <img src="./case-studies/tiktok-awards-larger-than-life.jpg" alt="">
+        <img src="./case-studies/ciroc-pineapple-global.jpeg" alt="">
+        <img src="./case-studies/the-house-of-bng.jpg" alt="">
+        <img src="./case-studies/nubian-music-festival.jpg" alt="">
+        <img src="./case-studies/stella-artois-racquet-club-launch.jpg" alt="">
+      </div>
+    </li>
+    <li class="service-item">
+      <a href="https://napkin-sport.com/#top" target="_blank" rel="noopener" class="service" data-trail>
+        <span class="service__title">Napkin Sport</span>
+        <span class="service__desc"><span>Athlete strategy, property activation and tournament partnerships.</span></span>
+        <span class="service__arrow" aria-hidden="true">→</span>
+      </a>
+      <div class="service__images" aria-hidden="true">
+        <img src="./case-studies/redbull-cape-town-circuit.jpg" alt="">
+        <img src="./case-studies/budweiser-fifa-world-cup-2.jpeg" alt="">
+        <img src="./case-studies/vodacom-durban-july.jpg" alt="">
+        <img src="./case-studies/city-of-cape-town.jpg" alt="">
+        <img src="./case-studies/status-deodorant.jpg" alt="">
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- THE WIRE SNIPPET (dark) -->
+<section class="section">
+  <div class="section__head">
+    <h2 class="section__title" data-reveal>The <em>Wire.</em></h2>
+    <p class="section__sub" data-reveal data-reveal-delay="1">The Wire is CSA.Global's culture intelligence newsletter that helps marketing leaders understand what's shifting in culture, and what to do about it before everyone else.</p>
+  </div>
+
+  <div class="cards-rail--scroll" id="wireRail" data-reveal>
+
+    <a class="article-card" href="/the-wire/drip-beat-disrupt/">
+      <div class="article-card__image">
+        <img src="./case-studies/wire/drip-beat-disrupt.jpg" alt="Drip, Beat, Disrupt: How SA Builds Culture Into Commerce" loading="lazy" />
+      </div>
+      <div class="article-card__meta"><span>Fashion · Industry</span><span class="date">Jun 5, 2026</span></div>
+      <h3 class="article-card__title">Drip, Beat, Disrupt: How SA Builds Culture Into Commerce</h3>
+      <p class="article-card__excerpt">In South Africa, the drip and the beat arrive together - and the smartest brands have stopped treating them as separate briefs.</p>
+      <div class="article-card__foot"><span>3 min read</span><span aria-hidden="true">→</span></div>
+    </a>
+
+    <a class="article-card" href="/the-wire/inside-the-kulture/">
+      <div class="article-card__image">
+        <img src="./case-studies/wire/inside-the-kulture.jpg" alt="Inside The Kulture: 800K Fans and a Cultural Movement in Motion" loading="lazy" />
+      </div>
+      <div class="article-card__meta"><span>Music · Industry</span><span class="date">Jun 3, 2026</span></div>
+      <h3 class="article-card__title">Inside The Kulture: 800K Fans and a Cultural Movement in Motion</h3>
+      <p class="article-card__excerpt">An 800,000-strong community didn't just show up - it organised, and that distinction is the whole story.</p>
+      <div class="article-card__foot"><span>3 min read</span><span aria-hidden="true">→</span></div>
+    </a>
+
+    <a class="article-card" href="/the-wire/why-pink-won-the-world-cup/">
+      <div class="article-card__image">
+        <img src="./case-studies/wire/why-pink-won-the-world-cup.jpg" alt="Why Pink Won the World Cup: A Masterclass in Culture Marketing" loading="lazy" />
+      </div>
+      <div class="article-card__meta"><span>Industry · Sports</span><span class="date">May 30, 2026</span></div>
+      <h3 class="article-card__title">Why Pink Won the World Cup: A Masterclass in Culture Marketing</h3>
+      <p class="article-card__excerpt">The winning play at this World Cup wasn't a formation - it was a colour that turned spectators into participants.</p>
+      <div class="article-card__foot"><span>4 min read</span><span aria-hidden="true">→</span></div>
+    </a>
+
+    <a class="article-card" href="/the-wire/gen-alpha-culture-shift/">
+      <div class="article-card__image">
+        <img src="./case-studies/wire/gen-alpha-culture-shift.jpg" alt="Gen Alpha: The Next Big Global Culture Shift" loading="lazy" />
+      </div>
+      <div class="article-card__meta"><span>Industry · B2B</span><span class="date">May 26, 2026</span></div>
+      <h3 class="article-card__title">Gen Alpha: The Next Big Global Culture Shift</h3>
+      <p class="article-card__excerpt">The generation that never knew a world without a feed is about to rewrite the rules brands thought were settled.</p>
+      <div class="article-card__foot"><span>4 min read</span><span aria-hidden="true">→</span></div>
+    </a>
+
+    <a class="article-card" href="/the-wire/sa-women-ceos-online-culture/">
+      <div class="article-card__image">
+        <img src="./case-studies/wire/sa-women-ceos-online-culture.jpg" alt="Why South African Women Are the Real CEOs of Online Culture" loading="lazy" />
+      </div>
+      <div class="article-card__meta"><span>Industry</span><span class="date">May 20, 2026</span></div>
+      <h3 class="article-card__title">Why South African Women Are the Real CEOs of Online Culture</h3>
+      <p class="article-card__excerpt">They set the slang, break the brands and move the market - and they've been doing it without the title or the credit.</p>
+      <div class="article-card__foot"><span>3 min read</span><span aria-hidden="true">→</span></div>
+    </a>
+
+  </div>
+
+  <div class="work__cta" data-reveal>
+    <a href="./the-wire.html" class="big-link">
+      Read The Wire
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2 class="contact__heading" data-reveal>
+    Let's build what <em>culture</em><br>talks about next.
+  </h2>
+  <a href="mailto:hello@csa.global" class="contact__email" data-reveal data-reveal-delay="1">
+    hello@csa.global
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+  </a>
+
+  <!-- Contact form - submissions go to your form service (Web3Forms/Formspree).
+       Replace the access_key below with your own free key from web3forms.com. -->
+  <form class="contact__form" action="https://api.web3forms.com/submit" method="POST" data-reveal data-reveal-delay="2">
+    <input type="hidden" name="access_key" value="REPLACE-WITH-YOUR-WEB3FORMS-ACCESS-KEY">
+    <input type="hidden" name="subject" value="New enquiry from csa.global">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" rows="4" placeholder="Tell us about your project" required></textarea>
+    <button type="submit" class="btn btn--solid">Send enquiry <span aria-hidden="true">→</span></button>
+  </form>
+
+  <div class="contact__offices" data-reveal data-reveal-delay="3">
+    <div class="contact__office"><b>Cape Town</b>HQ - Africa</div>
+    <div class="contact__office"><b>Johannesburg</b>South Africa</div>
+    <div class="contact__office"><b>Los Angeles</b>HQ - Americas</div>
+    <div class="contact__office"><b>London</b>United Kingdom</div>
+    <div class="contact__office"><b>Lagos</b>Nigeria</div>
+    <div class="contact__office"><b>Paris</b>France</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <video autoplay muted loop playsinline>
+        <source src="./brand/CSA_animation_logo.webm" type="video/webm">
+        <source src="./brand/CSA_animation_logo.mp4" type="video/mp4">
+      </video>
+      <div class="footer__tag">A culture &amp; entertainment agency. Working at the speed of what people care about.</div>
+    </div>
+    <div class="footer__col">
+      <h4>Services</h4>
+      <a href="./brand-communications.html">Brand Communications</a>
+      <a href="./talent.html">Talent</a>
+      <a href="./events-activations.html">Events &amp; Activations</a>
+      <a href="https://napkin-sport.com/#top" target="_blank" rel="noopener">Napkin Sport</a>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="./about.html">About</a>
+      <a href="./index.html#work">Work</a>
+      <a href="./the-wire.html">The Wire</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer__col">
+      <h4>Connect</h4>
+      <a href="https://www.instagram.com/csa.global/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/company/celebrityservicesafrica/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.facebook.com/celebrityservicesafrica" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.youtube.com/c/csaglobaltv" target="_blank" rel="noopener">YouTube</a>
+      <a href="/the-wire.html">Newsletter →</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div>© 2026 Celebrity Services Africa</div>
+    <div>Cape Town · Johannesburg · Los Angeles · London · Lagos · Paris</div>
+    <div><a href="/privacy-policy.html">Privacy Policy</a> · <a href="/data-protection.html">Data Protection</a></div>
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

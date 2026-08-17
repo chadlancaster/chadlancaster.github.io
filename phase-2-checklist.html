@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>CSA — Phase 2 Checklist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200..900&family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0A0A; --bg-1:#111111; --bg-2:#161616;
+    --line:rgba(245,241,234,.10); --line-strong:rgba(245,241,234,.22);
+    --text:#F5F1EA; --text-dim:rgba(245,241,234,.62); --text-faint:rgba(245,241,234,.38);
+    --accent:#FFA10C; --accent-soft:rgba(255,161,12,.14); --on-accent:#0A0A0A;
+    --done:#3FBF7F;
+    --font-display:"Inter Tight","Helvetica Neue",system-ui,sans-serif;
+    --font-body:"Geist","Inter",system-ui,sans-serif;
+    --font-mono:"Geist Mono",ui-monospace,monospace;
+    --ease:cubic-bezier(0.16,1,0.3,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:var(--font-body); font-size:16px; line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    padding:clamp(24px,5vw,72px) clamp(20px,4vw,56px) 120px;
+  }
+  .wrap{max-width:1000px;margin:0 auto}
+
+  /* ---- header ---- */
+  header{border-bottom:1px solid var(--line);padding-bottom:clamp(28px,4vw,44px);margin-bottom:clamp(32px,4vw,52px)}
+  .kicker{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+  h1{font-family:var(--font-display);font-weight:400;font-size:clamp(36px,6vw,76px);line-height:.96;letter-spacing:-.04em}
+  h1 em{font-style:normal;color:var(--accent)}
+  .lede{font-size:clamp(15px,1.1vw,17px);color:var(--text-dim);max-width:62ch;margin-top:20px}
+
+  /* ---- progress ---- */
+  .prog{margin-top:clamp(28px,3vw,36px)}
+  .prog__row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+  .prog__label{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint)}
+  .prog__count{font-family:var(--font-display);font-weight:500;font-size:22px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .prog__count b{color:var(--accent)}
+  .prog__track{height:6px;border-radius:999px;background:var(--bg-2);overflow:hidden}
+  .prog__bar{height:100%;width:0;background:var(--accent);border-radius:999px;transition:width .6s var(--ease)}
+
+  /* ---- sections ---- */
+  section{margin-top:clamp(40px,5vw,64px)}
+  .sec__head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+  .sec__no{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:var(--accent)}
+  h2{font-family:var(--font-display);font-weight:500;font-size:clamp(20px,2vw,28px);letter-spacing:-.025em}
+  .sec__meta{margin-left:auto;font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap}
+  .sec__note{font-size:14px;color:var(--text-dim);margin-bottom:18px;max-width:70ch}
+
+  /* ---- items ---- */
+  ul{list-style:none}
+  li{border-top:1px solid var(--line)}
+  li:last-child{border-bottom:1px solid var(--line)}
+  label{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;padding:14px 6px;cursor:pointer;transition:background .2s var(--ease)}
+  label:hover{background:var(--accent-soft)}
+  input{
+    appearance:none;-webkit-appearance:none;
+    width:20px;height:20px;margin-top:2px;flex-shrink:0;
+    border:1px solid var(--line-strong);border-radius:5px;background:transparent;
+    cursor:pointer;display:grid;place-items:center;
+    transition:background .2s var(--ease),border-color .2s var(--ease);
+  }
+  input:hover{border-color:var(--accent)}
+  input::after{content:"✓";font-size:12px;font-weight:700;color:var(--on-accent);opacity:0;transition:opacity .15s}
+  input:checked{background:var(--done);border-color:var(--done)}
+  input:checked::after{opacity:1}
+  .txt{min-width:0}
+  .t{font-size:15px;line-height:1.45;transition:color .2s,text-decoration-color .2s}
+  input:checked ~ .txt .t{color:var(--text-faint);text-decoration:line-through;text-decoration-color:var(--text-faint)}
+  .n{font-size:13px;color:var(--text-dim);margin-top:4px;line-height:1.5}
+  input:checked ~ .txt .n{color:var(--text-faint)}
+  code{font-family:var(--font-mono);font-size:12px;background:var(--bg-2);border:1px solid var(--line);padding:1px 6px;border-radius:4px;color:var(--accent)}
+  .tag{display:inline-block;font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:999px;margin-left:8px;vertical-align:1px}
+  .tag--block{background:rgba(255,107,94,.16);color:#FF8A7A}
+  .tag--content{background:var(--accent-soft);color:var(--accent)}
+  .tag--nice{background:rgba(245,241,234,.08);color:var(--text-faint)}
+
+  /* ---- footer bar ---- */
+  .bar{position:fixed;left:0;right:0;bottom:0;z-index:10;background:rgba(10,10,10,.86);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:14px clamp(20px,4vw,56px)}
+  .bar__in{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:16px;justify-content:space-between}
+  .bar__txt{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint)}
+  button{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);background:transparent;border:1px solid var(--line-strong);padding:9px 16px;border-radius:999px;cursor:pointer;transition:.2s var(--ease)}
+  button:hover{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+  @media print{.bar{display:none}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">CSA Portal · Build plan</div>
+  <h1>Phase 2 — <em>make it live.</em></h1>
+  <p class="lede">Phase 1 built the portal and the site. Phase 2 puts them on the internet and makes the portal actually write to the repo, so the team can publish without touching code. Ticks save in this browser.</p>
+  <div class="prog">
+    <div class="prog__row">
+      <span class="prog__label">Progress</span>
+      <span class="prog__count"><b id="pDone">0</b> / <span id="pTotal">0</span> done</span>
+    </div>
+    <div class="prog__track"><div class="prog__bar" id="pBar"></div></div>
+  </div>
+</header>
+
+<!-- ============ 0. DONE ============ -->
+<section>
+  <div class="sec__head"><span class="sec__no">00</span><h2>Already done</h2><span class="sec__meta">Phase 2 groundwork</span></div>
+  <p class="sec__note">Built during Phase 1, but these are the foundations Phase 2 plugs into. Ticked so the count is honest.</p>
+  <ul>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t">Custom portal shell — sidebar, hash router, dashboard</span></span></label></li>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t">Schema-driven edit forms for every collection</span><span class="n">Articles, Case Studies, Talent, Board, Clients, Awards, Pages — blocks, carousel, video, stats, SEO, relations, duplicate.</span></span></label></li>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t">Content pipeline: <code>content.json</code> + <code>media.json</code></span><span class="n">The portal reads real site content instead of dummy data.</span></span></label></li>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t">Site Health tab — categorised checks, score, descriptions</span></span></label></li>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t">Users tab UI — roles, access, 2FA, published count, last active</span></span></label></li>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t">Revisions tab UI</span></span></label></li>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t">Forms tab UI — Submissions / Pop-ups / Contact page</span></span></label></li>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t">Media Library — browse every image on the site</span></span></label></li>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t">Portal dark mode toggle matching the live site</span></span></label></li>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t">All collections synced to the real site content</span><span class="n">5 articles, 6 case studies, 20 talent, 5 board, 5 awards, 9 clients, real users.</span></span></label></li>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t">Chart Pulse — weekly, data-driven, SA + Nigeria ready</span></span></label></li>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t">Deploy workflow written — <code>.github/workflows/deploy.yml</code></span><span class="n">Builds with 11ty and publishes to GitHub Pages on every push to main. Written, never run yet.</span></span></label></li>
+    <li><label><input type="checkbox" checked><span class="txt"><span class="t"><code>CNAME</code> file set to csa.global</span></span></label></li>
+  </ul>
+</section>
+
+<!-- ============ 1. REPO + HOSTING ============ -->
+<section>
+  <div class="sec__head"><span class="sec__no">01</span><h2>Repo &amp; hosting</h2><span class="sec__meta">Do this first</span></div>
+  <p class="sec__note">Nothing else in Phase 2 can be tested until the site is on GitHub — the login and the save-to-repo both talk to it.</p>
+  <ul>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Create the repo under the CSA GitHub account<span class="tag tag--block">Blocker</span></span><span class="n">Public repo = free GitHub Pages. Decide the exact owner/name — everything below references it.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Add the remote and push <code>main</code></span><span class="n">No remote is configured yet — all work so far is local commits only.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Enable Pages → Source: <em>GitHub Actions</em></span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Confirm the first deploy goes green</span><span class="n">Check the Actions tab; the workflow runs <code>npm ci</code> then <code>npm run build</code>.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Set the custom domain to <code>csa.global</code> in Pages settings</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">GoDaddy DNS — 4 A records to GitHub</span><span class="n">185.199.108.153 · 185.199.109.153 · 185.199.110.153 · 185.199.111.153</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">GoDaddy DNS — CNAME <code>www</code> → the github.io host</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Tick “Enforce HTTPS” once the cert issues</span><span class="n">Can take up to ~24h after DNS propagates.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Verify csa.global serves the new site</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Decide what happens to the old WordPress site</span><span class="n">Keep it running until cutover is confirmed, then cancel the hosting.</span></span></label></li>
+  </ul>
+</section>
+
+<!-- ============ 2. LOGIN ============ -->
+<section>
+  <div class="sec__head"><span class="sec__no">02</span><h2>Logins (auth)</h2><span class="sec__meta">Gate the portal</span></div>
+  <p class="sec__note">Right now <code>/portal/</code> is open to anyone who knows the URL. This is what closes it.</p>
+  <ul>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Create a GitHub OAuth App on the CSA account</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Deploy an OAuth worker (Cloudflare Workers, free tier)</span><span class="n">GitHub Pages is static, so the token exchange needs somewhere to run.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Fill in <code>backend.repo</code> in <code>src/admin/config.yml</code></span><span class="n">Currently the placeholder <code>CSA-ORG/csa-site</code>.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Fill in <code>backend.base_url</code> (the worker URL)</span><span class="n">Currently <code>REPLACE-WITH-YOUR-AUTH-WORKER</code>.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Set <code>local_backend: false</code> for production</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Build the portal login screen</span><span class="n">“Sign in with GitHub”, CSA logo, redirect back to the dashboard.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Session handling + sign out</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Invite the 4 team members to the repo</span><span class="n">Chad, Davin, Robert, Marc — repo access is what actually grants portal access.</span></span></label></li>
+  </ul>
+</section>
+
+<!-- ============ 3. SAVING ============ -->
+<section>
+  <div class="sec__head"><span class="sec__no">03</span><h2>Saving content</h2><span class="sec__meta">The core of Phase 2</span></div>
+  <p class="sec__note">Every form in the portal is fully interactive but nothing is written yet — Save is a stub. This turns the portal from a demo into the real thing.</p>
+  <ul>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Write a file via the GitHub API (create new entry)<span class="tag tag--block">Blocker</span></span><span class="n">Form values → Markdown + YAML frontmatter → commit.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Update an existing file (edit)</span><span class="n">Needs the file SHA — read, then commit over it.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Delete a file</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Sensible commit messages</span><span class="n">e.g. “Wire: update The Afrobeats Atlas (Marc Le Chat)”.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Publish / unpublish (draft flag) writing through</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Duplicate writes a real new file</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Save state — spinner, success, and real error messages</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Conflict handling if two people edit the same item</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Show build status after save</span><span class="n">A commit triggers Actions — the editor should know when their change is actually live (~1 min), not just saved.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Settings / Menus / Redirects write to their JSON files</span></span></label></li>
+  </ul>
+</section>
+
+<!-- ============ 4. MEDIA ============ -->
+<section>
+  <div class="sec__head"><span class="sec__no">04</span><h2>Media upload</h2><span class="sec__meta">Images</span></div>
+  <p class="sec__note">The Media Library browses today but can't accept a file.</p>
+  <ul>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Upload an image to the repo via the API</span><span class="n">Base64 → commit into <code>/uploads/</code>.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Drag-and-drop + picker in the Media Library</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Delete / replace an image</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Compress + resize on upload<span class="tag tag--nice">Nice to have</span></span><span class="n">Worth it — a 5MB phone photo in a repo hurts every build and every page load.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Require ALT text on upload</span><span class="n">Closes the accessibility gap Site Health keeps flagging, at the source.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Decide on Google Drive vs repo storage</span><span class="n">You mentioned Drive. Repo is simpler and free; Drive needs an API layer and auth. Recommend repo unless files get large.</span></span></label></li>
+  </ul>
+</section>
+
+<!-- ============ 5. USERS ============ -->
+<section>
+  <div class="sec__head"><span class="sec__no">05</span><h2>Users &amp; permissions</h2><span class="sec__meta">Enforcement</span></div>
+  <p class="sec__note">The Users tab looks right but nothing is enforced — the access lists are display-only.</p>
+  <ul>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Map the signed-in GitHub user to a CSA user record</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Enforce access — hide/deny collections a user can't touch</span><span class="n">e.g. the Copy Writers only get The Wire.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Require 2FA where the user record says so</span><span class="n">Realistically: enforce 2FA on the GitHub org and let it inherit.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Real “last active” tracking</span><span class="n">Currently a static date in <code>users.json</code>.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Real published counts</span><span class="n">Currently counts articles by matching the author name — fine, but wire it to commits.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Adding/removing a user writes to <code>users.json</code></span></span></label></li>
+  </ul>
+</section>
+
+<!-- ============ 6. REVISIONS ============ -->
+<section>
+  <div class="sec__head"><span class="sec__no">06</span><h2>Revisions</h2><span class="sec__meta">The safety net</span></div>
+  <p class="sec__note">The whole reason for building on Git — every save is already a version, we just need to surface it.</p>
+  <ul>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Read real commit history per item via the API</span><span class="n">Replaces the sample rows in the Revisions tab.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Compare two versions (what changed)</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Restore an earlier version in one click</span><span class="n">The “something went out wrong, put it back” button.</span></span></label></li>
+  </ul>
+</section>
+
+<!-- ============ 7. FORMS ============ -->
+<section>
+  <div class="sec__head"><span class="sec__no">07</span><h2>Forms</h2><span class="sec__meta">Contact &amp; pop-ups</span></div>
+  <ul>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Replace the Web3Forms placeholder access key<span class="tag tag--block">Blocker</span></span><span class="n">The live contact form has a placeholder key — it will not deliver mail as-is.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Submissions inbox reads real submissions</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Pop-up forms actually render on the site</span><span class="n">Trigger rules (exit intent / scroll / delay) are editable but not yet wired to the front end.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Contact page fields save through</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Spam protection + notification email</span></span></label></li>
+  </ul>
+</section>
+
+<!-- ============ 8. WIRING ============ -->
+<section>
+  <div class="sec__head"><span class="sec__no">08</span><h2>Front-end wiring</h2><span class="sec__meta">Make the CMS actually drive the site</span></div>
+  <p class="sec__note">Some pages are still hand-coded HTML, so editing them in the portal won't change the page. Worth knowing exactly which.</p>
+  <ul>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Talent page → the talent collection</span><span class="n">All 20 roster members are in the CMS; the page is still hardcoded.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">About board + founder → the board collection</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Awards → the awards collection</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Homepage client logo strip → the clients collection</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Homepage Wire rail → the articles collection</span><span class="n">The rail is hardcoded and every card links to <code>article.html</code>; the Wire page itself is already data-driven.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Homepage Selected Work stats/copy → the case studies</span><span class="n">Kills the placeholder numbers in one move.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Chart Pulse tab in the portal</span><span class="n">So the Friday drop is a form, not hand-edited JSON.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Delete the leftover static <code>article.html</code> once the rail is wired</span></span></label></li>
+  </ul>
+</section>
+
+<!-- ============ 9. CONTENT ============ -->
+<section>
+  <div class="sec__head"><span class="sec__no">09</span><h2>Content to finish</h2><span class="sec__meta">Team, not code</span></div>
+  <p class="sec__note">Site Health currently reads <b>0 critical, ~24 recommendations</b> — this is that list. None of it blocks launch, but it's what makes the site feel finished.</p>
+  <ul>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Real copy + impact stats for 5 case studies<span class="tag tag--content">Content</span></span><span class="n">Corona Cero, Colombia Island, both Stellas, TikTok Awards still say “Add the challenge for this project in the CMS.”</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Replace the placeholder stats on the homepage work cards<span class="tag tag--content">Content</span></span><span class="n">Flagged in-source; they're illustrative, not real.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Lead images for the 4 Wire articles<span class="tag tag--content">Content</span></span><span class="n">They currently show the placeholder banner.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Chart Pulse artist avatars<span class="tag tag--content">Content</span></span><span class="n">Drop square crops into <code>chart-pulse/artists/</code> — grey initials until then.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Focus keyphrases + meta descriptions<span class="tag tag--content">Content</span></span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Confirm Fran's dates (site says 1955–2017)<span class="tag tag--content">Content</span></span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Award logos, if you want them as logos rather than text<span class="tag tag--nice">Optional</span></span></span></label></li>
+  </ul>
+</section>
+
+<!-- ============ 10. LAUNCH ============ -->
+<section>
+  <div class="sec__head"><span class="sec__no">10</span><h2>Before you call it live</h2><span class="sec__meta">Final pass</span></div>
+  <ul>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Block the portal + admin from search engines</span><span class="n"><code>noindex</code> is set — confirm it survives the build and check robots.txt.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Check every page on a real phone</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Test in Safari, Chrome and Firefox</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Check the loader, videos and the globe on a slow connection</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Run Lighthouse — performance + accessibility</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Redirects from the old WordPress URLs</span><span class="n">The Redirects tab exists — fill it before cutover so you don't lose the SEO you've built.</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Sitemap + robots reachable on the live domain</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Walk the team through the portal</span></span></label></li>
+  </ul>
+</section>
+
+<!-- ============ 11. PHASE 3 ============ -->
+<section>
+  <div class="sec__head"><span class="sec__no">11</span><h2>Phase 3 — parked</h2><span class="sec__meta">After launch</span></div>
+  <p class="sec__note">Not Phase 2. Listed so nothing gets lost — the dashboard shows sample analytics until this is done.</p>
+  <ul>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">GA4 property + connect to the dashboard</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Google Search Console — verify csa.global, submit the sitemap</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Real traffic + top-pages data in the portal dashboard</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt"><span class="t">Cookie / privacy notice if you add analytics</span></span></label></li>
+  </ul>
+</section>
+
+</div>
+
+<div class="bar">
+  <div class="bar__in">
+    <span class="bar__txt" id="barTxt">—</span>
+    <button id="reset" type="button">Reset ticks</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var boxes = [].slice.call(document.querySelectorAll('input[type=checkbox]'));
+  var KEY = 'csa-phase2-checklist';
+
+  // Give every box a stable id from its label text so saved ticks survive edits.
+  boxes.forEach(function(b, i){
+    var t = b.parentNode.querySelector('.t');
+    b.dataset.k = (t ? t.textContent.trim().slice(0, 48) : 'item') + '#' + i;
+  });
+
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){}
+  boxes.forEach(function(b){ if (b.dataset.k in saved) b.checked = saved[b.dataset.k]; });
+
+  var pDone = document.getElementById('pDone'),
+      pTotal = document.getElementById('pTotal'),
+      pBar = document.getElementById('pBar'),
+      barTxt = document.getElementById('barTxt');
+
+  function paint(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    var pct = Math.round(done / boxes.length * 100);
+    pDone.textContent = done;
+    pTotal.textContent = boxes.length;
+    pBar.style.width = pct + '%';
+    barTxt.textContent = done + ' of ' + boxes.length + ' complete · ' + pct + '%';
+  }
+
+  function save(){
+    var o = {};
+    boxes.forEach(function(b){ o[b.dataset.k] = b.checked; });
+    try { localStorage.setItem(KEY, JSON.stringify(o)); } catch(e){}
+  }
+
+  boxes.forEach(function(b){
+    b.addEventListener('change', function(){ save(); paint(); });
+  });
+
+  document.getElementById('reset').addEventListener('click', function(){
+    if (!confirm('Clear every tick on this checklist?')) return;
+    try { localStorage.removeItem(KEY); } catch(e){}
+    location.reload();
+  });
+
+  paint();
+})();
+</script>
+</body>
+</html>
