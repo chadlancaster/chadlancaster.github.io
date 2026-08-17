@@ -864,7 +864,7 @@ section { transition: background 0.6s var(--ease-out); }
 .work__stack {
   --video-w: calc(min(1100px, 100vw - 2 * var(--gutter)) - 48px); /* frozen video width = resting card content */
   --card-open: min(96vw, var(--max));                              /* how wide the card blows open */
-  --panel-w: calc(var(--card-open) - 48px - var(--video-w));       /* room left for copy + stats */
+  --panel-w: max(420px, calc(var(--card-open) - 48px - var(--video-w))); /* comfortable min so copy stays readable */
 }
 .work__stack .case__inner {
   display: flex;
@@ -882,8 +882,9 @@ section { transition: background 0.6s var(--ease-out); }
 .work__stack .case__reveal {        /* positioned against .case so it can use the FULL card height (video + meta row) */
   position: absolute;
   top: 24px; bottom: 24px;          /* card padding is 24px — span the whole inner card */
-  left: calc(24px + var(--video-w));
-  right: 24px;
+  right: 24px; left: auto;
+  width: var(--panel-w);            /* pinned to the panel's guaranteed width */
+  container-type: inline-size;      /* copy below sizes to THIS panel's width (cqi) */
   overflow: hidden;
   opacity: 0;
   border-left: 1px solid var(--line);
@@ -892,12 +893,13 @@ section { transition: background 0.6s var(--ease-out); }
 .work__stack .case__reveal-in {
   height: 100%;
   box-sizing: border-box;
-  width: var(--panel-w);      /* fixed -> content doesn't reflow while the card opens */
-  padding: clamp(20px, 2vw, 40px) clamp(28px, 3vw, 60px);
+  width: 100%;                /* the reveal box is already exactly --panel-w wide */
+  padding: clamp(18px, 1.8vw, 34px) clamp(24px, 2.4vw, 48px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: clamp(16px, 1.8vw, 26px);
+  gap: clamp(10px, 1.1vw, 18px);
+  overflow-y: auto;           /* safety net: never hard-clip if a tight width still overflows */
 }
 .case__reveal-kicker {
   font-family: var(--font-mono);
@@ -947,6 +949,23 @@ section { transition: background 0.6s var(--ease-out); }
 @media (max-width: 800px) {
   .work__stack .case__media { flex-basis: auto; width: 100%; }
   .work__stack .case__reveal { display: none; }   /* no hover on touch — cards stay simple */
+}
+
+/* Selected Work reveal: copy sizes to the PANEL width (container query units).
+   Stays at its full design size when the panel is roomy, and only scales down
+   as the panel narrows — never a flat, globally-shrunk look. */
+.work__stack .case__reveal-in { gap: clamp(11px, 4.3cqi, 26px); }
+.work__stack .case__summary { font-size: clamp(19px, 6.6cqi, 34px); line-height: 1.22; max-width: 34ch; }
+.work__stack .case__brief { gap: clamp(9px, 3cqi, 18px); }
+.work__stack .case__brief-item span { font-size: clamp(13px, 3.2cqi, 16px); margin-bottom: 3px; }
+.work__stack .case__brief-item p { font-size: clamp(13px, 3.2cqi, 16px); line-height: 1.55; }
+.work__stack .case__reveal .cs__stats { gap: clamp(8px, 2.2cqi, 14px); grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); }
+.work__stack .case__reveal .cs__stat { padding: clamp(13px, 4cqi, 26px) clamp(10px, 2.6cqi, 20px); }
+.work__stack .case__reveal .cs__stat-num { font-size: clamp(20px, 6cqi, 34px); line-height: 1; }
+.work__stack .case__reveal .cs__stat-label { margin-top: clamp(5px, 1.6cqi, 10px); }
+@media (min-width: 801px) {
+  /* shrink the video on hover ONLY when the leftover would be under the panel's min width */
+  .work__stack:hover .case:hover .case__media { flex-basis: calc(var(--card-open) - 48px - var(--panel-w)); }
 }
 
 /* Sound toggle — appears over the playing video on hover. */
