@@ -17,7 +17,7 @@ module.exports = function (eleventyConfig) {
     "fonts",
     "uploads",
     "chart-pulse",
-    // "CNAME",  // ← re-enable at go-live to claim csa.global (staging serves at chadlancaster.github.io)
+    "CNAME",  // csa.global custom domain (go-live)
   ].forEach((p) => eleventyConfig.addPassthroughCopy(p));
 
   // The CMS admin panel ships as static files.
