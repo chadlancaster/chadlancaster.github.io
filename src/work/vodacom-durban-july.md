@@ -7,7 +7,7 @@ discipline: "Sport"
 date: 2018-01-01
 year: 2018
 standfirst: "Vodacom Red partnered with South Africa’s most iconic luxury designer, David Tlale , for an exclusive fashion-first collaboration."
-image: "/case-studies/vodacom-durban-july.jpg"
+image: "/case-studies/vodacom-durban-july-detail.jpg"
 imageAlt: "Vodacom Durban July"
 challenge: "The Vodacom Durban July is South Africa’s premier fashion, society, and horse-racing event. Vodacom needed to drive migration of existing subscribers to the Vodacom Red Package, using the event as a powerful lifestyle touchpoint"
 bigIdea: "Vodacom Red partnered with South Africa’s most iconic luxury designer, David Tlale , for an exclusive fashion-first collaboration. For the first time in his 15-year career, Tlale abandoned his signature black aesthetic to create RED by David Tlale, a once-off collection of 10 striking couture looks, redefining his dramatic design style through the boldness of red. In another first, Tlale designed a limited-edition RED by David Tlale clutch bag , crafted from premium leather. Only 1,000 bags were made, available exclusively to Vodacom Red subscribers who upgraded or signed up during June and July 2018"

@@ -6,7 +6,7 @@ discipline: "Events & Activations"
 date: 2019-01-01
 year: 2019
 standfirst: "CSA managed all communications across multiple lifestyle and entertainment media platforms to drive awareness and excitement"
-image: "/case-studies/nubian-music-festival.jpg"
+image: "/case-studies/nubian-music-festival-detail.jpg"
 imageAlt: "Nubian Music Festival"
 challenge: "Generate media and social media buzz around ticket sales and the staging of the annual music and lifestyle festival"
 bigIdea: "CSA managed all communications across multiple lifestyle and entertainment media platforms to drive awareness and excitement"

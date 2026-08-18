@@ -7,7 +7,7 @@ discipline: "Brand Communications · Sport"
 date: 2022-01-01
 year: 2022
 standfirst: "To generate earned media and place Budweiser front and centre of the cultural conversation during the FIFA™ World Cup"
-image: "/case-studies/budweiser-fifa-world-cup-2.jpeg"
+image: "/case-studies/budweiser-fifa-world-cup-2-detail.jpg"
 imageAlt: "Budweiser FIFA World Cup"
 challenge: "Budweiser invited 250 of the world’s most eclectic and artistic creators & innovators to an immersive experience at the FIFA™ World Cup in Qatar 2022, in the name of expression and collaboration. South Africa was represented by Mzansi’s favourite female DJ duo, TxC, who have broken barriers and helped shape Amapiano culture in SA and around the world"
 bigIdea: "To generate earned media and place Budweiser front and centre of the cultural conversation during the FIFA™ World Cup"
