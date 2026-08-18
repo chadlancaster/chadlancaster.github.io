@@ -8,6 +8,7 @@ date: 2023-01-01
 year: 2023
 standfirst: "Corona launches its very own Island off the coast of Colombia and, to celebrate, invites consumers to a transformative experience at “Corona Island”…"
 image: "/case-studies/corona-island-2.jpeg"
+videoYouTube: "v3EfUNI5Ovo"
 imageAlt: "Corona: Colombia Island"
 challenge: "Share with multi-platform audiences that 95% of our lives are spent indoors and, of that, more than half is spent in the office. Show the impact of this and present an alternative that aligns with the brand’s narrative"
 bigIdea: "Corona launches its very own Island off the coast of Colombia and, to celebrate, invites consumers to a transformative experience at “Corona Island” where they can disconnect from everyday hustle and bustle and reconnect with nature"

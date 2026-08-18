@@ -8,6 +8,7 @@ date: 2024-01-01
 year: 2024
 standfirst: "Corona Cero didn’t just join the Olympic conversation, it disrupted it."
 image: "/case-studies/corona-cero-olympics.jpg"
+videoYouTube: "cfJRxeZvnsk"
 imageAlt: "Corona Cero: For Every #GoldenMoment"
 challenge: "Corona Cero needed a credible and impactful entry into the highly saturated space of sports sponsorship, the Olympics. How could a brand known for relaxation and celebration create genuine local relevance and cultural resonance amidst fierce competition and global media saturation?"
 bigIdea: "Corona Cero didn’t just join the Olympic conversation, it disrupted it. Rather than chasing medals, Corona celebrated everyday South African moments alongside iconic Olympic achievements. By placing real Olympic venue seats across South Africa and celebrating personal triumphs of local heroes like Akani Simbine and Tatjana Schoenmaker, Corona transformed Olympic performance into relatable #GoldenMoments for everyday South Africans"

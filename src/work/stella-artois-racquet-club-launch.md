@@ -8,6 +8,7 @@ date: 2025-01-01
 year: 2025
 standfirst: "Own the style side of the sport."
 image: "/case-studies/stella-artois-racquet-club-launch.jpg"
+videoYouTube: "-kngX0t1f0E"
 imageAlt: "Stella Artois: Racquet Club Launch"
 challenge: "Stella Artois needed to establish Perfect Serve Racquet Club as a premium lifestyle platform, not just a padel event. The complexity: delivering a R4M earned media KPI within 28 May to 28 June, while all content had to be 21+ age-gated in South Africa (25+ globally), limiting organic reach. The brief demanded cultural cut-through under regulatory constraint"
 bigIdea: "Own the style side of the sport. We reframed padel as courtside culture, sharp outfits, premium rituals and editorial-grade moments, then built one launch into a multi-angle content engine. By pairing a designer collaboration with GQ + Glamour editorial storytelling and creator/celebrity amplification, Stella became the brand that didn’t just sponsor padel… it styled it"

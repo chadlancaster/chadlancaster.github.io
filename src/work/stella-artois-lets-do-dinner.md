@@ -8,6 +8,7 @@ date: 2024-01-01
 year: 2024
 standfirst: "Stella Artois enlisted actors Nomzamo Mbatha and Kat Sinivasan to champion the power of a shared meal, turning solo dining into a national conversation about reconnecting over dinner."
 image: "/case-studies/stella-artois-lets-do-dinner.jpg"
+videoYouTube: "iVJiyLHJrV0"
 imageAlt: "Stella Artois: Let’s Do Dinner"
 challenge: "With over 50% of adults in South Africa dining solo, Stella Artois aimed to combat loneliness and inspire people to reconnect over a meal. The goal was to encourage consumers to break from their routines and dine together"
 bigIdea: "Stella Artois emphasized the importance of togetherness by enlisting popular personalities, actors Nomzamo Mbatha and Kat Sinivasan, whose busy lives helped promote the message of shared meals. Nomzamo participated in “Let’s Do Dinner” in New York City with international stars before hosting a similar event in South Africa with Kat. By partnering with influencers who resonated with the target audience, Stella Artois sparked meaningful conversations about the significance of dinner gatherings and their role in bringing people together"

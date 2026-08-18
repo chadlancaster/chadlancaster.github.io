@@ -8,6 +8,7 @@ date: 2023-01-01
 year: 2023
 standfirst: "CSA cast influencers and created an influencer Social Media programme; talent management with regards to posts & event attendance; managed publicity…"
 image: "/case-studies/redbull-cape-town-circuit.jpg"
+videoYouTube: "XliQh--iIXQ"
 imageAlt: "Red Bull Cape Town Circuit"
 challenge: "To create awareness of the REDBULL F1 Circuit race in Cape Town"
 bigIdea: "CSA cast influencers and created an influencer Social Media programme; talent management with regards to posts & event attendance; managed publicity & transport arrangements for talent to attend event. In another first, Tlale designed a limited-edition RED by David Tlale clutch bag , crafted from premium leather. Only 1,000 bags were made, available exclusively to Vodacom Red subscribers who upgraded or signed up during June and July 2018"

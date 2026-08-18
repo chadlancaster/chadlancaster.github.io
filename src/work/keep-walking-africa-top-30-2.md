@@ -8,6 +8,7 @@ date: 2023-01-01
 year: 2023
 standfirst: "Execute a culture-shifting, first time ever, pan-African campaign that celebrates those cultural shape shifters who are boldly striding into the next…"
 image: "/case-studies/keep-walking-africa-top-30-2.jpg"
+videoYouTube: "LYFn0NMeqf8"
 imageAlt: "Keep Walking: Africa Top 30"
 challenge: "Johnnie Walker wanted to take bold steps in speaking to a new generation of whiskey drinkers on the African continent. The solve lay in creating a campaign that would afford the brand substantial cultural relevance"
 bigIdea: "Execute a culture-shifting, first time ever, pan-African campaign that celebrates those cultural shape shifters who are boldly striding into the next era with purpose, while supporting progress in the continent’s creative economy. The inclusive nature of the campaign ensured creatives came from Anglo-, Franco- and Lusophone countries and CSA managed the entire nominations/finalists process. The company also directed all PR and social media and handled all celebrity panel management"

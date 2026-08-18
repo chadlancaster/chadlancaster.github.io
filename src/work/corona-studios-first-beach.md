@@ -8,6 +8,7 @@ date: 2026-01-01
 year: 2026
 standfirst: "“First Beach” captured the transformative power of first contact with the sea by following four South Africans on their inaugural coastal journey."
 image: "/case-studies/corona-studios-first-beach.jpg"
+videoYouTube: "1JWAeLxWHCE"
 imageAlt: "Corona Studios: First Beach"
 challenge: "Despite South Africa’s vast and iconic coastline, millions living inland have never experienced the ocean due to geographic and economic barriers. Corona Studios needed to bridge this divide by crafting an emotionally driven story aligned with Corona’s “100 Years Under the Sun” platform & its deep connection to nature"
 bigIdea: "“First Beach” captured the transformative power of first contact with the sea by following four South Africans on their inaugural coastal journey. At its heart was Ruvaine Wheatley, a landlocked lifeguard who had never seen the ocean, turning a personal milestone into a universal story of awe, freedom, and possibility"
