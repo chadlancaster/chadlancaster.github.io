@@ -926,3 +926,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 })();
+
+/* ---------- CASE STUDY: media block image carousel ---------- */
+document.querySelectorAll('.cs__video').forEach((box) => {
+  const poster = box.querySelector('.cs__video-poster');
+  const slides = poster ? poster.querySelectorAll('img.cs__slide') : [];
+  if (slides.length < 2) return;
+  const dots = box.querySelectorAll('.cs__media-dot');
+  let i = 0, timer;
+  const go = (n) => {
+    slides[i].classList.remove('is-active');
+    if (dots[i]) dots[i].classList.remove('is-active');
+    i = (n + slides.length) % slides.length;
+    slides[i].classList.add('is-active');
+    if (dots[i]) dots[i].classList.add('is-active');
+  };
+  const start = () => { timer = setInterval(() => go(i + 1), 4200); };
+  const stop = () => clearInterval(timer);
+  dots.forEach((d, idx) => d.addEventListener('click', (e) => { e.stopPropagation(); stop(); go(idx); start(); }));
+  box.addEventListener('mouseenter', stop);
+  box.addEventListener('mouseleave', start);
+  start();
+});

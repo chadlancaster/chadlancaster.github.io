@@ -42,8 +42,16 @@ ogType: article
       <div class="cs__sticky">
         <div class="cs__video{% if videoYouTube %} has-video{% endif %}"{% if videoYouTube %} data-youtube="{{ videoYouTube }}" role="button" tabindex="0" aria-label="Play film - {{ title }}"{% endif %}>
           <div class="cs__video-poster">
-            {% if image %}<img src="{{ image }}" alt="{{ imageAlt }}" />{% else %}<div class="placeholder"><span class="placeholder__label">[ film poster ]</span></div>{% endif %}
+            {% if gallery and gallery.length %}
+              {% for s in gallery %}<img src="{{ s }}" alt="{{ imageAlt or title }}" class="cs__slide{% if loop.first %} is-active{% endif %}"{% if not loop.first %} loading="lazy"{% endif %} />{% endfor %}
+            {% elif image %}<img src="{{ image }}" alt="{{ imageAlt }}" class="cs__slide is-active" />
+            {% else %}<div class="placeholder"><span class="placeholder__label">[ film poster ]</span></div>{% endif %}
           </div>
+          {% if gallery and gallery.length > 1 %}
+          <div class="cs__media-dots">
+            {% for s in gallery %}<button type="button" class="cs__media-dot{% if loop.first %} is-active{% endif %}" data-slide="{{ loop.index0 }}" aria-label="Image {{ loop.index }}"></button>{% endfor %}
+          </div>
+          {% endif %}
           {% if videoTitle %}
           <div class="cs__video-meta">
             <div class="cs__video-title">{{ videoTitle }}</div>
@@ -71,12 +79,5 @@ ogType: article
     </aside>
   </div>
 
-  {% if gallery and gallery.length %}
-  <section class="cs__gallery" aria-label="Campaign gallery">
-    {% for img in gallery %}
-    <figure class="cs__gallery-item"><img src="{{ img }}" alt="{{ title }} — image {{ loop.index }}" loading="lazy" /></figure>
-    {% endfor %}
-  </section>
-  {% endif %}
 
 </article>
