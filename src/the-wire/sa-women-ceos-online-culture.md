@@ -2,6 +2,7 @@
 title: "Why South African Women Are the Real CEOs of Online Culture"
 titleEm: "the Real CEOs of Online Culture"
 category: "Industry"
+filters: ["media"]
 author: "Robert Greeff"
 authorRole: "Copywriter"
 authorBio: "Robert Greeff is a culture-obsessed copywriter-specialist who studies the world and marketing industry through anthropology, sociology, and philosophy. He asks \"why?\" more than most people are comfortable with, believing every trend is really a story about human behaviour. Off the clock, he's usually watching K-dramas, wearing kimonos, or hunting down the next pair for his sneaker collection."

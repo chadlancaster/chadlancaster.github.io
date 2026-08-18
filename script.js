@@ -909,3 +909,20 @@ document.addEventListener('DOMContentLoaded', () => {
   render();
   restart();
 });
+
+/* ---------- THE WIRE: archive filter ---------- */
+(function () {
+  const bar = document.getElementById('wireFilter');
+  if (!bar) return;
+  const rail = bar.closest('section').querySelector('.cards-rail');
+  bar.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    bar.querySelectorAll('button').forEach((b) => b.classList.toggle('is-active', b === btn));
+    const f = btn.dataset.filter;
+    rail.querySelectorAll('.article-card').forEach((c) => {
+      const fs = (c.dataset.filters || '').split(/\s+/);
+      c.classList.toggle('is-hidden', !(f === 'all' || fs.includes(f)));
+    });
+  });
+})();

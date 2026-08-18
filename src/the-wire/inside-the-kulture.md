@@ -2,6 +2,7 @@
 title: "Inside The Kulture: 800K Fans and a Cultural Movement in Motion"
 titleEm: "800K Fans and a Cultural Movement in Motion"
 category: "Music · Industry"
+filters: ["music", "media"]
 author: "Robert Greeff"
 authorRole: "Copywriter"
 authorBio: "Robert Greeff is a culture-obsessed copywriter-specialist who studies the world and marketing industry through anthropology, sociology, and philosophy. He asks \"why?\" more than most people are comfortable with, believing every trend is really a story about human behaviour. Off the clock, he's usually watching K-dramas, wearing kimonos, or hunting down the next pair for his sneaker collection."
