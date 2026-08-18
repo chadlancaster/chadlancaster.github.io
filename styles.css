@@ -1945,12 +1945,13 @@ section { transition: background 0.6s var(--ease-out); }
 
 .cs__video {
   position: relative; overflow: hidden;
-  flex: 1 1 auto; min-height: 320px;
+  width: 100%; aspect-ratio: 16 / 9;   /* uniform poster size across every case study */
   border-radius: 6px;
   border: 1px solid var(--line);
-  cursor: pointer;
+  cursor: default;
   background: #0F0F0F;
 }
+.cs__video.has-video { cursor: pointer; }
 .cs__video-poster { position: absolute; inset: 0; }
 .cs__video-poster img {
   position: absolute; inset: 0;
