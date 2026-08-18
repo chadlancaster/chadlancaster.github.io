@@ -91,8 +91,8 @@ ogType: article
       <div class="post__subscribe">
         <h3 class="post__subscribe-title">The Wire, <em>in your inbox.</em></h3>
         <p class="post__subscribe-copy">A monthly signal on what's shifting in culture, trends, drops and talent. No fluff, no spam.</p>
-        <form class="post__subscribe-form" action="#" method="post" onsubmit="return false;">
-          <input type="email" placeholder="Email address" aria-label="Email address" required>
+        <form class="post__subscribe-form" onsubmit="window.location.href='mailto:admin@csa.global?subject=Subscribe to The Wire&body=Please add me to The Wire: '+encodeURIComponent(this.email.value);return false;">
+          <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
           <button type="submit" aria-label="Subscribe"><span aria-hidden="true">→</span></button>
         </form>
       </div>

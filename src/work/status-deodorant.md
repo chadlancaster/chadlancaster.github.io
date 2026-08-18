@@ -7,6 +7,9 @@ date: 2022-01-01
 year: 2022
 standfirst: "Develop a multi-faceted campaign that positioned The Man Of Status as more than just a deodorant, it became a symbol of ambition, perseverance, and…"
 image: "/case-studies/status-deodorant.jpg"
+gallery:
+  - "/case-studies/gallery/status-deodorant-1.jpg"
+  - "/case-studies/gallery/status-deodorant-2.jpg"
 imageAlt: "Status Deodorant"
 challenge: "C.S.A. was given a tall ask: how to gain traction in a well-traded market for The Man Of Status deodorant relaunch. The objective was to drive brand awareness, influencer advocacy, and PR while creating a lasting communication strategy"
 bigIdea: "Develop a multi-faceted campaign that positioned The Man Of Status as more than just a deodorant, it became a symbol of ambition, perseverance, and success. By leveraging influential personalities who embody the hustle and earn the respect of STATUS, the campaign resonated deeply with the target audience"

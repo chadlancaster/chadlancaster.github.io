@@ -8,6 +8,11 @@ date: 2023-01-01
 year: 2023
 standfirst: "CSA cast influencers and created an influencer Social Media programme; talent management with regards to posts & event attendance; managed publicity…"
 image: "/case-studies/redbull-cape-town-circuit.jpg"
+gallery:
+  - "/case-studies/gallery/redbull-cape-town-circuit-1.jpg"
+  - "/case-studies/gallery/redbull-cape-town-circuit-2.jpg"
+  - "/case-studies/gallery/redbull-cape-town-circuit-3.jpg"
+  - "/case-studies/gallery/redbull-cape-town-circuit-4.jpg"
 videoYouTube: "XliQh--iIXQ"
 imageAlt: "Red Bull Cape Town Circuit"
 challenge: "To create awareness of the REDBULL F1 Circuit race in Cape Town"

@@ -8,6 +8,13 @@ date: 2010-01-01
 year: 2010
 standfirst: "Leverage major events and multi-platform media coverage to showcase Cape Town’s cultural vibrancy and event-hosting capabilities, securing global…"
 image: "/case-studies/city-of-cape-town-detail.jpg"
+gallery:
+  - "/case-studies/gallery/city-of-cape-town-1.jpg"
+  - "/case-studies/gallery/city-of-cape-town-2.jpg"
+  - "/case-studies/gallery/city-of-cape-town-3.jpg"
+  - "/case-studies/gallery/city-of-cape-town-4.jpg"
+  - "/case-studies/gallery/city-of-cape-town-5.jpg"
+  - "/case-studies/gallery/city-of-cape-town-6.jpg"
 imageAlt: "City of Cape Town"
 challenge: "Position Cape Town as Africa’s “events capital” by generating international and domestic buzz through high-profile events"
 bigIdea: "Leverage major events and multi-platform media coverage to showcase Cape Town’s cultural vibrancy and event-hosting capabilities, securing global recognition"

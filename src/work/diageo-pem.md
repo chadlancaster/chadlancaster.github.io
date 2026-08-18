@@ -8,6 +8,9 @@ date: 2025-01-01
 year: 2025
 standfirst: "A Culture & Entertainment program that connected each Diageo Brand to relevant local artists, platforms and events across their particular pillars of…"
 image: "/case-studies/diageo-pem.jpg"
+gallery:
+  - "/case-studies/gallery/diageo-pem-1.jpg"
+  - "/case-studies/gallery/diageo-pem-2.jpg"
 videoYouTube: "sKirW8cfHL4"
 imageAlt: "Diageo PEM"
 challenge: "Diageo aimed to connect with a new generation of drinkers across Africa, specifically in Mozambique, Zambia, the DRC, Cameroon, Angola, Ethiopia, and Côte d’Ivoire. Whether it was whisky, gin, or vodka, Diageo sought to authentically embed their brand portfolio into the local culture to showcase its relevance"

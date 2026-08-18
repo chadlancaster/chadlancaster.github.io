@@ -5,7 +5,7 @@ ogType: article
 <article class="cs">
 
   <header class="cs__hero">
-    <a href="/index.html#work" class="cs__back"><span aria-hidden="true">←</span> Selected Work</a>
+    <a href="/index.html#work" class="cs__back" onclick="if(history.length>1){history.back();return false;}"><span aria-hidden="true">←</span> Back</a>
     <div class="cs__hero-grid">
       <div class="cs__hero-main">
         <div class="cs__kicker">Case Study{% if discipline %} / {{ discipline }}{% endif %}</div>
@@ -70,5 +70,13 @@ ogType: article
       </div>
     </aside>
   </div>
+
+  {% if gallery and gallery.length %}
+  <section class="cs__gallery" aria-label="Campaign gallery">
+    {% for img in gallery %}
+    <figure class="cs__gallery-item"><img src="{{ img }}" alt="{{ title }} — image {{ loop.index }}" loading="lazy" /></figure>
+    {% endfor %}
+  </section>
+  {% endif %}
 
 </article>

@@ -8,6 +8,9 @@ date: 2025-01-01
 year: 2025
 standfirst: "Own the style side of the sport."
 image: "/case-studies/stella-artois-racquet-club-launch.jpg"
+gallery:
+  - "/case-studies/gallery/stella-artois-racquet-club-launch-1.jpg"
+  - "/case-studies/gallery/stella-artois-racquet-club-launch-2.jpg"
 videoYouTube: "-kngX0t1f0E"
 imageAlt: "Stella Artois: Racquet Club Launch"
 challenge: "Stella Artois needed to establish Perfect Serve Racquet Club as a premium lifestyle platform, not just a padel event. The complexity: delivering a R4M earned media KPI within 28 May to 28 June, while all content had to be 21+ age-gated in South Africa (25+ globally), limiting organic reach. The brief demanded cultural cut-through under regulatory constraint"

@@ -8,6 +8,11 @@ date: 2024-01-01
 year: 2024
 standfirst: "“Larger Than Life”, a world-class awards production that celebrated the continent’s culture while emphasizing that TikTok isn’t just ingrained in the…"
 image: "/case-studies/tiktok-awards-larger-than-life.jpg"
+gallery:
+  - "/case-studies/gallery/tiktok-awards-larger-than-life-1.jpg"
+  - "/case-studies/gallery/tiktok-awards-larger-than-life-2.jpg"
+  - "/case-studies/gallery/tiktok-awards-larger-than-life-3.jpg"
+  - "/case-studies/gallery/tiktok-awards-larger-than-life-4.jpg"
 videoYouTube: "srMDSBgKs-s"
 imageAlt: "TikTok Awards: Larger Than Life"
 challenge: "Create an Awards experience that brought to life TikTok as a cultural phenomenon, while celebrating the digital creators redefining African narratives through innovation & creativity. CSA was tasked to create & produce the stage show as well as craft impactful social media content & visuals"

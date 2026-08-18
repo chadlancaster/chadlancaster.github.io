@@ -8,6 +8,12 @@ date: 2026-01-01
 year: 2026
 standfirst: "Corona transformed Copacabana into a living cultural experience through a curated South African creator and talent crew led by Zakes Bantwini."
 image: "/case-studies/corona-copacabana-2026-detail.jpg"
+gallery:
+  - "/case-studies/gallery/corona-copacabana-2026-1.jpg"
+  - "/case-studies/gallery/corona-copacabana-2026-2.jpg"
+  - "/case-studies/gallery/corona-copacabana-2026-3.jpg"
+  - "/case-studies/gallery/corona-copacabana-2026-4.jpg"
+  - "/case-studies/gallery/corona-copacabana-2026-5.jpg"
 imageAlt: "Corona: Copacabana 2026"
 challenge: "Corona wanted to position itself at the centre of Copacabana 2026 in Rio de Janeiro while translating the global “Rio Is Calling” experience into culturally relevant South African storytelling. The objective was to drive premium creator content, earned media and real-time social momentum that extended beyond traditional event coverage"
 bigIdea: "Corona transformed Copacabana into a living cultural experience through a curated South African creator and talent crew led by Zakes Bantwini. By blending immersive travel storytelling, iconic music moments and live media integration, the campaign connected South African audiences to the energy and culture of Rio in real time"
