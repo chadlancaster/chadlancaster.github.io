@@ -51,7 +51,7 @@ We may share or disclose the information you provide, including name and contact
 
 Except as described in this Privacy Policy or at the time we request the information, we do not otherwise use, share or otherwise disclose your name and contact to any third parties.
 
-If you wish to access, move, or delete your data contact us at [admin@csa.global](mailto:admin@csa.global) and the team at CSA will assist you. We comply with GDPR (General Data Protection Regulation) and CCPA policy.
+If you wish to access, move, or delete your data contact us at [contact@csa.global](mailto:contact@csa.global) and the team at CSA will assist you. We comply with GDPR (General Data Protection Regulation) and CCPA policy.
 
 ## D. Online Tracking / Third Party Advertising
 
@@ -75,7 +75,7 @@ Please note that by deleting or disabling future cookies, your user experience m
 
 ## E. Children
 
-The features, programs, promotions and other aspects of this Site requiring personally identifiable information are not intended for children. We do not knowingly collect personally identifiable information from children under the age of thirteen (13). If you are a parent or guardian of a child under the age of thirteen (13) and believe he or she has disclosed personally identifiable information to us, please contact us at [talent@csa.global](mailto:talent@csa.global). A parent or guardian of a child under the age of thirteen (13) may review and request deletion of such child's personally identifiable information as well as prohibit the use thereof.
+The features, programs, promotions and other aspects of this Site requiring personally identifiable information are not intended for children. We do not knowingly collect personally identifiable information from children under the age of thirteen (13). If you are a parent or guardian of a child under the age of thirteen (13) and believe he or she has disclosed personally identifiable information to us, please contact us at [contact@csa.global](mailto:contact@csa.global). A parent or guardian of a child under the age of thirteen (13) may review and request deletion of such child's personally identifiable information as well as prohibit the use thereof.
 
 ## F. International Transfer of Information
 
@@ -110,11 +110,11 @@ No data transmissions over the Internet can be guaranteed to be 100% secure. Con
 
 ## M. Contacting Us
 
-If you have any questions about this privacy policy or our privacy practices, please contact us at [talent@csa.global](mailto:talent@csa.global). All information you provide in any written communication will also be covered by this policy.
+If you have any questions about this privacy policy or our privacy practices, please contact us at [contact@csa.global](mailto:contact@csa.global). All information you provide in any written communication will also be covered by this policy.
 
 ## Your California Privacy Rights
 
 Beginning on January 1, 2020, the California Consumer Privacy Act 1798.100 (CCPA) permits our visitors who are California residents to know what personal data is being collected about them, know whether their personal data is sold or disclosed and to whom, say no to the sale of personal data, access their personal data, request a business to delete any personal information about a consumer collected from that consumer, and not be discriminated against for exercising their privacy rights. To make such a request to CSA US Subsidiary based in Los Angeles, CA, please contact us:
 
 Communications Services America Inc.
-E-mail: [talent@csa.global](mailto:talent@csa.global)
+E-mail: [contact@csa.global](mailto:contact@csa.global)
