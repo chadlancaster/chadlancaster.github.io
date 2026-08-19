@@ -948,3 +948,26 @@ document.querySelectorAll('.cs__video').forEach((box) => {
   box.addEventListener('mouseleave', start);
   start();
 });
+
+/* ---------- LOGO STRIP: constant scroll speed on every device ----------
+   The CSS animation runs for a fixed 60s, but the strip's width scales with
+   the viewport (cells are 18vw), so wider/scaled screens scrolled faster.
+   Derive the duration from the measured pixel width instead, so the speed
+   (pixels per second) is identical on every device and screen size. */
+(() => {
+  const SPEED = 45; // px/sec — single source of truth for the scroll speed
+  const tracks = document.querySelectorAll('.brands__track');
+  if (!tracks.length) return;
+  const sync = () => {
+    tracks.forEach((track) => {
+      // The keyframe travels translateX(-50%) = one full copy of the logo set.
+      const distance = track.scrollWidth / 2; // px covered per loop
+      if (distance > 0) track.style.animationDuration = (distance / SPEED) + 's';
+    });
+  };
+  sync();
+  // Re-measure after images/fonts settle and on resize (debounced).
+  window.addEventListener('load', sync);
+  let t;
+  window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(sync, 150); });
+})();
