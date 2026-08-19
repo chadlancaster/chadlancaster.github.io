@@ -2,7 +2,7 @@
 layout: legal.njk
 title: "Group External Data Privacy Policy"
 permalink: "/data-protection.html"
-description: "The Celebrity Services Africa (CSA) Group External Data Privacy Policy, setting out how personal information is protected in line with POPIA and the GDPR."
+description: "The CSA Group of Companies (CSA) Group External Data Privacy Policy, setting out how personal information is protected in line with POPIA and the GDPR."
 legalUpdated: "2025"
 eleventyExcludeFromCollections: true
 ---

@@ -2,12 +2,12 @@
 layout: legal.njk
 title: "Privacy Policy"
 permalink: "/privacy-policy.html"
-description: "How Celebrity Services Africa (CSA) collects, uses and protects personal information provided through this website."
+description: "How CSA Group of Companies (CSA) collects, uses and protects personal information provided through this website."
 legalUpdated: "2025"
 eleventyExcludeFromCollections: true
 ---
 
-This privacy policy applies only to the website owned, operated and maintained by Celebrity Services Africa (PTY) Ltd ("CSA") (collectively referred to as the "Parties", "we" or "us") where this privacy policy is posted (collectively, the "Site"). This privacy policy does not pertain to information that is collected offline. BY USING THE SITE, YOU CONSENT TO THE TERMS AND CONDITIONS OF THIS PRIVACY POLICY AND TO OUR PROCESSING OF PERSONAL INFORMATION FOR THE PURPOSES STATED BELOW. IF YOU DO NOT AGREE TO THE TERMS AND CONDITIONS OF THIS PRIVACY POLICY, PLEASE DO NOT USE THE SITE.
+This privacy policy applies only to the website owned, operated and maintained by CSA Group of Companies ("CSA") (collectively referred to as the "Parties", "we" or "us") where this privacy policy is posted (collectively, the "Site"). This privacy policy does not pertain to information that is collected offline. BY USING THE SITE, YOU CONSENT TO THE TERMS AND CONDITIONS OF THIS PRIVACY POLICY AND TO OUR PROCESSING OF PERSONAL INFORMATION FOR THE PURPOSES STATED BELOW. IF YOU DO NOT AGREE TO THE TERMS AND CONDITIONS OF THIS PRIVACY POLICY, PLEASE DO NOT USE THE SITE.
 
 ## A. Information Collected
 
