@@ -955,7 +955,7 @@ document.querySelectorAll('.cs__video').forEach((box) => {
    Derive the duration from the measured pixel width instead, so the speed
    (pixels per second) is identical on every device and screen size. */
 (() => {
-  const SPEED = 45; // px/sec — single source of truth for the scroll speed
+  const SPEED = 25; // px/sec — single source of truth for the scroll speed (calm & identical on every device)
   const tracks = document.querySelectorAll('.brands__track');
   if (!tracks.length) return;
   const sync = () => {
