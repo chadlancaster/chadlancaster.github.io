@@ -16,7 +16,7 @@ gallery:
   - "/case-studies/gallery/city-of-cape-town-5.jpg"
   - "/case-studies/gallery/city-of-cape-town-6.jpg"
 imageAlt: "City of Cape Town"
-challenge: "Position Cape Town as Africa’s “events capital” by generating international and domestic buzz through high-profile events"
-bigIdea: "Leverage major events and multi-platform media coverage to showcase Cape Town’s cultural vibrancy and event-hosting capabilities, securing global recognition"
-execution: "C.S.A. played a key role in executing and publicizing several high-profile events: Springbok Arrival Parade 2007: Organized a welcome concert at Cape Town’s City Hall for 6,000 attendees and managed the parade logistics as the South African Rugby team traveled through the CBD, celebrated by thousands of fans. FIFA World Cup Fan Walk 2009: Created a 2.4km cultural street festival leading to the stadium, hailed as one of the most spectacular World Cup events and attracting global media coverage. FIFA World Cup Host City Launch 2010: Delivered a large-scale stage event, featuring a performance by R. Kelly, to mark Cape Town’s official role as a World Cup Host City"
+challenge: "Position Cape Town as Africa’s “events capital” by generating international and domestic buzz through high-profile events."
+bigIdea: "Leverage major events and multi-platform media coverage to showcase Cape Town’s cultural vibrancy and event-hosting capabilities, securing global recognition."
+execution: "C.S.A. played a key role in executing and publicizing several high-profile events: Springbok Arrival Parade 2007: Organized a welcome concert at Cape Town’s City Hall for 6,000 attendees and managed the parade logistics as the South African Rugby team traveled through the CBD, celebrated by thousands of fans. FIFA World Cup Fan Walk 2009: Created a 2.4km cultural street festival leading to the stadium, hailed as one of the most spectacular World Cup events and attracting global media coverage. FIFA World Cup Host City Launch 2010: Delivered a large-scale stage event, featuring a performance by R. Kelly, to mark Cape Town’s official role as a World Cup Host City."
 ---

@@ -12,9 +12,9 @@ gallery:
   - "/case-studies/gallery/lindt-chocolate-1.jpg"
   - "/case-studies/gallery/lindt-chocolate-2.jpg"
 imageAlt: "Lindt Chocolate"
-challenge: "Profile new Lindt products, introduce two new flavours, showcase Lindt Lindor Month, and promote the Lindt Bear gifting concept, all within a single month"
-bigIdea: "CSA led a multi-pronged campaign featuring the launch of Lindt Excellence Dark Wasabi, along with new flavours A Touch of Vanilla White and Dark Coconut Intense. Lindt Lindor Month was amplified through a Top of The Times competition, while the Lindt Bear was introduced as the perfect festive gift, supported by an online competition with Oprah Magazine"
-execution: "The campaign combined product profiling, flavour launches, competitions, and seasonal gifting promotions across print, digital, and lifestyle platforms. This coordinated approach ensured maximum visibility and consumer engagement for all Lindt initiatives within the month"
+challenge: "Profile new Lindt products, introduce two new flavours, showcase Lindt Lindor Month, and promote the Lindt Bear gifting concept, all within a single month."
+bigIdea: "CSA led a multi-pronged campaign featuring the launch of Lindt Excellence Dark Wasabi, along with new flavours A Touch of Vanilla White and Dark Coconut Intense. Lindt Lindor Month was amplified through a Top of The Times competition, while the Lindt Bear was introduced as the perfect festive gift, supported by an online competition with Oprah Magazine."
+execution: "The campaign combined product profiling, flavour launches, competitions, and seasonal gifting promotions across print, digital, and lifestyle platforms. This coordinated approach ensured maximum visibility and consumer engagement for all Lindt initiatives within the month."
 stats:
   - value: "11"
     label: "Radio Broadcasts"

@@ -9,36 +9,10 @@
    the design works immediately. When you license the actual Haas Grot Disp Trial,
    place the files in ./fonts/ matching the names below (or update the paths). */
 
-@font-face {
-  font-family: "Haas Grot Disp Trial";
-  src: url("./fonts/HaasGrotDisp-Trial-Light.woff2") format("woff2"),
-       url("./fonts/HaasGrotDisp-Trial-Light.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Haas Grot Disp Trial";
-  src: url("./fonts/HaasGrotDisp-Trial-Roman.woff2") format("woff2"),
-       url("./fonts/HaasGrotDisp-Trial-Roman.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Haas Grot Disp Trial";
-  src: url("./fonts/HaasGrotDisp-Trial-Medium.woff2") format("woff2"),
-       url("./fonts/HaasGrotDisp-Trial-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Haas Grot Disp Trial";
-  src: url("./fonts/HaasGrotDisp-Trial-Bold.woff2") format("woff2"),
-       url("./fonts/HaasGrotDisp-Trial-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-display: swap;
-}
+/* Display font is Inter Tight, loaded via Google Fonts in each page's <head>
+   (this is the face actually rendering across the site). The trial Haas Grotesk
+   files were never shipped, so their @font-face rules were removed to stop the
+   404 requests — Inter Tight now leads the --font-display stack below. */
 
 :root {
   /* Dark theme (default) */
@@ -54,8 +28,8 @@
   --accent-soft:  rgba(255, 161, 12, 0.14);
   --on-accent:    #0A0A0A;
 
-  /* Typography — Haas Grot Disp Trial primary, Inter Tight fallback */
-  --font-display: "Haas Grot Disp Trial", "Inter Tight", "Neue Haas Grotesk Display Pro", "Helvetica Neue", Helvetica, system-ui, -apple-system, sans-serif;
+  /* Typography — Inter Tight is the display face (loaded from Google Fonts). */
+  --font-display: "Inter Tight", "Neue Haas Grotesk Display Pro", "Helvetica Neue", Helvetica, system-ui, -apple-system, sans-serif;
   --font-body:    "Geist", "Inter", "Helvetica Neue", system-ui, sans-serif;
   --font-mono:    "Geist Mono", "JetBrains Mono", ui-monospace, monospace;
 
@@ -83,7 +57,10 @@
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; overflow-x: hidden; max-width: 100%; }
+/* Safety net: never let a long word push a heading/paragraph past the viewport on narrow phones. */
+h1, h2, h3, h4, p, li, figcaption { overflow-wrap: break-word; }
+img, video, iframe { max-width: 100%; }
 
 body {
   background: #0A0A0A;
@@ -96,6 +73,12 @@ body {
   cursor: none;
 }
 @media (max-width: 900px) { body { cursor: auto; } }
+/* The custom cursor is a desktop-only affordance — never render it on touch /
+   small screens (it sat in the top-left corner, caused a sliver of horizontal
+   overflow, and obscured taps). */
+@media (max-width: 900px), (hover: none), (pointer: coarse) {
+  .cursor, .cursor-dot { display: none !important; }
+}
 
 a { color: inherit; text-decoration: none; }
 button { background: none; border: 0; color: inherit; font: inherit; cursor: pointer; }
@@ -147,6 +130,12 @@ ul, ol { list-style: none; }
 .cursor-dot.is-on-nav {
   mix-blend-mode: normal;
 }
+/* The custom cursor lives outside the <dialog> top layer and over cross-origin
+   iframes, so it disappears there (e.g. the Founder "window for Fran", video
+   embeds). Restore the native cursor inside modals, dialogs and iframes. */
+dialog, .pmodal, iframe { cursor: auto; }
+dialog a, dialog button, .pmodal a, .pmodal button,
+.founder-modal__close, .pmodal__close { cursor: pointer; }
 
 /* ---------- LOADER ---------- */
 .loader {
@@ -283,6 +272,11 @@ ul, ol { list-style: none; }
   padding: calc(var(--nav-h) + 40px) var(--gutter) 40px;
   flex-direction: column; gap: 8px;
   opacity: 0; transition: opacity 0.4s var(--ease-out);
+  /* Let the menu scroll if the links are taller than the screen (short phones,
+     landscape, or when the browser chrome shrinks the viewport). */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 .nav__mobile.is-open { display: flex; opacity: 1; }
 .nav__mobile a {
@@ -393,6 +387,14 @@ section { transition: background 0.6s var(--ease-out); }
   width: 100%; height: 100%;
   object-fit: cover;
   filter: contrast(1.05) saturate(1.05);
+}
+/* Phones: the hero film has its headline baked into the frame, so object-fit:cover
+   crops the words off in portrait. Size the film to its natural 16:9 ratio instead
+   so the full frame (and the text) is always visible. */
+@media (max-width: 760px) {
+  .hero { min-height: auto; }
+  .hero__video { flex: 0 0 auto; aspect-ratio: 16 / 9; }
+  .hero__video img, .hero__video video { object-fit: contain; background: #0A0A0A; }
 }
 .hero__video .placeholder {
   position: absolute; inset: 0;
@@ -767,7 +769,7 @@ section { transition: background 0.6s var(--ease-out); }
 
 @media (min-width: 801px) {
   .work__stack {
-    --gap: clamp(-560px, -42vw, -380px); /* heavy overlap by default */
+    --gap: clamp(-170px, -12vw, -110px); /* light, CONSTANT overlap — stays fixed on hover so the stack's flow height never changes (no page push/jump when a card collapses) */
   }
   .work__stack .case:nth-child(1) { transform: rotate(-2deg) translateX(-2.5%); z-index: 5; }
   .work__stack .case:nth-child(2) { transform: rotate(1.5deg) translateX(2.5%); z-index: 4; }
@@ -775,8 +777,8 @@ section { transition: background 0.6s var(--ease-out); }
   .work__stack .case:nth-child(4) { transform: rotate(2deg) translateX(2%); z-index: 2; }
   .work__stack .case:nth-child(5) { transform: rotate(-1.5deg) translateX(-1.5%); z-index: 1; }
 
-  /* Hover the stack: spread cards, kill rotation */
-  .work__stack:hover { --gap: clamp(40px, 4vw, 72px); }
+  /* Hover the stack: straighten the cards (transform only — the gap stays
+     constant so the page never reflows/jumps vertically). */
   .work__stack:hover .case:nth-child(1),
   .work__stack:hover .case:nth-child(2),
   .work__stack:hover .case:nth-child(3),
@@ -1554,6 +1556,16 @@ section { transition: background 0.6s var(--ease-out); }
   margin-bottom: 16px;
 }
 .team-member__bio { font-size: 14px; line-height: 1.6; color: var(--text-dim); }
+.team-member__li {
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-top: 14px; align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-dim);
+  transition: color 0.3s var(--ease-out);
+}
+.team-member__li svg { flex: 0 0 auto; }
+.team-member__li:hover { color: var(--accent); }
 .team-member--memorial .team-member__role { color: var(--text-faint); }
 
 /* ---------- NETWORK MAP ---------- */

@@ -15,9 +15,9 @@ gallery:
   - "/case-studies/gallery/the-house-of-bng-5.jpg"
   - "/case-studies/gallery/the-house-of-bng-6.jpg"
 imageAlt: "The House of BNG"
-challenge: "Generate media and social media buzz around Bonang Matheba’s launch of House of BNG , a luxury Cap Classique, and its positioning as her “love letter to Africa.”"
-bigIdea: "CSA created a secret online space where 1,803 followers received VIP access to Bonang’s Twitter and Instagram accounts on launch day (18:03:19). This exclusive reveal was accompanied by a competition, giving winners invites to the launch event. Within days, #HouseofBNG was trending, and Bonang’s brand saw a massive surge in followers across platforms"
-execution: "Through a combination of social media strategy, classic PR, and leveraging Bonang’s personal following, CSA generated significant media coverage and engagement, positioning House of BNG as the most-followed alcohol brand in South Africa within a year"
+challenge: "Generate media and social media buzz around Bonang Matheba’s launch of House of BNG , a luxury Cap Classique, and its positioning as her “love letter to Africa.”."
+bigIdea: "CSA created a secret online space where 1,803 followers received VIP access to Bonang’s Twitter and Instagram accounts on launch day (18:03:19). This exclusive reveal was accompanied by a competition, giving winners invites to the launch event. Within days, #HouseofBNG was trending, and Bonang’s brand saw a massive surge in followers across platforms."
+execution: "Through a combination of social media strategy, classic PR, and leveraging Bonang’s personal following, CSA generated significant media coverage and engagement, positioning House of BNG as the most-followed alcohol brand in South Africa within a year."
 stats:
   - value: "934M"
     label: "Potential Reach"
