@@ -43,7 +43,9 @@ The smartest brands are moving from slogans to substance.
 
 In 2026, [Lindex put women's stories and bodies at the centre of a new underwear campaign ](https://www.youtube.com/watch?v=29D-D50trnU)designed to normalise the female body and move the conversation away from idealised imagery. That matters because it shows what modern women-centric marketing actually looks like: not "celebrating women" from a distance, but reflecting the realities women live with every day.
 
-[Watch on YouTube](https://www.youtube.com/watch?v=6xkMhpOR8Pc)
+<div class="wire-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/6xkMhpOR8Pc" title="Does Your Brand Know It's a Women's World?" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 Mercedes-Benz has also gone beyond seasonal celebration, deepening work with the Women's Tennis Association and launching ["Driven by Her."](https://group.mercedes-benz.com/company/news/world-womens-day-2026.html)
 

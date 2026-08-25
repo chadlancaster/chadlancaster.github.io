@@ -2291,6 +2291,24 @@ section { transition: background 0.6s var(--ease-out); }
 }
 .post__body li strong { color: var(--text); }
 
+/* ---- embedded video (YouTube) ---- */
+.wire-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: clamp(32px, 4vw, 48px) 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+}
+.wire-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* ---- pull quote ---- */
 .post__quote {
   margin: clamp(40px, 5vw, 56px) 0;
@@ -3192,3 +3210,24 @@ section { transition: background 0.6s var(--ease-out); }
 
 /* The Wire — archive filter: hidden state for filtered-out cards */
 .article-card.is-hidden { display: none; }
+
+/* The Wire — "Read more" expander */
+.wire-more { display: flex; justify-content: center; margin-top: clamp(36px, 4vw, 56px); }
+.wire-more[hidden] { display: none; }
+.wire-more__btn {
+  font-family: var(--font-mono, monospace);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 14px 30px;
+  cursor: pointer;
+  transition: border-color 0.25s var(--ease-out), color 0.25s var(--ease-out), background 0.25s var(--ease-out);
+}
+.wire-more__btn:hover { border-color: var(--accent); color: var(--accent); }
+.wire-more__btn span { display: inline-block; margin-left: 6px; }
+[data-theme="light"] .wire-more__btn { color: #141414; border-color: rgba(20, 20, 20, 0.25); }
+[data-theme="light"] .wire-more__btn:hover { color: var(--accent); border-color: var(--accent); }

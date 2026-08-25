@@ -47,7 +47,9 @@ One of the most fascinating examples comes from an unlikely place.
 
 Fast-food chain Jack in the Box didn't use Discord as another social media channel. It treated it as cultural infrastructure. During its [Comic-Con "Jack's Late Night Discord" experience,](https://www.marketingdive.com/news/why-jack-in-the-box-hosted-a-comic-con-afterparty-on-discord/604357/) the brand hosted a virtual Aquabats concert, opened fan-led Marvel and DC spaces and even auctioned NFT artwork created with community participation.
 
-[Watch on YouTube](https://www.youtube.com/watch?v=o_b5OO_w2_Y)
+<div class="wire-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/o_b5OO_w2_Y" title="Jack's Late Night Discord - Jack in the Box" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 The results were extraordinary.
 

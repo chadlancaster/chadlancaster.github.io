@@ -910,21 +910,45 @@ document.addEventListener('DOMContentLoaded', () => {
   restart();
 });
 
-/* ---------- THE WIRE: archive filter ---------- */
+/* ---------- THE WIRE: archive filter + show-10 / read more ---------- */
 (function () {
   const bar = document.getElementById('wireFilter');
   if (!bar) return;
-  const rail = bar.closest('section').querySelector('.cards-rail');
+  const section = bar.closest('section');
+  const rail = section.querySelector('.cards-rail');
+  const moreWrap = section.querySelector('.wire-more');
+  const moreBtn = moreWrap ? moreWrap.querySelector('.wire-more__btn') : null;
+  const cards = Array.from(rail.querySelectorAll('.article-card'));
+  const LIMIT = 10;
+  let filter = 'all';
+  let expanded = false;
+
+  const matches = (card) =>
+    filter === 'all' || (card.dataset.filters || '').split(/\s+/).includes(filter);
+
+  function render() {
+    let shown = 0, eligible = 0;
+    cards.forEach((c) => {
+      if (!matches(c)) { c.classList.add('is-hidden'); return; }
+      eligible++;
+      if (expanded || shown < LIMIT) { c.classList.remove('is-hidden'); shown++; }
+      else { c.classList.add('is-hidden'); }
+    });
+    if (moreWrap) moreWrap.hidden = !(eligible > LIMIT && !expanded);
+  }
+
   bar.addEventListener('click', (e) => {
     const btn = e.target.closest('button');
     if (!btn) return;
     bar.querySelectorAll('button').forEach((b) => b.classList.toggle('is-active', b === btn));
-    const f = btn.dataset.filter;
-    rail.querySelectorAll('.article-card').forEach((c) => {
-      const fs = (c.dataset.filters || '').split(/\s+/);
-      c.classList.toggle('is-hidden', !(f === 'all' || fs.includes(f)));
-    });
+    filter = btn.dataset.filter || 'all';
+    expanded = false;              // each filter view starts collapsed at 10
+    render();
   });
+
+  if (moreBtn) moreBtn.addEventListener('click', () => { expanded = true; render(); });
+
+  render();
 })();
 
 /* ---------- CASE STUDY: media block image carousel ---------- */
