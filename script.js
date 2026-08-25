@@ -996,26 +996,5 @@ document.querySelectorAll('.cs__video').forEach((box) => {
   window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(sync, 150); });
 })();
 
-/* ---------- SELECTED WORK: lock the stack's outer height ----------
-   The approved animation piles the cards and fans them out on hover. Fanning
-   changes the stack's natural height, which used to push The Wire section down
-   (and caused the collapse "jump"/jank). We lock the stack's OUTER height to its
-   resting (piled) height, so the fan-out expands over a fixed footprint — the
-   cards fan on top of the section, the document never reflows, nothing jumps.
-   Desktop only: below 801px the cards are a simple full-width column (no pile). */
-(() => {
-  const stack = document.querySelector('.work__stack');
-  if (!stack) return;
-  const desktop = () => window.matchMedia('(min-width: 801px)').matches;
-  const lock = () => {
-    stack.style.height = '';               // release so we can measure the resting height
-    if (desktop() && !stack.matches(':hover')) {
-      stack.style.height = stack.offsetHeight + 'px';
-    }
-  };
-  lock();
-  window.addEventListener('load', lock);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(lock);
-  let rt;
-  window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(lock, 150); });
-})();
+/* (Selected Work is now a fixed-overlap deck — no JS height management needed:
+   the stack's height never changes on hover, so nothing pushes or overlaps.) */

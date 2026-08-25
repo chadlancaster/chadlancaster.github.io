@@ -434,12 +434,11 @@ section { transition: background 0.6s var(--ease-out); }
     box-shadow: none;
     padding: 0 16px;
   }
+  .nav.is-scrolled { box-shadow: none; }   /* no floating "box" shadow on the flat bar */
   .nav.is-hidden { transform: translateY(-100%); }
-
-  /* Smaller client logos on mobile — they were sized for desktop. */
-  .hero__brands { padding: 16px 0; }
-  .brand-cell { width: auto; min-width: 0; height: 50px; padding: 0 16px; }
-  .brand-cell__logo { max-width: 84px; max-height: 30px; }
+  /* Make the hamburger clearly tappable on the dark bar. */
+  .nav__hamburger { width: 26px; padding: 8px 4px; }
+  .nav__hamburger span { height: 2px; background: #F5F1EA; }
 }
 .hero__video .placeholder {
   position: absolute; inset: 0;
@@ -621,6 +620,13 @@ section { transition: background 0.6s var(--ease-out); }
 .brand-cell:hover .brand-cell__logo {
   opacity: 1;
   transform: scale(1.06);
+}
+/* Smaller client logos on mobile. Placed AFTER the base rules above so it wins
+   the cascade (an identical selector earlier in the file would lose to the base). */
+@media (max-width: 760px) {
+  .hero__brands { padding: 14px 0; }
+  .brand-cell { width: auto; min-width: 0; height: 42px; padding: 0 14px; }
+  .brand-cell__logo { max-width: 66px; max-height: 24px; }
 }
 @keyframes brand-scroll { to { transform: translateX(-50%); } }
 
@@ -814,9 +820,8 @@ section { transition: background 0.6s var(--ease-out); }
 
 @media (min-width: 801px) {
   .work__stack {
-    --gap: clamp(-560px, -42vw, -380px); /* heavy overlap = the tight resting pile; opens to a positive gap on :hover (fan-out). Outer height is JS-locked so the fan never pushes the page. */
+    --gap: clamp(-450px, -34vw, -320px); /* CONSTANT overlap — a tight stacked deck where each card still peeks enough to hover/click. Never changes on hover, so the layout is fully stable: no page push, no overlap of neighbouring sections, no empty gap. */
     position: relative;
-    z-index: 2;                          /* fanned cards paint above The Wire section below */
   }
   .work__stack .case:nth-child(1) { transform: rotate(-2deg) translateX(-2.5%); z-index: 5; }
   .work__stack .case:nth-child(2) { transform: rotate(1.5deg) translateX(2.5%); z-index: 4; }
@@ -824,11 +829,8 @@ section { transition: background 0.6s var(--ease-out); }
   .work__stack .case:nth-child(4) { transform: rotate(2deg) translateX(2%); z-index: 2; }
   .work__stack .case:nth-child(5) { transform: rotate(-1.5deg) translateX(-1.5%); z-index: 1; }
 
-  /* Hover the stack: fan the cards out (the approved animation). The stack's
-     OUTER height is locked to its resting height by JS (see script.js), so this
-     expands over a FIXED footprint — the cards fan on top of the section instead
-     of growing it, so The Wire below never gets pushed/jumped. */
-  .work__stack:hover { --gap: clamp(40px, 4vw, 72px); }
+  /* Hover the stack: straighten the deck (transform only — no layout change,
+     so nothing pushes or overlaps). The hovered card then lifts + opens. */
   .work__stack:hover .case:nth-child(1),
   .work__stack:hover .case:nth-child(2),
   .work__stack:hover .case:nth-child(3),
