@@ -75,12 +75,19 @@ navCurrent: wire
       </div>
       <div class="pulse-feature__body">
         <div class="pulse-feature__meta"><span>{{ ed.title }}</span>{% if ed.period %}<span class="date">{{ ed.period }}</span>{% endif %}</div>
+        <div class="pulse-feature__list-head" aria-hidden="true">
+          <span>Rank</span>
+          <span>Artist</span>
+          <span class="ta-r">Heat Score</span>
+          <span class="th-track">Top Track</span>
+        </div>
         <ol class="pulse-feature__list">
           {% for e in ed.entries %}{% if loop.index <= 10 %}
           <li class="pulse-rank">
             <span class="pulse-rank__no">{{ e.rank }}</span>
             <span class="pulse-rank__artist">{{ e.artist }}<em>{{ e.genre }}</em></span>
-            <span class="pulse-rank__score">{{ e.score }}</span>
+            <span class="pulse-rank__score">{{ e.score | thousands }}</span>
+            {% if e.track %}<span class="pulse-rank__track">{{ e.track }}</span>{% endif %}
           </li>
           {% endif %}{% endfor %}
         </ol>

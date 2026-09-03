@@ -48,6 +48,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("exclude", (arr, url) => (arr || []).filter((i) => i.url !== url));
   eleventyConfig.addFilter("limit", (arr, n) => (arr || []).slice(0, n));
   eleventyConfig.addFilter("abs", (n) => Math.abs(Number(n) || 0));
+  // Thousands separator, e.g. 6540 -> "6,540".
+  eleventyConfig.addFilter("thousands", (n) => Number(n).toLocaleString("en-US"));
   // Fallback avatar for Chart Pulse rows with no artist image yet.
   eleventyConfig.addFilter("initials", (name) =>
     String(name || "")
