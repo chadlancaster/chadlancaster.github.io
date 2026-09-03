@@ -2560,7 +2560,7 @@ section { transition: background 0.6s var(--ease-out); }
   margin: 0 0 28px;
 }
 .pulse-rank {
-  display: grid; grid-template-columns: 30px 1fr auto auto; align-items: center;
+  display: grid; grid-template-columns: 30px 1fr auto; align-items: center;
   gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line);
 }
 .pulse-rank__no { font-family: var(--font-display); font-weight: 500; font-size: 19px; color: var(--text-faint); }
@@ -2581,6 +2581,12 @@ section { transition: background 0.6s var(--ease-out); }
   color: var(--text); border-bottom: 1px solid currentColor; padding-bottom: 4px;
   transition: gap 0.35s var(--ease-out), color 0.35s var(--ease-out);
 }
+/* Disabled state — full Top 10 / movement notes not available yet. */
+.pulse-feature__cta.is-disabled {
+  color: var(--text-faint); border-bottom-color: transparent;
+  cursor: not-allowed; pointer-events: none;
+}
+.pulse-feature__cover { cursor: default; }
 .pulse-feature__cta:hover { gap: 16px; color: #FFA10C; }
 @media (max-width: 860px) {
   .pulse-feature { grid-template-columns: 1fr; gap: 32px; }
@@ -2670,6 +2676,32 @@ section { transition: background 0.6s var(--ease-out); }
   font-family: var(--font-body); font-weight: 400;
   font-size: 14px; line-height: 1.55;
   color: rgba(20,20,20,0.65); margin-top: 10px; max-width: 62ch;
+}
+/* Highlights variant — single column: category eyebrow, name, write-up. */
+.pchart__row--hl { grid-template-columns: 1fr; }
+.pchart__cat {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--pc-green); margin-bottom: 8px;
+}
+.pchart__row--hl .pchart__bio { max-width: 80ch; }
+/* Editorial insight block below the highlights. */
+.pmodal__editorial {
+  margin-top: clamp(24px, 3vw, 40px);
+  padding-top: clamp(20px, 2.5vw, 32px);
+  border-top: 2px solid var(--pc-ink);
+}
+.pmodal__editorial-title {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--pc-green); margin: 0 0 16px;
+}
+.pmodal__editorial-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.pmodal__editorial-list li {
+  font-family: var(--font-body); font-size: 15px; line-height: 1.55;
+  color: rgba(20,20,20,0.72); padding-left: 22px; position: relative; max-width: 80ch;
+}
+.pmodal__editorial-list li::before {
+  content: ''; position: absolute; left: 0; top: 9px;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--pc-green);
 }
 /* score block - the deep green panel from the creative */
 .pchart__scorebox {

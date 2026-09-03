@@ -70,22 +70,21 @@ navCurrent: wire
     {% set ed = r.editions[0] %}
     {# Cover + the full Top-10 laid out in two columns. #}
     <div class="pulse-feature">
-      <a class="pulse-feature__cover" href="#pulse-{{ r.id }}-{{ ed.slug }}" data-pulse-open="pulse-{{ r.id }}-{{ ed.slug }}" aria-label="Open {{ ed.title }} Top 10">
-        {% if ed.cover %}<img src="{{ ed.cover }}" alt="{{ ed.title }}, {{ ed.weekStart }} to {{ ed.weekEnd }}" loading="lazy" />{% else %}<div class="placeholder"><span class="placeholder__label">[ cover ]</span></div>{% endif %}
-      </a>
+      <div class="pulse-feature__cover">
+        {% if ed.cover %}<img src="{{ ed.cover }}" alt="{{ ed.title }}" loading="lazy" />{% else %}<div class="placeholder"><span class="placeholder__label">[ cover ]</span></div>{% endif %}
+      </div>
       <div class="pulse-feature__body">
-        <div class="pulse-feature__meta"><span>{{ ed.title }}</span><span class="date">{{ ed.weekStart }} - {{ ed.weekEnd }}</span></div>
+        <div class="pulse-feature__meta"><span>{{ ed.title }}</span>{% if ed.period %}<span class="date">{{ ed.period }}</span>{% endif %}</div>
         <ol class="pulse-feature__list">
           {% for e in ed.entries %}{% if loop.index <= 10 %}
           <li class="pulse-rank">
             <span class="pulse-rank__no">{{ e.rank }}</span>
             <span class="pulse-rank__artist">{{ e.artist }}<em>{{ e.genre }}</em></span>
-            <span class="pulse-rank__delta {% if e.status == 'new' %}is-new{% elif e.change > 0 %}is-up{% elif e.change < 0 %}is-down{% else %}is-flat{% endif %}">{% if e.status == 'new' %}New{% elif e.change > 0 %}&#9650; {{ e.change }}%{% elif e.change < 0 %}&#9660; {{ e.change | abs }}%{% else %}&#8226;{% endif %}</span>
             <span class="pulse-rank__score">{{ e.score }}</span>
           </li>
           {% endif %}{% endfor %}
         </ol>
-        <a class="pulse-feature__cta" href="#pulse-{{ r.id }}-{{ ed.slug }}" data-pulse-open="pulse-{{ r.id }}-{{ ed.slug }}">View the full Top 10 <span aria-hidden="true">→</span></a>
+        <a class="pulse-feature__cta" href="#pulse-{{ r.id }}-{{ ed.slug }}" data-pulse-open="pulse-{{ r.id }}-{{ ed.slug }}">Chart Pulse Top 10 Insights <span aria-hidden="true">→</span></a>
       </div>
     </div>
     {% else %}
@@ -104,40 +103,35 @@ navCurrent: wire
   <div class="pmodal__sheet" role="document">
     <header class="pmodal__head">
       <div>
-        <div class="pmodal__kicker">{{ ed.weekStart }} - {{ ed.weekEnd }}</div>
+        <div class="pmodal__kicker">SA Chart Pulse</div>
         <h3 class="pmodal__title">{{ ed.title }}</h3>
-        <p class="pmodal__sub">"{{ ed.subtitle }}"</p>
+        {% if ed.subtitle %}<p class="pmodal__sub">{{ ed.subtitle }}</p>{% endif %}
       </div>
       <button type="button" class="pmodal__close" data-pulse-close aria-label="Close">&times;</button>
     </header>
 
+    {% if ed.highlights and ed.highlights.length %}
     <div class="pchart">
-      {% for e in ed.entries %}
-      <article class="pchart__row">
-        <div class="pchart__rank">#{{ e.rank }}</div>
-        <div class="pchart__avatar">
-          {% if e.image %}<img src="{{ e.image }}" alt="{{ e.artist }}" loading="lazy">{% else %}<span class="pchart__initials" aria-hidden="true">{{ e.artist | initials }}</span>{% endif %}
-        </div>
+      {% for hl in ed.highlights %}
+      <article class="pchart__row pchart__row--hl">
         <div class="pchart__info">
-          <h4 class="pchart__name">{{ e.artist }}</h4>
-          <div class="pchart__genre">{{ e.genre }}</div>
-          <p class="pchart__bio">{{ e.note }}</p>
-        </div>
-        <div class="pchart__scorebox">
-          <div class="pchart__scorelabel">Pulse Score</div>
-          <div class="pchart__scorerow">
-            <span class="pchart__score">{{ e.score }}</span>
-            <span class="pchart__delta {% if e.status == 'new' %}is-new{% elif e.change > 0 %}is-up{% elif e.change < 0 %}is-down{% else %}is-flat{% endif %}">
-              <span class="pchart__arrow" aria-hidden="true">{% if e.status == 'new' %}&#9664;{% elif e.change > 0 %}&#9650;{% elif e.change < 0 %}&#9660;{% else %}&#9664;{% endif %}</span>
-              <span class="pchart__pct">{{ e.change | abs }}%</span>
-            </span>
-          </div>
-          <div class="pchart__when">{% if e.status == 'new' %}New entry{% else %}This week{% endif %}</div>
-          <div class="pchart__strong">Strong: <b>{{ e.platform }}</b></div>
+          <div class="pchart__cat">{{ hl.category }}</div>
+          <h4 class="pchart__name">{{ hl.artist }}</h4>
+          <p class="pchart__bio">{{ hl.note }}</p>
         </div>
       </article>
       {% endfor %}
     </div>
+    {% endif %}
+
+    {% if ed.editorial and ed.editorial.length %}
+    <div class="pmodal__editorial">
+      <h4 class="pmodal__editorial-title">Editorial Insight</h4>
+      <ul class="pmodal__editorial-list">
+        {% for point in ed.editorial %}<li>{{ point }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
   </div>
 </div>
 {% endfor %}{% endfor %}

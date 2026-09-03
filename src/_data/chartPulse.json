@@ -1,5 +1,5 @@
 {
-  "intro": "Every Friday we score the country's most-streamed artists. The Pulse Score blends streaming, airplay and discovery across Spotify, Apple Music, YouTube, Shazam and Deezer into a single weekly number.",
+  "intro": "Every month we score the country's most-streamed artists. The Pulse Score blends streaming, airplay and discovery across Spotify, Apple Music, YouTube, Shazam and Deezer into a single monthly number.",
   "regions": [
     {
       "id": "sa",
@@ -7,133 +7,39 @@
       "short": "SA",
       "editions": [
         {
-          "slug": "2026-06-05",
-          "title": "SA Chart Pulse",
-          "subtitle": "Top 10 Artists This Week",
-          "weekStart": "1 June",
-          "weekEnd": "5 June 2026",
-          "cover": "/chart-pulse/sa-2026-06-05.jpg",
+          "slug": "2026-08",
+          "title": "August 2026 Monthly Top 10",
+          "subtitle": "August Highlights",
+          "period": "",
+          "weekStart": "",
+          "weekEnd": "",
+          "cover": "",
+          "highlights": [
+            { "category": "Artist of the Month", "artist": "Drake", "note": "Owned every week of August, finishing with more than double the Monthly Heat Score of his nearest competitor through sustained cross-platform catalogue performance." },
+            { "category": "South African Artist of the Month", "artist": "Sam Deep", "note": "Amapiano continued to dominate, with Shela and consistent streaming momentum powering Sam Deep to the top local spot." },
+            { "category": "Song of the Month", "artist": "\"Everybody Wanna Be In Love\" - Calvin Fallo", "note": "One breakout hit delivered Calvin Fallo's entire monthly performance, making it August's strongest individual track." },
+            { "category": "Genre of the Month", "artist": "Amapiano", "note": "Amapiano remained South Africa's dominant genre, led by Sam Deep and Calvin Fallo. Maskandi also continued its rise through Feza, MENZI MUSIC and Inkos'yamagcokama." },
+            { "category": "Breakthrough Artist", "artist": "Inkos'yamagcokama (Posthumous)", "note": "One of August's biggest movers, breaking into the upper tier through sustained Maskandi momentum." },
+            { "category": "Most Consistent Artist", "artist": "Drake", "note": "The clear benchmark throughout the month, leading every reporting period." }
+          ],
+          "editorial": [
+            "August highlighted two powerful shifts in South African music.",
+            "Global catalogue continued to dominate, with Drake proving that long-term audience loyalty can outperform a single blockbuster release.",
+            "At the same time, local music gained even more ground. Amapiano remained a cultural powerhouse, while Maskandi strengthened its mainstream appeal through artists like Feza, MENZI MUSIC and Inkos'yamagcokama.",
+            "Calvin Fallo also showed the impact of a single cultural moment, with Everybody Wanna Be In Love emerging as August's defining track.",
+            "Together, the results reflect a music landscape where global staying power and local cultural momentum thrive side by side, offering valuable insight into both audience behaviour and emerging trends."
+          ],
           "entries": [
-            {
-              "rank": 1,
-              "artist": "Drake",
-              "genre": "Hip-Hop / Rap",
-              "platform": "Apple Music",
-              "score": 2210,
-              "change": -12,
-              "status": "",
-              "track": "What Did I Miss?",
-              "image": "",
-              "note": "\"What Did I Miss?\" keeps Drake at #1, with Apple Music continuing to power his unmatched catalogue strength and streaming dominance."
-            },
-            {
-              "rank": 2,
-              "artist": "Feza",
-              "genre": "Maskandi / Amapiano",
-              "platform": "Spotify",
-              "score": 732,
-              "change": 7,
-              "status": "",
-              "track": "Umaqondana",
-              "image": "",
-              "note": "\"Umaqondana\" remains one of the country's strongest streaming records, with Spotify continuing to drive Feza's remarkable consistency."
-            },
-            {
-              "rank": 3,
-              "artist": "Sam Deep",
-              "genre": "Amapiano",
-              "platform": "Apple Music",
-              "score": 691,
-              "change": 17,
-              "status": "",
-              "track": "Thandaza",
-              "image": "",
-              "note": "\"Thandaza\" climbs into the Top 3, supported by strong Apple Music performance and sustained listener demand."
-            },
-            {
-              "rank": 4,
-              "artist": "Menzi Music",
-              "genre": "Maskandi",
-              "platform": "YouTube",
-              "score": 535,
-              "change": -14,
-              "status": "",
-              "track": "Sengithole Omunye",
-              "image": "",
-              "note": "\"Sengithole Omunye\" keeps Menzi Music reinforcing Maskandi's continued rise through YouTube-led discovery."
-            },
-            {
-              "rank": 5,
-              "artist": "Nkeshemba",
-              "genre": "Maskandi",
-              "platform": "Spotify",
-              "score": 526,
-              "change": 0,
-              "status": "new",
-              "track": "Baba Yilwa",
-              "image": "",
-              "note": "\"Baba Yilwa\" returns to the Top 5 through strong Spotify momentum, highlighting the growing commercial strength of Maskandi."
-            },
-            {
-              "rank": 6,
-              "artist": "Calvin Fallo",
-              "genre": "Amapiano",
-              "platform": "Shazam",
-              "score": 526,
-              "change": -3,
-              "status": "",
-              "track": "Everybody Wanna Be In Love",
-              "image": "",
-              "note": "\"Everybody Wanna Be In Love\" continues its impressive run, with Shazam discovery translating into sustained chart momentum."
-            },
-            {
-              "rank": 7,
-              "artist": "Olivia Dean",
-              "genre": "Soul / Pop",
-              "platform": "Airplay",
-              "score": 465,
-              "change": 10,
-              "status": "",
-              "track": "Nice To Each Other",
-              "image": "",
-              "note": "\"Nice To Each Other\" continues Olivia Dean's strong South African run, with Airplay remaining the key driver behind her chart success."
-            },
-            {
-              "rank": 8,
-              "artist": "Olivia Rodrigo",
-              "genre": "Pop / Rock",
-              "platform": "Deezer",
-              "score": 442,
-              "change": 13,
-              "status": "",
-              "track": "All-American Bitch",
-              "image": "",
-              "note": "\"All-American Bitch\" keeps Olivia Rodrigo in the Top 10, supported primarily by Deezer and continued streaming engagement."
-            },
-            {
-              "rank": 9,
-              "artist": "Natiey Lepaka",
-              "genre": "Hip-Hop / Trap / Lekompo",
-              "platform": "Spotify",
-              "score": 411,
-              "change": -3,
-              "status": "",
-              "track": "Owabulala uBaba (feat. Shenge wasehlalankosi)",
-              "image": "",
-              "note": "\"Owabulala uBaba (feat. Shenge wasehlalankosi)\" continues to build through Spotify momentum."
-            },
-            {
-              "rank": 10,
-              "artist": "Taylor Swift",
-              "genre": "Pop",
-              "platform": "Deezer",
-              "score": 410,
-              "change": 0,
-              "status": "new",
-              "track": "Cruel Summer",
-              "image": "",
-              "note": "\"Cruel Summer\" continuing to sustain Taylor Swift's presence on the South African charts."
-            }
+            { "rank": 1, "artist": "Drake", "genre": "Hip-Hop / Rap", "platform": "", "score": 6540, "change": 0, "status": "", "track": "Janice STFU", "image": "", "note": "" },
+            { "rank": 2, "artist": "Sam Deep", "genre": "Amapiano", "platform": "", "score": 3047, "change": 0, "status": "", "track": "Shela", "image": "", "note": "" },
+            { "rank": 3, "artist": "Tyla", "genre": "Pop / Amapiano", "platform": "", "score": 2904, "change": 0, "status": "", "track": "THAT GIRL", "image": "", "note": "" },
+            { "rank": 4, "artist": "Feza", "genre": "Maskandi / Amapiano", "platform": "", "score": 2151, "change": 0, "status": "", "track": "Sengithole Omunye", "image": "", "note": "" },
+            { "rank": 5, "artist": "Calvin Fallo", "genre": "Amapiano", "platform": "", "score": 1965, "change": 0, "status": "", "track": "Everybody Wanna Be In Love", "image": "", "note": "" },
+            { "rank": 6, "artist": "Menzi Music", "genre": "Maskandi", "platform": "", "score": 1951, "change": 0, "status": "", "track": "Vuma", "image": "", "note": "" },
+            { "rank": 7, "artist": "Inkos'yamagcokama", "genre": "Maskandi", "platform": "", "score": 1755, "change": 0, "status": "", "track": "BAHAMBA BONKE", "image": "", "note": "" },
+            { "rank": 8, "artist": "Olivia Rodrigo", "genre": "Pop / Rock", "platform": "", "score": 1652, "change": 0, "status": "", "track": "drop dead", "image": "", "note": "" },
+            { "rank": 9, "artist": "Razolo", "genre": "Maskandi", "platform": "", "score": 1434, "change": 0, "status": "", "track": "Lea chancer bafana", "image": "", "note": "" },
+            { "rank": 10, "artist": "Taylor Swift", "genre": "Pop", "platform": "", "score": 1410, "change": 0, "status": "", "track": "The Fate of Ophelia", "image": "", "note": "" }
           ]
         }
       ]
