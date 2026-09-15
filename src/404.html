@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Redirecting - CSA</title>
+  <meta name="robots" content="noindex">
+  <script>
+  /* Catch-all migration router for old WordPress URLs that have no explicit
+     redirect stub (e.g. de-listed articles). Runs before paint. Any path we
+     can't map to a real page just falls through to the branded 404 below. */
+  (function () {
+    var p = location.pathname;
+    if (p.charAt(p.length - 1) !== "/") p += "/"; // normalise trailing slash
+
+    var exact = {
+      "/about-us/":   "/about.html",
+      "/talent/":     "/talent.html",
+      "/contact-us/": "/#contact",
+      "/sport/":      "/",
+      "/thewire/":    "/the-wire.html",
+      "/case-study/": "/#work"
+    };
+
+    var dest = null;
+    if (exact[p]) {
+      dest = exact[p];
+    } else if (/^\/thewire\//.test(p)) {
+      dest = "/the-wire.html";   // old article, no longer carried -> archive
+    } else if (/^\/case-study\//.test(p)) {
+      dest = "/#work";           // old case study, no longer carried -> work
+    } else if (/^\/(sport|talent|about)/.test(p)) {
+      dest = "/";
+    }
+
+    if (dest) { location.replace(dest); }
+  })();
+  </script>
+  <style>
+    :root { --bg:#0A0A0A; --cream:#F5F1EA; --orange:#FFA10C; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; height:100%; }
+    body {
+      background:var(--bg); color:var(--cream);
+      font-family:"Haas Grot Disp Trial","Inter Tight",system-ui,-apple-system,sans-serif;
+      display:grid; place-items:center; text-align:center; padding:24px;
+    }
+    .e { max-width:560px; }
+    .e__code { font-size:clamp(72px,18vw,160px); font-weight:600; line-height:0.9; letter-spacing:-0.03em; margin:0; }
+    .e__title { font-size:clamp(22px,3vw,32px); font-weight:500; margin:18px 0 10px; }
+    .e__lede { color:#B8B2A8; font-weight:300; font-size:clamp(15px,1.4vw,18px); line-height:1.5; margin:0 auto 34px; max-width:44ch; }
+    .e__links { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+    .e__link { display:inline-flex; align-items:center; gap:8px; padding:13px 22px; border-radius:999px;
+      border:1px solid rgba(245,241,234,0.25); color:var(--cream); text-decoration:none; font-size:15px; font-weight:500;
+      transition:background .2s, border-color .2s, color .2s; }
+    .e__link:hover { background:var(--cream); color:var(--bg); border-color:var(--cream); }
+    .e__link--primary { background:var(--orange); border-color:var(--orange); color:#0A0A0A; }
+    .e__link--primary:hover { background:#ffb43a; border-color:#ffb43a; color:#0A0A0A; }
+  </style>
+</head>
+<body>
+  <main class="e">
+    <p class="e__code">404</p>
+    <h1 class="e__title">This page has moved on.</h1>
+    <p class="e__lede">The page you're after isn't here - it may have shifted since our relaunch. Let's get you back to the good stuff.</p>
+    <div class="e__links">
+      <a class="e__link e__link--primary" href="/">Back home</a>
+      <a class="e__link" href="/the-wire.html">Read The Wire</a>
+      <a class="e__link" href="/#work">See the work</a>
+    </div>
+  </main>
+</body>
+</html>

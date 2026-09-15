@@ -1,0 +1,8 @@
+[
+  { "from": "/about-us/",   "to": "/about.html" },
+  { "from": "/talent/",     "to": "/talent.html" },
+  { "from": "/contact-us/", "to": "/#contact" },
+  { "from": "/sport/",      "to": "/" },
+  { "from": "/thewire/",    "to": "/the-wire.html" },
+  { "from": "/case-study/", "to": "/#work" }
+]

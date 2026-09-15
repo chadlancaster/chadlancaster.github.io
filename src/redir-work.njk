@@ -1,0 +1,19 @@
+---
+pagination:
+  data: collections.caseStudies
+  size: 1
+  alias: cs
+permalink: "/case-study/{{ cs.fileSlug }}/index.html"
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page moved</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{{ cs.url }}">
+<meta http-equiv="refresh" content="0; url={{ cs.url }}">
+<script>location.replace("{{ cs.url }}");</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;background:#0A0A0A;color:#F5F1EA;margin:0;display:grid;place-items:center;min-height:100vh;text-align:center}a{color:#FFA10C;text-decoration:none}</style>
+</head><body><p>This case study has moved.<br><a href="{{ cs.url }}">Continue &rarr;</a></p></body></html>
