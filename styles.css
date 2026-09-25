@@ -2485,6 +2485,33 @@ section { transition: background 0.6s var(--ease-out); }
   .section__head--pulse .pulse-toggle { justify-self: start; }
 }
 
+/* Chart Pulse deep-link: a "copy link" pill on its own row under the heading,
+   plus a scroll offset so #chart-pulse clears the floating nav when opened. */
+#chart-pulse { scroll-margin-top: 100px; }
+.pulse-share {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 241, 234, 0.2);
+  background: transparent;
+  color: #F5F1EA;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.pulse-share:hover { background: #F5F1EA; border-color: #F5F1EA; color: #0A0A0A; }
+.pulse-share:focus-visible { outline: 2px solid #FFA10C; outline-offset: 2px; }
+.pulse-share.is-copied { background: #FFA10C; border-color: #FFA10C; color: #0A0A0A; }
+.pulse-share__ico { flex: none; }
+
 /* ---- SA / Nigeria toggle, mirroring the trust toggle ---- */
 .pulse-toggle {
   /* Equal-width columns: the sliding pill is 50%, so "SA" and "Nigeria"

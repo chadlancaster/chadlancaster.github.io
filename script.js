@@ -998,3 +998,50 @@ document.querySelectorAll('.cs__video').forEach((box) => {
 
 /* (Selected Work is now a fixed-overlap deck — no JS height management needed:
    the stack's height never changes on hover, so nothing pushes or overlaps.) */
+
+/* Chart Pulse — "Copy link" button. Copies a shareable deep-link to the
+   #chart-pulse section so a pasted URL opens straight on Chart Pulse. */
+(function () {
+  var btn = document.getElementById('pulseShare');
+  if (!btn) return;
+  var label = btn.querySelector('.pulse-share__label');
+  var original = label ? label.textContent : '';
+  var reset;
+
+  function fallbackCopy(text) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'absolute';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    } catch (e) {}
+  }
+
+  function confirmCopied() {
+    btn.classList.add('is-copied');
+    if (label) label.textContent = 'Link copied!';
+    clearTimeout(reset);
+    reset = setTimeout(function () {
+      btn.classList.remove('is-copied');
+      if (label) label.textContent = original;
+    }, 2200);
+  }
+
+  btn.addEventListener('click', function () {
+    var url = window.location.origin + window.location.pathname + '#chart-pulse';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(confirmCopied, function () {
+        fallbackCopy(url);
+        confirmCopied();
+      });
+    } else {
+      fallbackCopy(url);
+      confirmCopied();
+    }
+  });
+})();
