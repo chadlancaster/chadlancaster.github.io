@@ -9,8 +9,8 @@ authorBio: "Robert Greeff is a culture-obsessed copywriter-specialist who studie
 date: 2026-09-26
 image: "/case-studies/wire/when-culture-marketing-actually-changes-lives.jpg"
 imageAlt: "Sunlight's #RaiseTheBarWithSunlight Schools Edition activation celebrating young South African talent"
-standfirst: "45 million impressions and R1.7 million in earned media tell you #RaiseTheBarWithSunlight travelled. They don't tell you why it mattered - or what happens when a brand stops borrowing culture and starts investing in it."
-description: "When Sunlight put R1.215 million directly into nine South African schools, it redefined ROI. Why the most demanding KPI in culture marketing is whether somebody's life actually moved forward."
+standfirst: "45 million impressions and headlines nationwide tell you #RaiseTheBarWithSunlight travelled. They don't tell you why it mattered - or what happens when a brand stops borrowing culture and starts investing in it."
+description: "When Sunlight invested over a million rand across nine schools and learners nationwide, it redefined ROI. Why the most demanding KPI in culture marketing is whether somebody's life actually moved forward."
 tags:
   - Culture
   - Impact
@@ -20,13 +20,15 @@ tags:
 ---
 - **45M impressions. R1.7 million in earned media.**
 
-- **R1.215M invested directly into nine schools.**
+- **R1.215M invested directly into nine schools and learners nationwide.**
+
+- **Do lives move forward when your brand shows up?**
 
 - **One stage could uncover tomorrow's superstar.**
 
 - **Stop extracting culture. Start creating opportunity.**
 
-68 pieces of earned coverage. 45 million impressions. More than R1.7 million in earned media value. Those numbers tell you #RaiseTheBarWithSunlight travelled. But they don't tell you why it mattered. The bigger story is what happens when a 135-year-old brand stops treating culture as something to borrow and starts using it as something to invest in.
+68 pieces of earned coverage. 45 million impressions. More than R135 million in earned media value. Those numbers tell you #RaiseTheBarWithSunlight travelled. But they don't tell you why it mattered. The bigger story is what happens when a 135-year-old brand stops treating culture as something to borrow and starts using it as something to invest in.
 
 ## Culture Cannot Just Be a Campaign Mechanic
 
@@ -38,7 +40,7 @@ That makes authenticity difficult to fake.
 
 ## Creating a Real Socio-Economic Difference
 
-The Schools Edition took that commitment further: nine schools, one from every province, each receiving R135,000. That's R1.215 million going directly into South African schools.
+The Schools Edition took that commitment further: nine schools, one from every province, each receiving R100,000 and R35,000 going to participating students, totalling well over a million Rand.
 
 But the potential impact is bigger than the cheque. In South Africa, educational opportunity can play a critical role in breaking cycles of poverty. Investing in schools is therefore an investment in social mobility. And consider another possibility: what if the campaign discovers the next great dancer, rapper or creator?
 
@@ -64,3 +66,7 @@ Because perhaps the most important KPI comes after the campaign report:
 > Did somebody's life move forward because your brand showed up?
 
 That's a much more demanding definition of ROI. And perhaps that's exactly how authentic culture marketing should be measured.
+
+---
+
+**CSA's role:** CSA led PR, talent, media relations and nationwide activations, driving Sunlight awareness through cultural storytelling, local engagement and real-time amplification.

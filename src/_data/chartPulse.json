@@ -7,39 +7,33 @@
       "short": "SA",
       "editions": [
         {
-          "slug": "2026-08",
-          "title": "August 2026 Monthly Top 10",
-          "subtitle": "August Highlights",
+          "slug": "2026-09",
+          "title": "September 2026 Monthly Top 10",
+          "subtitle": "September Highlights",
           "period": "",
           "weekStart": "",
           "weekEnd": "",
-          "cover": "/chart-pulse/sa-2026-06-05.jpg",
+          "cover": "/chart-pulse/sa-2026-09.jpg",
           "highlights": [
-            { "category": "Artist of the Month", "artist": "Drake", "note": "Owned every week of August, finishing with more than double the Monthly Heat Score of his nearest competitor through sustained cross-platform catalogue performance." },
-            { "category": "South African Artist of the Month", "artist": "Sam Deep", "note": "Amapiano continued to dominate, with Shela and consistent streaming momentum powering Sam Deep to the top local spot." },
-            { "category": "Song of the Month", "artist": "\"Everybody Wanna Be In Love\" - Calvin Fallo", "note": "One breakout hit delivered Calvin Fallo's entire monthly performance, making it August's strongest individual track." },
-            { "category": "Genre of the Month", "artist": "Amapiano", "note": "Amapiano remained South Africa's dominant genre, led by Sam Deep and Calvin Fallo. Maskandi also continued its rise through Feza, MENZI MUSIC and Inkos'yamagcokama." },
-            { "category": "Breakthrough Artist", "artist": "Inkos'yamagcokama (Posthumous)", "note": "One of August's biggest movers, breaking into the upper tier through sustained Maskandi momentum." },
-            { "category": "Most Consistent Artist", "artist": "Drake", "note": "The clear benchmark throughout the month, leading every reporting period." }
+            { "category": "Artist of the Month", "artist": "Drake", "note": "Finishes September at #1 with a Monthly Heat Score of 3,420, maintaining his lead through sustained catalogue strength and Shabang." },
+            { "category": "South African Artist of the Month", "artist": "Royal MusiQ", "note": "A defining month for Royal MusiQ, finishing #2 overall as H's On The Table drove sustained Amapiano momentum and became September's standout local track." },
+            { "category": "Song of the Month", "artist": "\"H's On The Table\" - Royal MusiQ", "note": "September's defining individual track, maintaining momentum throughout the month and powering Royal MusiQ to the #2 position overall." },
+            { "category": "Genre of the Month", "artist": "Maskandi", "note": "Five Maskandi artists finished inside September's Top 10, with Mzukulu, Feza, Inkos'yamagcokama, MENZI MUSIC and G-Jealous demonstrating the genre's growing mainstream power." },
+            { "category": "Breakthrough Artist", "artist": "G-Jealous", "note": "Luqale sakudlala powered G-Jealous into September's Top 10, adding another emerging name to Maskandi's expanding national movement." },
+            { "category": "Most Consistent Artist", "artist": "Royal MusiQ", "note": "One of September's most persistent performers, climbing from #6 early in the month to #3 by 25 September as H's On The Table continued to deliver across platforms." }
           ],
-          "editorial": [
-            "August highlighted two powerful shifts in South African music.",
-            "Global catalogue continued to dominate, with Drake proving that long-term audience loyalty can outperform a single blockbuster release.",
-            "At the same time, local music gained even more ground. Amapiano remained a cultural powerhouse, while Maskandi strengthened its mainstream appeal through artists like Feza, MENZI MUSIC and Inkos'yamagcokama.",
-            "Calvin Fallo also showed the impact of a single cultural moment, with Everybody Wanna Be In Love emerging as August's defining track.",
-            "Together, the results reflect a music landscape where global staying power and local cultural momentum thrive side by side, offering valuable insight into both audience behaviour and emerging trends."
-          ],
+          "editorial": [],
           "entries": [
-            { "rank": 1, "artist": "Drake", "genre": "Hip-Hop / Rap", "platform": "", "score": 6540, "change": 0, "status": "", "track": "Janice STFU", "image": "", "note": "" },
-            { "rank": 2, "artist": "Sam Deep", "genre": "Amapiano", "platform": "", "score": 3047, "change": 0, "status": "", "track": "Shela", "image": "", "note": "" },
-            { "rank": 3, "artist": "Tyla", "genre": "Pop / Amapiano", "platform": "", "score": 2904, "change": 0, "status": "", "track": "THAT GIRL", "image": "", "note": "" },
-            { "rank": 4, "artist": "Feza", "genre": "Maskandi / Amapiano", "platform": "", "score": 2151, "change": 0, "status": "", "track": "Sengithole Omunye", "image": "", "note": "" },
-            { "rank": 5, "artist": "Calvin Fallo", "genre": "Amapiano", "platform": "", "score": 1965, "change": 0, "status": "", "track": "Everybody Wanna Be In Love", "image": "", "note": "" },
-            { "rank": 6, "artist": "Menzi Music", "genre": "Maskandi", "platform": "", "score": 1951, "change": 0, "status": "", "track": "Vuma", "image": "", "note": "" },
-            { "rank": 7, "artist": "Inkos'yamagcokama", "genre": "Maskandi", "platform": "", "score": 1755, "change": 0, "status": "", "track": "BAHAMBA BONKE", "image": "", "note": "" },
-            { "rank": 8, "artist": "Olivia Rodrigo", "genre": "Pop / Rock", "platform": "", "score": 1652, "change": 0, "status": "", "track": "drop dead", "image": "", "note": "" },
-            { "rank": 9, "artist": "Razolo", "genre": "Maskandi", "platform": "", "score": 1434, "change": 0, "status": "", "track": "Lea chancer bafana", "image": "", "note": "" },
-            { "rank": 10, "artist": "Taylor Swift", "genre": "Pop", "platform": "", "score": 1410, "change": 0, "status": "", "track": "The Fate of Ophelia", "image": "", "note": "" }
+            { "rank": 1, "artist": "Drake", "genre": "Hip-Hop / Rap", "platform": "", "score": 3420, "change": 0, "status": "", "track": "Shabang", "image": "", "note": "" },
+            { "rank": 2, "artist": "Royal MusiQ", "genre": "Amapiano", "platform": "", "score": 2685, "change": 0, "status": "", "track": "H's On The Table", "image": "", "note": "" },
+            { "rank": 3, "artist": "Mzukulu", "genre": "Maskandi", "platform": "", "score": 2514, "change": 0, "status": "", "track": "Isesheli", "image": "", "note": "" },
+            { "rank": 4, "artist": "Feza", "genre": "Maskandi", "platform": "", "score": 2307, "change": 0, "status": "", "track": "Sengithole Omunye", "image": "", "note": "" },
+            { "rank": 5, "artist": "Inkos'yamagcokama", "genre": "Maskandi", "platform": "", "score": 2115, "change": 0, "status": "", "track": "ISAZOCHOMELANA (feat. Boohle)", "image": "", "note": "" },
+            { "rank": 6, "artist": "MENZI MUSIC", "genre": "Maskandi", "platform": "", "score": 1846, "change": 0, "status": "", "track": "Vuma", "image": "", "note": "" },
+            { "rank": 7, "artist": "Jhené Aiko", "genre": "R&B", "platform": "", "score": 1695, "change": 0, "status": "", "track": "So Good (feat. Kendrick Lamar)", "image": "", "note": "" },
+            { "rank": 8, "artist": "G-Jealous", "genre": "Maskandi", "platform": "", "score": 1424, "change": 0, "status": "", "track": "Luqale sakudlala", "image": "", "note": "" },
+            { "rank": 9, "artist": "Focalistic", "genre": "Amapiano", "platform": "", "score": 1318, "change": 0, "status": "", "track": "Gumba Fire (feat. Mr JazziQ)", "image": "", "note": "" },
+            { "rank": 10, "artist": "W4DE", "genre": "Amapiano", "platform": "", "score": 1204, "change": 0, "status": "", "track": "TEZE (feat. Royal MusiQ)", "image": "", "note": "" }
           ]
         }
       ]
