@@ -2181,10 +2181,16 @@ section { transition: background 0.6s var(--ease-out); }
 }
 .post__lead-cap span { opacity: 0.7; }
 /* Mobile: show the whole lead image instead of a cropped center. The tall
-   min-height + object-fit: cover was slicing the sides off wide covers. */
+   min-height + object-fit: cover was slicing the sides off wide covers, and
+   the fixed 54px nav bar was covering the top of the image. */
 @media (max-width: 760px) {
-  .post__lead-media { height: auto; min-height: 0; }
+  .post__lead-media {
+    height: auto; min-height: 0;
+    padding-top: 54px;        /* clear the fixed mobile nav bar */
+    background: #0A0A0A;      /* strip under the nav reads as one solid bar */
+  }
   .post__lead-media img { position: static; width: 100%; height: auto; object-fit: contain; }
+  .post__lead-media::after { display: none; }  /* scrim not needed under the solid mobile nav */
 }
 
 /* ---- content (full width) ---- */
