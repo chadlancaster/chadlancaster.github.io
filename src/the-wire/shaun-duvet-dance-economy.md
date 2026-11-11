@@ -42,7 +42,7 @@ The Wire spoke to him in an exclusive conversation about the South African dance
 
 **The Wire:** With Anything Goes attracting over 100,000 festivalgoers across 33 events in one season, how do you see dance culture evolving from entertainment into a serious economic driver, and what are we still undervaluing about its contribution to South Africa?
 
-Dance culture has been an economic driver in this country for a long time. What's changed is that the numbers are now too big to ignore.
+**Shaun Duvet:** Dance culture has been an economic driver in this country for a long time. What's changed is that the numbers are now too big to ignore.
 
 The part we still undervalue is everything around the music. People look at a festival and see a line-up. I look at it and see security, riggers, lighting techs, sound engineers, truck drivers, bar staff, medics, caterers, cleaners, photographers and a production office that has been working for six months. Across 33 events in a season that's thousands of people earning a living, and almost none of it is counted as creative economy. It gets filed under logistics, hospitality or security, so the industry looks smaller on paper than it is.
 
@@ -54,7 +54,7 @@ And then there's what a show does to a city for a weekend. Hotels, restaurants, 
 
 **The Wire:** South African dance music is influencing audiences worldwide. What will it take to turn that global cultural influence into tourism, investment and international recognition, making Johannesburg and Cape Town must-visit destinations for dance music?
 
-Three things, and none of them are about the music.
+**Shaun Duvet:** Three things, and none of them are about the music.
 
 The first is calendar certainty. An international fan books six to nine months ahead. They need to know the date is real, the line-up is coming and the tickets are on sale. Locking and protecting the calendar is the least glamorous thing in this business and the most important.
 
@@ -68,7 +68,7 @@ What we have that nobody else has is the trip around the show. You can do a fest
 
 **The Wire:** With global Amapiano streams growing by 114,377% between 2018 and 2024, how do we turn international demand into sustainable opportunities for local artists, and ensure South Africa benefits economically from the culture it creates?
 
-The honest answer is that streams don't pay. A 114,377% growth figure is a cultural signal, not a bank balance. The money sits in live performance, in publishing and in ownership, and that's where the work needs to go.
+**Shaun Duvet:** The honest answer is that streams don't pay. A 114,377% growth figure is a cultural signal, not a bank balance. The money sits in live performance, in publishing and in ownership, and that's where the work needs to go.
 
 What's missing is the infrastructure around the artist. Management, publishing administration, rights registration, touring visas and basic business education. Too many South African artists have travelled the world musically and seen very little of the money, because the rights were signed away early, or were simply never registered. That's fixable and it isn't expensive to fix.
 
@@ -80,7 +80,7 @@ The third is that the companies doing the exporting should be South African. If 
 
 **The Wire:** You've connected global brands with music culture through platforms like Corona Sunsets Festival and ULTRA South Africa. What separates brands that genuinely contribute to culture from those simply buying visibility, and why should CMOs rethink how they measure cultural investment?
 
-There's one test, and it's simple. Would the thing still exist if you took the logo off?
+**Shaun Duvet:** There's one test, and it's simple. Would the thing still exist if you took the logo off?
 
 A brand that builds commits over years, gives the audience something they couldn't otherwise have, and lets the culture lead. It shows up when the show isn't selling as well as it should. It takes a view on an emerging artist before that artist is obvious. Corona Sunsets works because it's been there long enough to become a thing people plan their summer around, not a banner at somebody else's party.
 
@@ -94,7 +94,7 @@ The CMOs who get this treat culture like a long-term asset and build equity in i
 
 **The Wire:** After more than 25 years shaping South Africa's live entertainment industry, what do you believe needs to happen next to transform our dance culture into a globally competitive creative economy, and what role should brands, government and industry leaders play in making that vision a reality?
 
-Three things have to move together.
+**Shaun Duvet:** Three things have to move together.
 
 Government needs to treat live events as infrastructure rather than a permitting problem. Faster, more predictable approvals, safety frameworks that are consistent from city to city, and cities that understand a festival weekend is tourism revenue, not a traffic inconvenience. We are good at safety in this country, and our people run events at a world standard. The process around them is what slows us down.
 
@@ -108,8 +108,8 @@ And then we export. For over two decades we've brought the world to South Africa
 
 **The Wire:** What music are you listening to right now?
 
-I listen to a lot of music, and it depends on the mood. I can find myself moving between Neil Young and Bob Dylan all the way through to Pawsa, The Prodigy, Fred Again.., Four Tet and Maribou State.
+**Shaun Duvet:** I listen to a lot of music, and it depends on the mood. I can find myself moving between Neil Young and Bob Dylan all the way through to Pawsa, The Prodigy, Fred Again.., Four Tet and Maribou State.
 
 **The Wire:** Where's your favourite place to recharge?
 
-I love a good mountain walk. I live in Cape Town and there's truly nothing more magical than being up in the mountains with my family and the dog.
+**Shaun Duvet:** I love a good mountain walk. I live in Cape Town and there's truly nothing more magical than being up in the mountains with my family and the dog.
