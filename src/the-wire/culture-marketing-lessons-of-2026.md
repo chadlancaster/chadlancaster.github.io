@@ -31,7 +31,7 @@ The lesson? Brands don't own culture. They earn participation in it.
 
 ## The Big DO: Co-create, Don't Cosplay
 
-**Local - Citiq x Phiri Movers FC:** Instead of "township-inspired" advertising, Citiq funded Soweto club Phiri Movers FC with bespoke kits from streetwear label Kasi Flavour - turning sponsorship into a genuine cultural drop, then scaling it through AFCON media.
+**Local - Citiq x Phiri Movers FC:** Instead of "township-inspired" advertising, Citiq (South Africa's leading prepaid electricity and water sub-metering provider) funded Soweto club Phiri Movers FC with bespoke kits from streetwear label Kasi Flavour - turning sponsorship into a genuine cultural drop, then scaling it through AFCON media.
 
 **International - Tommy Hilfiger:** By joining TikTok's "airball" trend without forcing product messaging, the brand earned more than 2 million likes and praise in the comments.
 

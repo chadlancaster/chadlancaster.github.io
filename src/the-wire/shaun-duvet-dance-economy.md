@@ -32,11 +32,9 @@ Few people understand that better than Shaun Duwe, aka Shaun Duvet.
 
 For more than 25 years, the former DJ turned entrepreneur has helped push South African dance music beyond the club, onto global stages and into the business of culture.
 
-He started DJing at 15. In 2003, he founded Anything Goes. Today, through The Unit, his portfolio spans festivals, touring, talent and branded experiences. But his bigger achievement is changing what a dancefloor can mean for South Africa.
+He started DJing at 15. In 2003, he founded Anything Goes, which recently released the short film CULTURE IN MOTION ahead of the summer season. It captures the country's nightlife universe and features acclaimed visual artist Yay Abe, directed by Grant de Sousa, with musical direction by Liquideep. Today, through The Unit, his portfolio spans festivals, touring, talent and branded experiences. But his bigger achievement is changing what a dancefloor can mean for South Africa.
 
 The Wire spoke to him in an exclusive conversation about the South African dance economy.
-
-<!-- PROFILE IMAGE: add a portrait of Shaun Duvet here (interview piece) -->
 
 ## From Dancefloors to Economic Powerhouses
 
@@ -75,6 +73,10 @@ What's missing is the infrastructure around the artist. Management, publishing a
 The second piece is routing. A South African artist shouldn't have to fly to Europe to play one show. We need proper regional circuits so touring is viable: Nairobi, Lagos, Maputo, Gaborone, Harare. Build the circuit and the economics of being a working artist change completely.
 
 The third is that the companies doing the exporting should be South African. If the demand is ours and the sound is ours, the promoters, agents and production companies taking it out should be ours too. That's the part we've started on, and it's what Culture in Motion is pointed at.
+
+<div class="wire-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/jNnuvZ07iiI" title="CULTURE IN MOTION - Anything Goes" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Why Brands Need to Build Culture, Not Borrow It
 
