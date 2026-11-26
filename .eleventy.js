@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   [
     "styles.css",
     "script.js",
+    "csa-chat.js", // guided site helper ("Ziggy")
     "brand",
     "logos",
     "archive",
