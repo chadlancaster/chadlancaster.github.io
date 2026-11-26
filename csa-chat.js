@@ -357,7 +357,7 @@
   .zig-ic:hover{background:var(--line,rgba(245,241,234,.1));color:var(--text,#F5F1EA)}
   .zig-ic.zig-on{color:var(--accent,#FFA10C)}
 
-  .zig-log{position:relative;z-index:2;flex:1;overflow-y:auto;padding:18px 15px 8px;display:flex;flex-direction:column;gap:11px;scroll-behavior:smooth}
+  .zig-log{position:relative;z-index:2;flex:1;min-height:0;overflow-y:auto;padding:18px 15px 8px;display:flex;flex-direction:column;gap:11px;scroll-behavior:smooth}
   .zig-log>*{flex:none}
   .zig-log::-webkit-scrollbar{width:8px}.zig-log::-webkit-scrollbar-thumb{background:var(--line-strong,rgba(245,241,234,.22));border-radius:8px}
   .zig-msg{max-width:88%;font-size:13.8px;line-height:1.5;padding:11px 14px;border-radius:15px;animation:zigRise .4s cubic-bezier(.16,1,.3,1) both}
@@ -373,7 +373,7 @@
   .zig-typing i:nth-child(2){animation-delay:.15s}.zig-typing i:nth-child(3){animation-delay:.3s}
   @keyframes zigBob{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-4px)}}
 
-  .zig-dock{position:relative;z-index:2;display:flex;flex-direction:column}
+  .zig-dock{position:relative;z-index:2;display:flex;flex-direction:column;flex:none;max-height:46%;overflow-y:auto;overscroll-behavior:contain}
   .zig-opts{display:flex;flex-direction:column;gap:8px;padding:4px 15px 12px}
   .zig-opt{text-align:left;width:100%;cursor:pointer;font-family:inherit;font-size:13.5px;font-weight:500;color:var(--text,#F5F1EA);
     background:var(--bg-2,#161616);border:1px solid var(--line-strong,rgba(245,241,234,.22));border-radius:12px;
@@ -388,12 +388,15 @@
   .zig-chip{font-family:var(--font-mono,"Geist Mono",monospace);font-size:11px;letter-spacing:.02em;color:var(--text-dim,rgba(245,241,234,.62));
     border:1px solid var(--line,rgba(245,241,234,.1));border-radius:999px;padding:6px 11px;background:var(--bg-2,#161616)}
 
-  .zig-cards{display:flex;gap:9px;overflow-x:auto;padding:2px 15px 13px;scrollbar-width:none;animation:zigRise .4s cubic-bezier(.16,1,.3,1) both}
+  .zig-log .zig-opts,.zig-log .zig-cards{padding:0}
+  .zig-log .zig-cover{margin:0}
+  .zig-inl{width:100%;animation:zigRise .38s cubic-bezier(.16,1,.3,1) both}
+  .zig-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px 9px;padding:2px 15px 13px;animation:zigRise .4s cubic-bezier(.16,1,.3,1) both}
   .zig-cards::-webkit-scrollbar{display:none}
-  .zig-face{flex:none;width:92px;cursor:pointer;border:none;background:none;padding:0;font-family:inherit;text-align:left}
-  .zig-face img{width:92px;height:112px;object-fit:cover;border-radius:12px;display:block;border:1px solid var(--line,rgba(245,241,234,.1));transition:transform .25s,border-color .25s;background:var(--bg-2,#161616)}
+  .zig-face{min-width:0;width:100%;cursor:pointer;border:none;background:none;padding:0;font-family:inherit;text-align:left}
+  .zig-face img{width:100%;height:auto;aspect-ratio:92/112;object-fit:cover;border-radius:12px;display:block;border:1px solid var(--line,rgba(245,241,234,.1));transition:transform .25s,border-color .25s;background:var(--bg-2,#161616)}
   .zig-face:hover img{transform:translateY(-3px);border-color:var(--accent,#FFA10C)}
-  .zig-face span{display:block;margin-top:7px;font-size:11px;line-height:1.25;color:var(--text-dim,rgba(245,241,234,.62))}
+  .zig-face span{display:block;margin-top:7px;font-size:11px;line-height:1.25;overflow-wrap:anywhere;color:var(--text-dim,rgba(245,241,234,.62))}
   .zig-cover{display:block;margin:2px 15px 13px;cursor:pointer;border:1px solid var(--line-strong,rgba(245,241,234,.22));border-radius:14px;overflow:hidden;background:var(--bg-2,#161616);text-decoration:none;animation:zigRise .4s cubic-bezier(.16,1,.3,1) both;transition:border-color .25s}
   .zig-cover:hover{border-color:var(--accent,#FFA10C)}
   .zig-cover img{width:100%;height:150px;object-fit:cover;display:block}
@@ -540,7 +543,8 @@
           '<div class="zig-ava" id="zig-ava" aria-hidden="true"><img src="/brand/CSA_Script_Logo_Black.png" alt="CSA"></div>' +
           '<div><h2>' + NAME + '</h2><p><span class="zig-dot"></span> Your guide to CSA</p></div>' +
           '<div class="zig-tools">' +
-            '<button class="zig-ic" id="zig-sound" aria-label="Toggle sound"></button>' +
+            '<button class="zig-ic" id="zig-new" aria-label="New chat" title="New chat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>' +
+            '<button class="zig-ic" id="zig-sound" aria-label="Toggle sound" title="Sound"></button>' +
             '<button class="zig-ic" id="zig-close" aria-label="Close helper"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>' +
           '</div>' +
         '</div>' +
@@ -727,7 +731,7 @@
         try { rec = new SR(); } catch (e) { return; }
         try { rec.lang = navigator.language || "en-GB"; } catch (e) {}
         rec.continuous = true; rec.interimResults = true; rec.maxAlternatives = 1; gotText = false;
-        rec.onstart = function () { listening = true; gotText = false; mic.classList.add("zig-live"); input.placeholder = "Listening… tap the mic to send"; try { input.focus(); } catch (e) {} };
+        rec.onstart = function () { listening = true; gotText = false; mic.classList.add("zig-live"); input.placeholder = "Listening…"; try { input.focus(); } catch (e) {} };
         rec.onresult = function (e) {
           var txt = ""; for (var i = 0; i < e.results.length; i++) txt += e.results[i][0].transcript;
           input.value = txt; if (txt.trim()) gotText = true;
@@ -735,7 +739,7 @@
         rec.onerror = function (ev) {
           stopListen();
           input.placeholder = (ev && ev.error === "not-allowed") ? "Allow mic access to talk to " + NAME
-            : (ev && ev.error === "no-speech") ? "Didn't catch that, tap the mic to retry" : "Ask me anything…";
+            : (ev && ev.error === "no-speech") ? "Didn't catch that, try again" : "Ask me anything…";
         };
         rec.onend = function () {
           stopListen();
@@ -748,6 +752,15 @@
 
     /* ---- building blocks ---- */
     function scroll() { log.scrollTop = log.scrollHeight; }
+    function clearDock() { dock.innerHTML = ""; var g = log.querySelectorAll(".zig-inl"); for (var i = 0; i < g.length; i++) g[i].remove(); }
+    function follow(anchor) {
+      if (!anchor || !anchor.isConnected) { scroll(); return; }
+      var sb = log.style.scrollBehavior; log.style.scrollBehavior = "auto";
+      log.scrollTop = log.scrollHeight;
+      var lr = log.getBoundingClientRect(), r = anchor.getBoundingClientRect();
+      if (r.top < lr.top + 10) log.scrollTop += r.top - lr.top - 10;
+      log.style.scrollBehavior = sb;
+    }
     function scrollToTop(el) { log.scrollTop += el.getBoundingClientRect().top - log.getBoundingClientRect().top - 12; }
     function bubble(text, who) {
       if (who === "me") lastUserMsg = text;
@@ -796,14 +809,15 @@
       var b = document.createElement("button");
       b.className = "zig-opt zig-ghost"; b.textContent = text; b.onclick = fn; return b;
     }
-    function stream(el, text, done) {
-      if (REDUCE) { el.textContent = text; scroll(); done(); return; }
+    function stream(el, text, done, anchor) {
+      anchor = anchor || el;
+      if (REDUCE) { el.textContent = text; follow(anchor); done(); return; }
       var words = text.split(/(\s+)/), i = 0;
       var caret = document.createElement("span"); caret.className = "zig-caret";
       el.appendChild(caret);
       (function step() {
         if (i >= words.length) { if (caret.parentNode) caret.remove(); done(); return; }
-        el.insertBefore(document.createTextNode(words[i++]), caret); scroll();
+        el.insertBefore(document.createTextNode(words[i++]), caret); follow(anchor);
         setTimeout(step, 16 + Math.random() * 30);
       })();
     }
@@ -813,12 +827,13 @@
       var node = typeof ref === "string" ? TREE[ref] : ref;
       var id = typeof ref === "string" ? ref : null;
       if (id && id !== "start" && LABEL[id]) lsSet("zig_topic", id);
-      busy = true; sendBtn.disabled = true; dock.innerHTML = "";
+      busy = true; sendBtn.disabled = true; clearDock();
       ava.classList.add("zig-think");
       var t = typing(node.think);
       setTimeout(function () {
         t.remove();
-        if (node.step) { var stp = document.createElement("div"); stp.className = "zig-step"; stp.textContent = node.step; log.appendChild(stp); }
+        var stp = null;
+        if (node.step) { stp = document.createElement("div"); stp.className = "zig-step"; stp.textContent = node.step; log.appendChild(stp); }
         var msg = document.createElement("div");
         msg.className = "zig-msg zig-bot"; log.appendChild(msg);
         blip("bot");
@@ -830,14 +845,15 @@
           if (id !== "start" && !node.greeting && !node.noFb) addFeedback(node);
           fillDock(node, id);
           busy = false; sendBtn.disabled = false;
-          if (node.scrollCard && cardEl) scrollToTop(cardEl);
-          else if (node.brief || node.caseCard) scrollToTop(msg);
-        });
+          var anchor = stp || msg;
+          follow(anchor);
+          requestAnimationFrame(function () { follow(anchor); setTimeout(function () { follow(anchor); }, 450); });
+        }, stp);
       }, node.think ? 560 : 440);
     }
 
     function fillDock(node, id) {
-      if (id === "start" || node.hint) { handle.classList.add("zig-hint"); scroll(); return; }
+      if (id === "start" || node.hint) { handle.classList.add("zig-hint"); return; }
       var stagger = 0;
       if (node.chips) {
         var c = document.createElement("div"); c.className = "zig-chips";
@@ -846,7 +862,12 @@
         });
         dock.appendChild(c);
       }
-      if (node.cards) dock.appendChild(buildCards(node.cards));
+      /* content (faces, covers) lives in the conversation, not the button area */
+      if (node.cards) log.appendChild(buildCards(node.cards));
+      /* big button sets sit inside the conversation too, so the chat area never gets squeezed */
+      var inline = !!(node.brief || node.caseCard || node.cards || (node.opts || []).length > 4);
+      var host = dock;
+      if (inline && (node.opts || []).length) { host = document.createElement("div"); host.className = "zig-inl"; log.appendChild(host); }
       if (node.multi) {
         var mw = document.createElement("div"); mw.className = "zig-pick"; var M = node.multi; M.sel = M.pre.slice();
         var go = document.createElement("button"); go.type = "button"; go.className = "zig-opt zig-go";
@@ -857,7 +878,7 @@
           c.onclick = function () { var k = M.sel.indexOf(o); if (k >= 0) M.sel.splice(k, 1); else M.sel.push(o); c.setAttribute("aria-pressed", k >= 0 ? "false" : "true"); paintGo(); blip("bot"); };
           mw.appendChild(c);
         });
-        go.onclick = function () { if (!M.sel.length || busy) return; bubble(M.sel.join(", "), "me"); blip("send"); dock.innerHTML = ""; awaiting = null; input.placeholder = DEF_PH; M.done(M.sel.slice()); };
+        go.onclick = function () { if (!M.sel.length || busy) return; bubble(M.sel.join(", "), "me"); blip("send"); clearDock(); awaiting = null; input.placeholder = DEF_PH; M.done(M.sel.slice()); };
         paintGo(); dock.appendChild(mw);
         var gw = document.createElement("div"); gw.className = "zig-opts"; gw.appendChild(go); dock.appendChild(gw);
       }
@@ -869,10 +890,10 @@
         var arr = document.createElement("span"); arr.className = "zig-arr"; arr.innerHTML = o.link ? ARR_LINK : ARR_GO;
         b.appendChild(label); b.appendChild(arr); b.onclick = function () { choose(o); }; wrap.appendChild(b);
       });
-      dock.appendChild(wrap);
+      host.appendChild(wrap);
       var foot = document.createElement("div"); foot.className = "zig-row";
       if (node.foot && node.foot.indexOf("back:") === 0) foot.appendChild(ghost("← Back", function () { render(node.foot.split(":")[1]); }));
-      if (id !== "start" && !node.noFoot) foot.appendChild(ghost("↺ Start over", function () { bubble("Start over", "me"); render("start"); }));
+
       if (foot.children.length) dock.appendChild(foot);
       scroll();
     }
@@ -898,7 +919,7 @@
 
     function choose(o) {
       if (busy) return;
-      bubble(o.t, "me"); blip("send"); dock.innerHTML = "";
+      bubble(o.t, "me"); blip("send"); clearDock();
       awaiting = null; input.placeholder = DEF_PH;
       if (o.fn) { o.fn(); return; }
       if (o.article) { showArticle(o.article); return; }
@@ -932,8 +953,8 @@
           };
           card.appendChild(cp); dock.appendChild(card);
           var foot = document.createElement("div"); foot.className = "zig-row";
-          foot.appendChild(ghost("↺ Start over", function () { bubble("Start over", "me"); render("start"); }));
-          dock.appendChild(foot); scroll();
+          foot.appendChild(ghost("↺ Start over", function () { restart(); }));
+          dock.appendChild(foot); follow(msg); requestAnimationFrame(function () { follow(msg); });
           busy = false; sendBtn.disabled = false;
         });
       }, 420);
@@ -941,7 +962,7 @@
 
     function reoffer() {
       var foot = document.createElement("div"); foot.className = "zig-row";
-      foot.appendChild(ghost("↺ Start over", function () { bubble("Start over", "me"); render("start"); }));
+      foot.appendChild(ghost("↺ Start over", function () { restart(); }));
       foot.appendChild(ghost("Talk to the team", function () { bubble("Talk to the team", "me"); render("human"); }));
       dock.appendChild(foot); scroll();
     }
@@ -1091,7 +1112,7 @@
       var k = CTXK; CTXK = "wire";
       render({ bot: "Sure. What are you looking for? A topic, a brand or an artist.", opts: [], foot: null, noFb: true });
       awaiting = function (q) { CTXK = k; var r = findArticles(q); if (r.length) showArticles(r, q); else render({ bot: "I couldn't find a read on that yet. Try another topic, or browse everything on The Wire.", opts: [{ t: "Browse The Wire", link: "/the-wire.html" }, { t: "Try another search", fn: wireSearchPrompt }], foot: "start" }); };
-      input.placeholder = "e.g. Gen Alpha, amapiano, rituals";
+      input.placeholder = "e.g. Gen Alpha";
     }
 
     /* ---- Talent: the cards on this page plus the CMS roster ---- */
@@ -1142,29 +1163,29 @@
     var BR = null;
     function has(svc) { return BR && BR.services && BR.services.indexOf(svc) >= 0; }
     var STEPS = [
-      { k: "brand", label: "Client / brand", type: "text", ph: "Brand or company name",
+      { k: "brand", label: "Client / brand", type: "text", ph: "Brand or company",
         q: function () { return "Let's build your brief properly, the way we'd scope it in the room. First, who's the client or brand?"; } },
       { k: "services", label: "Services", type: "multi", opts: SERVICES,
         q: function () { return "What do you need from us? Pick everything that applies."; } },
-      { k: "challenge", label: "The challenge", type: "text", when: function () { return !BR.preChallenge || BR.edit; }, ph: "The problem or opportunity, in your words", skip: "Not sure yet",
+      { k: "challenge", label: "The challenge", type: "text", when: function () { return !BR.preChallenge || BR.edit; }, ph: "In your own words", skip: "Not sure yet",
         q: function () { var ex = caseExample(); return "What's the challenge? The business problem or opportunity, in a sentence or two." + (ex ? " For example, on " + ex.title + " the brief was: “" + ex.text + "”" : ""); } },
       { k: "goals", label: "Objectives", type: "multi", opts: ["Awareness and reach", "A launch moment", "Sales or conversion", "Cultural credibility", "Community and engagement", "Earned media and PR"],
         q: function () { return "What does success look like? Pick any that fit, or type your own."; } },
-      { k: "audience", label: "Audience", type: "text", ph: "Age, interests, where they live", skip: "Skip for now",
+      { k: "audience", label: "Audience", type: "text", ph: "Who you want to reach", skip: "Skip for now",
         q: function () { return "Who are you trying to reach? Age, interests, where they live, what they care about."; } },
       { k: "markets", label: "Markets", type: "multi", opts: ["South Africa", "Nigeria", "Rest of Africa", "United Kingdom", "Europe", "United States", "Global"],
         q: function () { return "Which markets is this for?"; } },
-      { k: "talent", label: "Talent", type: "text", ph: "A name, or the kind of talent", skip: "Open to recommendations", when: function () { return has("Talent") && !BR.data.talent; },
+      { k: "talent", label: "Talent", type: "text", ph: "A name or type of talent", skip: "Open to recommendations", when: function () { return has("Talent") && !BR.data.talent; },
         q: function () { return "Do you have talent in mind? Name them, or describe who you're after and what they'd do, appearances, content, an ambassadorship."; } },
-      { k: "event", label: "Event / activation", type: "text", ph: "Format, city, guest numbers", skip: "Still shaping it", when: function () { return has("Events & Activations"); },
+      { k: "event", label: "Event / activation", type: "text", ph: "Format, city, guests", skip: "Still shaping it", when: function () { return has("Events & Activations"); },
         q: function () { return "Tell us about the event or activation. The format, the city, rough guest numbers, any venue in mind."; } },
-      { k: "digital", label: "Digital build", type: "text", ph: "What it is and what it needs to do", skip: "Still shaping it", when: function () { return has("Digital & interactive"); },
+      { k: "digital", label: "Digital build", type: "text", ph: "What it needs to do", skip: "Still shaping it", when: function () { return has("Digital & interactive"); },
         q: function () { return "What are we building? A site, an app, a tool, an interactive experience. What does it need to do?"; } },
       { k: "timing", label: "Timing", type: "single", ph: "Or type a date", opts: ["As soon as possible", "In the next 1 to 3 months", "3 to 6 months out", "Later this year", "Just exploring"],
         q: function () { return "When does it need to happen? Pick one, or type a launch date."; } },
       { k: "budget", label: "Budget", type: "single", ph: "Or type a figure", opts: ["Under R250k", "R250k to R1m", "R1m to R5m", "Over R5m", "Prefer to discuss"],
         q: function () { return "What's the budget range? A ballpark helps us shape the right idea. Rand or the equivalent is fine."; } },
-      { k: "notes", label: "Anything else", type: "text", ph: "Mandatories, KPIs, assets, the big idea", skip: "That's everything",
+      { k: "notes", label: "Anything else", type: "text", ph: "Anything else", skip: "That's everything",
         q: function () { return "Last one. Anything else we should know? Mandatories, KPIs, existing assets, or the big idea if you already have one."; } }
     ];
     function activeSteps() { return STEPS.filter(function (s) { return !s.when || s.when(); }); }
@@ -1185,7 +1206,7 @@
       p = p || {}; awaiting = null; input.placeholder = DEF_PH;
       var pre = NEED_MAP[p.need] ? [NEED_MAP[p.need]] : (p.need === "Cultural Index" ? ["Cultural Index"] : []);
       if (p.talent && pre.indexOf("Talent") < 0) pre.push("Talent");
-      BR = { data: { talent: p.talent || "", notes: p.notes || "", challenge: p.challenge || "" }, services: pre, pre: pre.slice(), i: 0, edit: false, preChallenge: !!p.challenge };
+      BR = { data: { talent: p.talent || "", notes: p.notes || "", challenge: p.challenge || "" }, services: pre, pre: pre.slice(), i: 0, edit: false, preChallenge: !!p.challenge, active: true };
       loadData().then(function () { askStep(0); });
     }
     function askStep(i) {
@@ -1198,7 +1219,8 @@
         if (BR.edit) { BR.edit = false; briefDone(); return; }
         askStep(activeSteps().indexOf(st) + 1);
       };
-      var node = { bot: st.q(), step: "Brief · " + (BR.svcKnown ? n + " of " + total : "Question " + n), noFoot: true, foot: null, noFb: true, opts: [] };
+      var lead = BR.again ? "Hey. We're in the middle of your brief. Say \u201Cstart over\u201D any time to stop. " : ""; BR.again = false;
+      var node = { bot: lead + st.q(), step: "Brief · " + (BR.svcKnown ? n + " of " + total : "Question " + n), noFoot: true, foot: null, noFb: true, opts: [] };
       if (st.type === "multi") {
         var pre = st.k === "services" ? BR.services.slice() : (BR.data[st.k] ? BR.data[st.k].split(", ") : []);
         node.multi = { opts: st.opts, pre: pre, done: done };
@@ -1223,7 +1245,7 @@
     }
     function briefSubject() { return "New brief via " + NAME + ": " + (BR.data.brand || "a new client") + " (" + (BR.services || []).join(", ") + ")"; }
     function briefDone() {
-      awaiting = null; input.placeholder = DEF_PH;
+      awaiting = null; input.placeholder = DEF_PH; BR.active = false;
       var onForm = !!document.querySelector(".contact__form textarea"), sim = similarWork(), o = [];
       o.push({ t: onForm ? "Put it in the contact form" : "Send it to the contact form", fn: sendBrief });
       o.push({ t: "Change an answer", fn: editMenu });
@@ -1232,6 +1254,7 @@
       render({ bot: "Here's your brief" + (BR.data.brand ? " for " + BR.data.brand : "") + ". Have a read, change anything that's off, then send it to the team.", brief: briefRows(), opts: o, foot: null, noFb: true, noFoot: true });
     }
     function editMenu() {
+      BR.active = true;
       render({ bot: "Which part do you want to change?", foot: null, noFb: true, noFoot: true,
         opts: activeSteps().map(function (s, i) { return { t: s.label, fn: function () { BR.edit = true; askStep(i); } }; }).concat([{ t: "Back to my brief", fn: briefDone }]) });
     }
@@ -1263,7 +1286,7 @@
         if (k === "brief") { bubble("Help me with a brief", "me"); startBrief(arg ? { need: arg } : null); return; }
         if (k === "wiresearch") { bubble("Help me find a read", "me"); loadData().then(wireSearchPrompt); return; }
         if (k === "related") { loadData().then(function () { var a = hereArticle(); bubble("More like this", "me"); if (a) showRelated(a); else render("wire"); }); return; }
-        if (k === "about" && arg) { bubble(arg.length > 60 ? arg.slice(0, 57) + "..." : arg, "me"); dock.innerHTML = ""; loadData().then(function () { lookup(arg); }); return; }
+        if (k === "about" && arg) { bubble(arg.length > 60 ? arg.slice(0, 57) + "..." : arg, "me"); clearDock(); loadData().then(function () { lookup(arg); }); return; }
         if (k === "results") { loadData().then(function () { var c = hereCase(); bubble("Show me the results", "me"); if (c) showResults(c); else render(workPickerNode()); }); return; }
         if (!busy && !log.children.length) render(greeting());
       });
@@ -1502,10 +1525,22 @@
       if (CTXK === "wire" || CTXK === "article") { render({ bot: "I couldn't find a read on that yet. Try another topic, a brand or an artist, or browse everything on The Wire.", opts: [{ t: "Browse The Wire", link: "/the-wire.html" }, { t: "This month's Chart Pulse", go: "w_chart" }], foot: "start" }); return; }
       render({ bot: "Good question. I can point you around CSA, tap Quick options below and pick a starting point, or ask me something else.", hint: true });
     }
+    function restart() {
+      awaiting = null; BR = null; input.placeholder = DEF_PH;
+      try { setTray(false); } catch (e) {}
+      log.innerHTML = ""; clearDock();
+      render("start");
+    }
+    var RE_RESTART = /^\W*(?:(?:hey|ok|okay|please)\W+)?(?:ziggy\W+)?(?:can (?:we|you)\W+)?(?:start over|start again|start from scratch|restart|reset|begin again|from the top|main menu)\b|^\W*(?:ziggy\W+)?(?:cancel|stop|quit|exit|never ?mind|forget it|menu)\W*(?:it|that|this|please|ziggy)?\W*(?:please|ziggy)?\W*$/i;
+    var RE_BACK = /^\W*(?:ziggy\W+)?(go back|back|previous|undo)\W*(?:ziggy)?\W*$/i;
+    var RE_HELLO = /^\W*(hi+|hey+|hello+|yo|hiya|howzit|ziggy)\W*(ziggy)?\W*$/i;
     function ask(q) {
       if (busy || !q) return;
-      if (awaiting) { var cb = awaiting; awaiting = null; input.placeholder = DEF_PH; bubble(q, "me"); blip("send"); dock.innerHTML = ""; cb(q); return; }
-      bubble(q, "me"); blip("send"); dock.innerHTML = "";
+      if (RE_RESTART.test(q)) { restart(); return; }
+      if (BR && BR.active && RE_BACK.test(q)) { awaiting = null; bubble(q, "me"); clearDock(); askStep(Math.max(0, BR.i - 1)); return; }
+      if (BR && BR.active && awaiting && RE_HELLO.test(q)) { awaiting = null; bubble(q, "me"); clearDock(); BR.again = true; askStep(BR.i); return; }
+      if (awaiting) { var cb = awaiting; awaiting = null; input.placeholder = DEF_PH; bubble(q, "me"); blip("send"); clearDock(); cb(q); return; }
+      bubble(q, "me"); blip("send"); clearDock();
       if (DATA) routeQ(q); else loadData().then(function () { routeQ(q); });
     }
     form.addEventListener("submit", function (e) {
@@ -1561,6 +1596,7 @@
     function close() { panel.classList.remove("zig-open"); launch.classList.remove("zig-hide"); }
     launch.onclick = function () { open(); };
     root.querySelector("#zig-close").onclick = close;
+    root.querySelector("#zig-new").onclick = function () { whenFree(function () { blip("send"); restart(); }); };
     enhancePage();
   }
 
