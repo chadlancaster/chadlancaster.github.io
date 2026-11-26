@@ -299,6 +299,8 @@
 
   /* ---- Styles (scoped to #zig-root, reuse the site's own CSS tokens) ---- */
   var CSS = `
+  /* keep the site's custom cursor above Ziggy so it never disappears behind her */
+  .cursor,.cursor-dot{z-index:10002}
   #zig-launch{position:fixed;z-index:9998;right:max(20px,env(safe-area-inset-right,0px));bottom:max(20px,env(safe-area-inset-bottom,0px));
     display:flex;align-items:center;gap:10px;cursor:pointer;border:none;
     background:var(--accent,#FFA10C);color:var(--on-accent,#0A0A0A);
